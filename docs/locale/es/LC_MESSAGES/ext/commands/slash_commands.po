@@ -1,0 +1,360 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-2021, Rapptz, 2021-present, EQUENOS
+# This file is distributed under the same license as the disnake package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: disnake 2.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-01 22:36-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../ext/commands/slash_commands.rst:6
+msgid "Slash Commands"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:8
+msgid ""
+"Slash commands can significantly simplify the user's experience with your"
+" bot. Once \"/\" is pressed on the keyboard, the list of slash commands "
+"appears. You can fill the options and read the hints at the same time, "
+"while types are validated instantly. This library allows to make such "
+"commands in several minutes, regardless of their complexity."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:15
+msgid "Getting started"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:17
+msgid ""
+"You have probably noticed that slash commands have really interactive "
+"user interface, as if each slash command was built-in. This is because "
+"each slash command is registered in Discord before people can see it. "
+"This library handles registration for you, but you can still manage it."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:21
+msgid ""
+"By default, the registration is global. This means that your slash "
+"commands will be visible everywhere, including bot DMs. Global "
+"registration can take up to 1 hour to complete, this is an API "
+"limitation. You can change the registration to be local, so your slash "
+"commands will only be visible in several guilds. This type of "
+"registration is almost instant."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:25
+msgid "This code sample shows how to set the registration to be local:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:39
+msgid "For global registration, don't specify this parameter."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:41
+msgid ""
+"Another useful parameter is ``sync_commands_debug``. If set to ``True``, "
+"you receive debug messages related to the app command registration. This "
+"is useful if you want to figure out some registration details:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:54
+msgid ""
+"If you want to disable the automatic registration, set ``sync_commands`` "
+"to ``False``:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:66
+msgid "Basic Slash Command"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:68
+msgid ""
+"Make sure that you've read :ref:`slash_commands_start`, it contains "
+"important information about command registration."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:70
+msgid "Here's an example of a slash command:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:78
+msgid ""
+"A slash command must always have at least one parameter, ``inter``, which"
+" is the :class:`.ApplicationCommandInteraction` as the first one."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:80
+msgid ""
+"I can't see my slash command, what do I do? Read "
+":ref:`slash_commands_start`."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:85
+msgid "Parameters"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:87
+msgid ""
+"You may want to define a couple of options for your slash command. In "
+"disnake, the definition of options is based on annotations."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:89
+msgid ""
+"Here's an example of a command with one integer option (without a "
+"description):"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:97
+msgid "The result should look like this:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:101
+msgid "You can of course set a default for your option by giving a default value:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:109
+msgid ""
+"You may have as many options as you want but the order matters, an "
+"optional option cannot be followed by a required one."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:112
+msgid "Option Types"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:114
+msgid ""
+"You might already be familiar with discord.py's converters, slash "
+"commands have a very similar equivalent in the form of option types. "
+"Discord itself supports only a few built-in types which are guaranteed to"
+" be enforced:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:117
+msgid ":class:`str`"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:118
+msgid ":class:`int`"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:119
+msgid ":class:`float`"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:120
+msgid ":class:`bool`"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:121
+msgid ":class:`disnake.User` or :class:`disnake.Member`"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:122
+msgid ":class:`disnake.abc.GuildChannel`\\*"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:123
+msgid ":class:`disnake.Role`\\*\\*"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:125
+msgid ""
+"All the other types may be converted implicitly, similarly to "
+":ref:`ext_commands_basic_converters`"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:142
+msgid ""
+"\\* All channel subclasses and unions are also supported, see "
+":attr:`Option.channel_types <Option>`"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:144
+msgid ""
+"\\*\\* Role and Member may be used together to create a \"mentionable\" "
+"(:class:`Union[Role, Member]`)"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:147
+msgid "Parameter Descriptors"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:149
+msgid ""
+"Python has no truly *clean* way to provide metadata for parameters, so "
+"disnake uses the same approach as fastapi using parameter defaults. At "
+"the current time there's only :class:`Param`."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:152
+msgid ""
+"With this you may set the name, description, custom converters and "
+":ref:`autocompleters`."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:177
+msgid "All keyword arguments of :class:`Param` have shorter aliases:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:176
+msgid "``description`` -> ``desc``"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:177
+msgid "``converter`` -> ``conv``"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:178
+msgid "``autocomplete`` -> ``autocomp``"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:182
+msgid ""
+"The converter parameter only ever takes in a **function**, not a "
+"Converter class. Converter classes are completely unusable in disnake due"
+" to their inconsistent typing."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:188
+msgid "Choices"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:190
+msgid ""
+"Some options can have a list of choices, so the user doesn't have to "
+"manually fill the value. The most elegant way of defining the choices is "
+"by using enums. These enums **must** inherit from the type of their value"
+" if you want them to work with linters."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:193
+#: ../../ext/commands/slash_commands.rst:278
+msgid "For example:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:209
+msgid "The ``animal`` arg will receive one of the enum values."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:211
+msgid "The values can be integers as well:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:226
+msgid "You can define an enum in one line:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:236
+msgid "Or even forget about values and define the enum from list:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:246
+msgid "Finally, you can simply list the choices in ``commands.Param``:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:269
+msgid "Autocompleters"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:271
+msgid ""
+"Slash commands support interactive autocompletion. You can define a "
+"function that will constantly suggest autocomplete options while the user"
+" is typing. So basically autocompletion is roughly equivalent to dynamic "
+"choices."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:274
+msgid ""
+"In order to build an option with autocompletion, define a function that "
+"takes 2 parameters - :class:`.ApplicationCommandInteraction` instance, "
+"representing an autocomp interaction with your command, and a "
+":class:`str` instance, representing the current user input. The function "
+"should return a list of strings or a mapping of choice names to values."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:295
+msgid "Both ``autocomp`` and ``autocomplete`` kwargs work."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:298
+msgid "Subcommands And Groups"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:300
+msgid ""
+"Groups of commands work differently in terms of slash commands. Instead "
+"of defining a group, you should still define a slash command and then "
+"nest some sub-commands or sub-command-groups there via special "
+"decorators."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:303
+msgid "For example, here's how you make a ``/show user`` command:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:323
+msgid ""
+"After being registered this command will be visible as ``/show user`` in "
+"the list, not allowing you to invoke ``/show`` without any sub-commands. "
+"This is an API limitation."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:326
+msgid ""
+"You can implement double nesting and build commands like ``/parent group "
+"subcmd``:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:344
+msgid "This is the deepest nesting available."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:347
+msgid "Docstrings"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:349
+msgid ""
+"If you have a feeling that option descriptions make the parameters of "
+"your function look overloaded, use docstrings. This feature allows to "
+"describe your command and options in triple quotes inside the function, "
+"following the RST markdown."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:352
+msgid ""
+"In order to describe the parameters, list them under the ``Parameters`` "
+"header, underlined with dashes:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:373
+msgid "In the above example we're using a simplified RST markdown."
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:375
+msgid "If you prefer the real RST format, you can still use it:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:397
+msgid "Specifying the types isn't necessary, the docstring will still work:"
+msgstr ""
+
+#: ../../ext/commands/slash_commands.rst:420
+msgid ""
+"You can remove ``:`` after the parameter names if you prefer the numpy "
+"format."
+msgstr ""
+
