@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: disnake 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-01 22:36-0300\n"
+"POT-Creation-Date: 2021-11-05 21:04-0300\n"
 "PO-Revision-Date: 2021-11-02 21:27-0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -763,9 +763,9 @@ msgid ""
 "False."
 msgstr ""
 
-#: ../../api.rst:3036 ../../api.rst:3155 ../../api.rst:3163 ../../api.rst:3188
-#: ../../api.rst:3196 ../../api.rst:3253 ../../api.rst:3332 ../../api.rst:3338
-#: ../../api.rst:3344 ../../docstring disnake.ApplicationFlags.embedded:3
+#: ../../api.rst:3047 ../../api.rst:3166 ../../api.rst:3174 ../../api.rst:3199
+#: ../../api.rst:3207 ../../api.rst:3264 ../../api.rst:3343 ../../api.rst:3349
+#: ../../api.rst:3355 ../../docstring disnake.ApplicationFlags.embedded:3
 #: disnake.ApplicationFlags.gateway_guild_members:4
 #: disnake.ApplicationFlags.gateway_guild_members_limited:4
 #: disnake.ApplicationFlags.gateway_message_content:4
@@ -780,7 +780,7 @@ msgstr ""
 #: disnake.Intents.guild_messages:24 disnake.Intents.guild_reactions:18
 #: disnake.Intents.guild_typing:11 disnake.Intents.guilds:23
 #: disnake.Intents.integrations:12 disnake.Intents.invites:10
-#: disnake.Intents.members:32 disnake.Intents.messages:24
+#: disnake.Intents.members:33 disnake.Intents.messages:24
 #: disnake.Intents.presences:20 disnake.Intents.reactions:18
 #: disnake.Intents.typing:11 disnake.Intents.voice_states:17
 #: disnake.Intents.webhooks:9 disnake.MemberCacheFlags.joined:8
@@ -856,10 +856,10 @@ msgstr ""
 #: disnake.member.VoiceState:25 disnake.member.VoiceState:33
 #: disnake.member.VoiceState:39 disnake.member.VoiceState:49
 #: disnake.member.VoiceState:67 disnake.mentions.AllowedMentions:11
-#: disnake.mentions.AllowedMentions:40 disnake.message.Message:23
-#: disnake.message.Message:94 disnake.message.Message:147
-#: disnake.message.MessageReference:33 disnake.opus.is_loaded:7
-#: disnake.partial_emoji.PartialEmoji:38
+#: disnake.mentions.AllowedMentions:40 disnake.message.Attachment:83
+#: disnake.message.Message:23 disnake.message.Message:94
+#: disnake.message.Message:147 disnake.message.MessageReference:33
+#: disnake.opus.is_loaded:7 disnake.partial_emoji.PartialEmoji:38
 #: disnake.permissions.PermissionOverwrite.is_empty:7
 #: disnake.reaction.Reaction:42 disnake.role.Role:59 disnake.role.Role:81
 #: disnake.role.Role:87 disnake.stage_instance.StageInstance:53
@@ -1558,7 +1558,7 @@ msgstr ""
 msgid "Optional[:class:`.Message`]"
 msgstr ""
 
-#: ../../api.rst:2740 ../../api.rst:2748 ../../api.rst:2759 ../../api.rst:2779
+#: ../../api.rst:2751 ../../api.rst:2759 ../../api.rst:2770 ../../api.rst:2790
 #: disnake.abc.Connectable.connect:1 disnake.abc.GuildChannel.clone:1
 #: disnake.abc.GuildChannel.create_invite:1 disnake.abc.GuildChannel.delete:1
 #: disnake.abc.GuildChannel.invites:1 disnake.abc.GuildChannel.move:1
@@ -3072,9 +3072,9 @@ msgstr ""
 msgid "The application ID."
 msgstr ""
 
-#: ../../api.rst:3024 ../../api.rst:3030 ../../api.rst:3075 ../../api.rst:3089
-#: ../../api.rst:3111 ../../api.rst:3229 ../../api.rst:3237 ../../api.rst:3245
-#: ../../api.rst:3266 ../../api.rst:3283 ../../api.rst:3352 ../../api.rst:3358
+#: ../../api.rst:3035 ../../api.rst:3041 ../../api.rst:3086 ../../api.rst:3100
+#: ../../api.rst:3122 ../../api.rst:3240 ../../api.rst:3248 ../../api.rst:3256
+#: ../../api.rst:3277 ../../api.rst:3294 ../../api.rst:3363 ../../api.rst:3369
 #: disnake.Colour.b:3 disnake.Colour.g:3 disnake.Colour.r:3
 #: disnake.DeletedReferencedMessage.channel_id:3
 #: disnake.DeletedReferencedMessage.id:3 disnake.Guild.emoji_limit:3
@@ -3168,8 +3168,8 @@ msgstr ""
 msgid "The application name."
 msgstr ""
 
-#: ../../api.rst:2936 ../../api.rst:3083 ../../api.rst:3103 ../../api.rst:3204
-#: ../../api.rst:3316 ../../api.rst:3324 ../../docstring disnake.Asset.key:3
+#: ../../api.rst:2947 ../../api.rst:3094 ../../api.rst:3114 ../../api.rst:3215
+#: ../../api.rst:3327 ../../api.rst:3335 ../../docstring disnake.Asset.key:3
 #: disnake.Asset.url:3 disnake.CategoryChannel.mention:3
 #: disnake.ClientUser.display_name:7 disnake.ClientUser.mention:3
 #: disnake.Emoji.url:3 disnake.Invite.id:3 disnake.Invite.url:3
@@ -3222,16 +3222,16 @@ msgstr ""
 #: disnake.invite.Invite:59 disnake.invite.PartialInviteChannel:28
 #: disnake.invite.PartialInviteGuild:28 disnake.message.Attachment:52
 #: disnake.message.Attachment:59 disnake.message.Attachment:67
-#: disnake.message.InteractionReference:24 disnake.message.Message:43
-#: disnake.raw_models.RawReactionActionEvent:50 disnake.role.Role:47
-#: disnake.stage_instance.StageInstance:41 disnake.sticker.GuildSticker:23
-#: disnake.sticker.GuildSticker:35 disnake.sticker.GuildSticker:66
-#: disnake.sticker.StandardSticker:23 disnake.sticker.StandardSticker:35
-#: disnake.sticker.Sticker:23 disnake.sticker.Sticker:35
-#: disnake.sticker.Sticker:53 disnake.sticker.StickerItem:23
-#: disnake.sticker.StickerItem:41 disnake.sticker.StickerPack:23
-#: disnake.sticker.StickerPack:29 disnake.team.Team:13
-#: disnake.team.TeamMember:27 disnake.team.TeamMember:39
+#: disnake.message.Attachment:91 disnake.message.InteractionReference:24
+#: disnake.message.Message:43 disnake.raw_models.RawReactionActionEvent:50
+#: disnake.role.Role:47 disnake.stage_instance.StageInstance:41
+#: disnake.sticker.GuildSticker:23 disnake.sticker.GuildSticker:35
+#: disnake.sticker.GuildSticker:66 disnake.sticker.StandardSticker:23
+#: disnake.sticker.StandardSticker:35 disnake.sticker.Sticker:23
+#: disnake.sticker.Sticker:35 disnake.sticker.Sticker:53
+#: disnake.sticker.StickerItem:23 disnake.sticker.StickerItem:41
+#: disnake.sticker.StickerPack:23 disnake.sticker.StickerPack:29
+#: disnake.team.Team:13 disnake.team.TeamMember:27 disnake.team.TeamMember:39
 #: disnake.template.Template:9 disnake.template.Template:21
 #: disnake.template.Template:27 disnake.threads.Thread:27
 #: disnake.ui.Select.custom_id:3 disnake.user.ClientUser:25
@@ -3252,7 +3252,7 @@ msgstr ""
 msgid "The application owner."
 msgstr ""
 
-#: ../../api.rst:3709 disnake.appinfo.AppInfo:20
+#: ../../api.rst:3720 disnake.appinfo.AppInfo:20
 #: disnake.integrations.BotIntegration:39 disnake.integrations.Integration:45
 #: disnake.integrations.StreamIntegration:63
 #: disnake.message.InteractionReference:30 disnake.template.Template:33 of
@@ -3324,7 +3324,7 @@ msgid ""
 " slug that links to the store page."
 msgstr ""
 
-#: ../../api.rst:3147 ../../api.rst:3704 disnake.Activity.large_image_text:3
+#: ../../api.rst:3158 ../../api.rst:3715 disnake.Activity.large_image_text:3
 #: disnake.Activity.large_image_url:3 disnake.Activity.small_image_text:3
 #: disnake.Activity.small_image_url:3 disnake.Streaming.twitch_name:6
 #: disnake.Widget.invite_url:3 disnake.activity.Activity:22
@@ -3339,7 +3339,7 @@ msgstr ""
 #: disnake.channel.TextChannel:49 disnake.components.Button:23
 #: disnake.components.Button:29 disnake.components.Button:41
 #: disnake.components.SelectMenu:17 disnake.components.SelectMenu:23
-#: disnake.components.SelectOption:27 disnake.file.File:30
+#: disnake.components.SelectOption:27 disnake.file.File:30 disnake.file.File:44
 #: disnake.guild.Guild:112 disnake.guild.Guild:199
 #: disnake.integrations.IntegrationApplication:21
 #: disnake.invite.PartialInviteGuild:52 disnake.member.Member:54
@@ -4891,9 +4891,9 @@ msgid "Note that you can get the guild from :attr:`~abc.GuildChannel.guild`."
 msgstr ""
 
 #: ../../api.rst:713 ../../api.rst:722 ../../api.rst:733 ../../api.rst:747
-#: ../../api.rst:760 ../../api.rst:780 ../../api.rst:805 ../../api.rst:934
-#: ../../api.rst:953 ../../api.rst:967 ../../api.rst:981 ../../api.rst:990
-#: ../../api.rst:1031
+#: ../../api.rst:760 ../../api.rst:780 ../../api.rst:805 ../../api.rst:945
+#: ../../api.rst:964 ../../api.rst:978 ../../api.rst:992 ../../api.rst:1001
+#: ../../api.rst:1042
 msgid "This requires :attr:`Intents.guilds` to be enabled."
 msgstr ""
 
@@ -4974,7 +4974,8 @@ msgid ""
 ":attr:`ThreadMember.thread`."
 msgstr ""
 
-#: ../../api.rst:794 ../../api.rst:872 ../../api.rst:887 ../../api.rst:922
+#: ../../api.rst:794 ../../api.rst:872 ../../api.rst:887 ../../api.rst:900
+#: ../../api.rst:933
 msgid "This requires :attr:`Intents.members` to be enabled."
 msgstr ""
 
@@ -5046,7 +5047,7 @@ msgstr ""
 msgid "Called when a :class:`Member` updates their profile."
 msgstr ""
 
-#: ../../api.rst:881 ../../api.rst:898 ../../api.rst:916
+#: ../../api.rst:881 ../../api.rst:909 ../../api.rst:927
 msgid "This is called when one or more of the following things change:"
 msgstr ""
 
@@ -5062,351 +5063,362 @@ msgstr ""
 msgid "pending"
 msgstr ""
 
-#: ../../api.rst:889 ../../api.rst:907
+#: ../../api.rst:889 ../../api.rst:918
 msgid "The updated member's old info."
 msgstr ""
 
-#: ../../api.rst:891 ../../api.rst:909
+#: ../../api.rst:891 ../../api.rst:920
 msgid "The updated member's updated info."
 msgstr ""
 
 #: ../../api.rst:896
+msgid ""
+"Called when a :class:`Member` leaves a :class:`Guild` without completing "
+"membership screening. This does not replace :func:`on_member_remove`; "
+"both will be called."
+msgstr ""
+
+#: ../../api.rst:902
+msgid "The member that left."
+msgstr ""
+
+#: ../../api.rst:907
 msgid "Called when a :class:`Member` updates their presence."
 msgstr ""
 
-#: ../../api.rst:900
+#: ../../api.rst:911
 msgid "status"
 msgstr ""
 
-#: ../../api.rst:901
+#: ../../api.rst:912
 msgid "activity"
 msgstr ""
 
-#: ../../api.rst:903
+#: ../../api.rst:914
 msgid ""
 "This requires :attr:`Intents.presences` and :attr:`Intents.members` to be"
 " enabled."
 msgstr ""
 
-#: ../../api.rst:914
+#: ../../api.rst:925
 msgid "Called when a :class:`User` updates their profile."
 msgstr ""
 
-#: ../../api.rst:918
+#: ../../api.rst:929
 msgid "avatar"
 msgstr ""
 
-#: ../../api.rst:919
+#: ../../api.rst:930
 msgid "username"
 msgstr ""
 
-#: ../../api.rst:920
+#: ../../api.rst:931
 msgid "discriminator"
 msgstr ""
 
-#: ../../api.rst:924
+#: ../../api.rst:935
 msgid "The updated user's old info."
 msgstr ""
 
-#: ../../api.rst:926
+#: ../../api.rst:937
 msgid "The updated user's updated info."
 msgstr ""
 
-#: ../../api.rst:931
+#: ../../api.rst:942
 msgid ""
 "Called when a :class:`Guild` is either created by the :class:`Client` or "
 "when the :class:`Client` joins a guild."
 msgstr ""
 
-#: ../../api.rst:936
+#: ../../api.rst:947
 msgid "The guild that was joined."
 msgstr ""
 
-#: ../../api.rst:941
+#: ../../api.rst:952
 msgid "Called when a :class:`Guild` is removed from the :class:`Client`."
 msgstr ""
 
-#: ../../api.rst:943
+#: ../../api.rst:954
 msgid "This happens through, but not limited to, these circumstances:"
 msgstr ""
 
-#: ../../api.rst:945
+#: ../../api.rst:956
 msgid "The client got banned."
 msgstr ""
 
-#: ../../api.rst:946
+#: ../../api.rst:957
 msgid "The client got kicked."
 msgstr ""
 
-#: ../../api.rst:947
+#: ../../api.rst:958
 msgid "The client left the guild."
 msgstr ""
 
-#: ../../api.rst:948
+#: ../../api.rst:959
 msgid "The client or the guild owner deleted the guild."
 msgstr ""
 
-#: ../../api.rst:950
+#: ../../api.rst:961
 msgid ""
 "In order for this event to be invoked then the :class:`Client` must have "
 "been part of the guild to begin with. (i.e. it is part of "
 ":attr:`Client.guilds`)"
 msgstr ""
 
-#: ../../api.rst:955
+#: ../../api.rst:966
 msgid "The guild that got removed."
 msgstr ""
 
-#: ../../api.rst:960
+#: ../../api.rst:971
 msgid "Called when a :class:`Guild` updates, for example:"
 msgstr ""
 
-#: ../../api.rst:962
+#: ../../api.rst:973
 msgid "Changed name"
 msgstr ""
 
-#: ../../api.rst:963
+#: ../../api.rst:974
 msgid "Changed AFK channel"
 msgstr ""
 
-#: ../../api.rst:964
+#: ../../api.rst:975
 msgid "Changed AFK timeout"
 msgstr ""
 
-#: ../../api.rst:965
+#: ../../api.rst:976
 msgid "etc"
 msgstr ""
 
-#: ../../api.rst:969
+#: ../../api.rst:980
 msgid "The guild prior to being updated."
 msgstr ""
 
-#: ../../api.rst:971
+#: ../../api.rst:982
 msgid "The guild after being updated."
 msgstr ""
 
-#: ../../api.rst:977
+#: ../../api.rst:988
 msgid "Called when a :class:`Guild` creates or deletes a new :class:`Role`."
 msgstr ""
 
-#: ../../api.rst:979
+#: ../../api.rst:990
 msgid "To get the guild it belongs to, use :attr:`Role.guild`."
 msgstr ""
 
-#: ../../api.rst:983
+#: ../../api.rst:994
 msgid "The role that was created or deleted."
 msgstr ""
 
-#: ../../api.rst:988
+#: ../../api.rst:999
 msgid "Called when a :class:`Role` is changed guild-wide."
 msgstr ""
 
-#: ../../api.rst:992
+#: ../../api.rst:1003
 msgid "The updated role's old info."
 msgstr ""
 
-#: ../../api.rst:994
+#: ../../api.rst:1005
 msgid "The updated role's updated info."
 msgstr ""
 
-#: ../../api.rst:999
+#: ../../api.rst:1010
 msgid "Called when a :class:`Guild` adds or removes :class:`Emoji`."
 msgstr ""
 
-#: ../../api.rst:1001 ../../api.rst:1014
+#: ../../api.rst:1012 ../../api.rst:1025
 msgid "This requires :attr:`Intents.emojis_and_stickers` to be enabled."
 msgstr ""
 
-#: ../../api.rst:1003
+#: ../../api.rst:1014
 msgid "The guild who got their emojis updated."
 msgstr ""
 
-#: ../../api.rst:1005
+#: ../../api.rst:1016
 msgid "A list of emojis before the update."
 msgstr ""
 
-#: ../../api.rst:1007
+#: ../../api.rst:1018
 msgid "A list of emojis after the update."
 msgstr ""
 
-#: ../../api.rst:1012
+#: ../../api.rst:1023
 msgid "Called when a :class:`Guild` updates its stickers."
 msgstr ""
 
-#: ../../api.rst:1018
+#: ../../api.rst:1029
 msgid "The guild who got their stickers updated."
 msgstr ""
 
-#: ../../api.rst:1020
+#: ../../api.rst:1031
 msgid "A list of stickers before the update."
 msgstr ""
 
-#: ../../api.rst:1022
+#: ../../api.rst:1033
 msgid "A list of stickers after the update."
 msgstr ""
 
-#: ../../api.rst:1028
+#: ../../api.rst:1039
 msgid ""
 "Called when a guild becomes available or unavailable. The guild must have"
 " existed in the :attr:`Client.guilds` cache."
 msgstr ""
 
-#: ../../api.rst:1033
+#: ../../api.rst:1044
 msgid "The :class:`Guild` that has changed availability."
 msgstr ""
 
-#: ../../api.rst:1037
+#: ../../api.rst:1048
 msgid "Called when a :class:`Member` changes their :class:`VoiceState`."
 msgstr ""
 
-#: ../../api.rst:1039 ../../api.rst:1069
+#: ../../api.rst:1050 ../../api.rst:1080
 msgid ""
 "The following, but not limited to, examples illustrate when this event is"
 " called:"
 msgstr ""
 
-#: ../../api.rst:1041
+#: ../../api.rst:1052
 msgid "A member joins a voice or stage channel."
 msgstr ""
 
-#: ../../api.rst:1042
+#: ../../api.rst:1053
 msgid "A member leaves a voice or stage channel."
 msgstr ""
 
-#: ../../api.rst:1043
+#: ../../api.rst:1054
 msgid "A member is muted or deafened by their own accord."
 msgstr ""
 
-#: ../../api.rst:1044
+#: ../../api.rst:1055
 msgid "A member is muted or deafened by a guild administrator."
 msgstr ""
 
-#: ../../api.rst:1046
+#: ../../api.rst:1057
 msgid "This requires :attr:`Intents.voice_states` to be enabled."
 msgstr ""
 
-#: ../../api.rst:1048
+#: ../../api.rst:1059
 msgid "The member whose voice states changed."
 msgstr ""
 
-#: ../../api.rst:1050
+#: ../../api.rst:1061
 msgid "The voice state prior to the changes."
 msgstr ""
 
-#: ../../api.rst:1052
+#: ../../api.rst:1063
 msgid "The voice state after the changes."
 msgstr ""
 
-#: ../../api.rst:1058
+#: ../../api.rst:1069
 msgid ""
 "Called when a :class:`StageInstance` is created or deleted for a "
 ":class:`StageChannel`."
 msgstr ""
 
-#: ../../api.rst:1062
+#: ../../api.rst:1073
 msgid "The stage instance that was created or deleted."
 msgstr ""
 
-#: ../../api.rst:1067
+#: ../../api.rst:1078
 msgid "Called when a :class:`StageInstance` is updated."
 msgstr ""
 
-#: ../../api.rst:1071
+#: ../../api.rst:1082
 msgid "The topic is changed."
 msgstr ""
 
-#: ../../api.rst:1072
+#: ../../api.rst:1083
 msgid "The privacy level is changed."
 msgstr ""
 
-#: ../../api.rst:1076
+#: ../../api.rst:1087
 msgid "The stage instance before the update."
 msgstr ""
 
-#: ../../api.rst:1078
+#: ../../api.rst:1089
 msgid "The stage instance after the update."
 msgstr ""
 
-#: ../../api.rst:1083
+#: ../../api.rst:1094
 msgid "Called when user gets banned from a :class:`Guild`."
 msgstr ""
 
-#: ../../api.rst:1085 ../../api.rst:1098
+#: ../../api.rst:1096 ../../api.rst:1109
 msgid "This requires :attr:`Intents.bans` to be enabled."
 msgstr ""
 
-#: ../../api.rst:1087
+#: ../../api.rst:1098
 msgid "The guild the user got banned from."
 msgstr ""
 
-#: ../../api.rst:1089
+#: ../../api.rst:1100
 msgid ""
 "The user that got banned. Can be either :class:`User` or :class:`Member` "
 "depending if the user was in the guild or not at the time of removal."
 msgstr ""
 
-#: ../../api.rst:1096
+#: ../../api.rst:1107
 msgid "Called when a :class:`User` gets unbanned from a :class:`Guild`."
 msgstr ""
 
-#: ../../api.rst:1100
+#: ../../api.rst:1111
 msgid "The guild the user got unbanned from."
 msgstr ""
 
-#: ../../api.rst:1102
+#: ../../api.rst:1113
 msgid "The user that got unbanned."
 msgstr ""
 
-#: ../../api.rst:1107
+#: ../../api.rst:1118
 msgid ""
 "Called when an :class:`Invite` is created. You must have the "
 ":attr:`~Permissions.manage_channels` permission to receive this."
 msgstr ""
 
-#: ../../api.rst:1114 ../../api.rst:1131
+#: ../../api.rst:1125 ../../api.rst:1142
 msgid ""
 "There is a rare possibility that the :attr:`Invite.guild` and "
 ":attr:`Invite.channel` attributes will be of :class:`Object` rather than "
 "the respective models."
 msgstr ""
 
-#: ../../api.rst:1117 ../../api.rst:1137
+#: ../../api.rst:1128 ../../api.rst:1148
 msgid "This requires :attr:`Intents.invites` to be enabled."
 msgstr ""
 
-#: ../../api.rst:1119 disnake.abc.GuildChannel.create_invite:39 of
+#: ../../api.rst:1130 disnake.abc.GuildChannel.create_invite:39 of
 msgid "The invite that was created."
 msgstr ""
 
-#: ../../api.rst:1124
+#: ../../api.rst:1135
 msgid ""
 "Called when an :class:`Invite` is deleted. You must have the "
 ":attr:`~Permissions.manage_channels` permission to receive this."
 msgstr ""
 
-#: ../../api.rst:1134
+#: ../../api.rst:1145
 msgid ""
 "Outside of those two attributes, the only other attribute guaranteed to "
 "be filled by the Discord gateway for this event is :attr:`Invite.code`."
 msgstr ""
 
-#: ../../api.rst:1139
+#: ../../api.rst:1150
 msgid "The invite that was deleted."
 msgstr ""
 
-#: ../../api.rst:1145
+#: ../../api.rst:1156
 msgid "Called when someone joins or leaves a :class:`GroupChannel`."
 msgstr ""
 
-#: ../../api.rst:1147
+#: ../../api.rst:1158
 msgid "The group that the user joined or left."
 msgstr ""
 
-#: ../../api.rst:1149
+#: ../../api.rst:1160
 msgid "The user that joined or left."
 msgstr ""
 
-#: ../../api.rst:1155
+#: ../../api.rst:1166
 msgid "Utility Functions"
 msgstr ""
 
@@ -5716,7 +5728,7 @@ msgstr ""
 msgid "Example Output"
 msgstr ""
 
-#: ../../api.rst:2876 ../../api.rst:2896 disnake.utils.format_dt:6 of
+#: ../../api.rst:2887 ../../api.rst:2907 disnake.utils.format_dt:6 of
 msgid "Description"
 msgstr ""
 
@@ -5834,7 +5846,7 @@ msgstr ""
 msgid "The maximum chunk size."
 msgstr ""
 
-#: ../../api.rst:2801 disnake.utils.as_chunks:12 of
+#: ../../api.rst:2812 disnake.utils.as_chunks:12 of
 msgid "The last chunk collected may not be as large as ``max_size``."
 msgstr ""
 
@@ -5846,186 +5858,186 @@ msgstr ""
 msgid "Union[:class:`Iterator`, :class:`AsyncIterator`]"
 msgstr ""
 
-#: ../../api.rst:1186
+#: ../../api.rst:1197
 msgid "Enumerations"
 msgstr ""
 
-#: ../../api.rst:1188
+#: ../../api.rst:1199
 msgid ""
 "The API provides some enumerations for certain types of strings to avoid "
 "the API from being stringly typed in case the strings change in the "
 "future."
 msgstr ""
 
-#: ../../api.rst:1191
+#: ../../api.rst:1202
 msgid ""
 "All enumerations are subclasses of an internal class which mimics the "
 "behaviour of :class:`enum.Enum`."
 msgstr ""
 
-#: ../../api.rst:1196
+#: ../../api.rst:1207
 msgid "Specifies the type of channel."
 msgstr ""
 
-#: ../../api.rst:1200
+#: ../../api.rst:1211
 msgid "A text channel."
 msgstr ""
 
-#: ../../api.rst:1203
+#: ../../api.rst:1214
 msgid "A voice channel."
 msgstr ""
 
-#: ../../api.rst:1206
+#: ../../api.rst:1217
 msgid "A private text channel. Also called a direct message."
 msgstr ""
 
-#: ../../api.rst:1209
+#: ../../api.rst:1220
 msgid "A private group text channel."
 msgstr ""
 
-#: ../../api.rst:1212
+#: ../../api.rst:1223
 msgid "A category channel."
 msgstr ""
 
-#: ../../api.rst:1215
+#: ../../api.rst:1226
 msgid "A guild news channel."
 msgstr ""
 
-#: ../../api.rst:1219
+#: ../../api.rst:1230
 msgid "A guild store channel."
 msgstr ""
 
-#: ../../api.rst:1223
+#: ../../api.rst:1234
 msgid "A guild stage voice channel."
 msgstr ""
 
-#: ../../api.rst:1229
+#: ../../api.rst:1240
 msgid "A news thread."
 msgstr ""
 
-#: ../../api.rst:1235
+#: ../../api.rst:1246
 msgid "A public thread."
 msgstr ""
 
-#: ../../api.rst:1241
+#: ../../api.rst:1252
 msgid "A private thread."
 msgstr ""
 
-#: ../../api.rst:1247
+#: ../../api.rst:1258
 msgid "A student hub channel."
 msgstr ""
 
-#: ../../api.rst:1253
+#: ../../api.rst:1264
 msgid ""
 "Specifies the type of :class:`Message`. This is used to denote if a "
 "message is to be interpreted as a system message or a regular message."
 msgstr ""
 
-#: ../../api.rst:1260 disnake.message.Message:7 of
+#: ../../api.rst:1271 disnake.message.Message:7 of
 msgid "Checks if two messages are equal."
 msgstr ""
 
-#: ../../api.rst:1263 disnake.message.Message:11 of
+#: ../../api.rst:1274 disnake.message.Message:11 of
 msgid "Checks if two messages are not equal."
 msgstr ""
 
-#: ../../api.rst:1267
+#: ../../api.rst:1278
 msgid "The default message type. This is the same as regular messages."
 msgstr ""
 
-#: ../../api.rst:1270
+#: ../../api.rst:1281
 msgid ""
 "The system message when a user is added to a group private message or a "
 "thread."
 msgstr ""
 
-#: ../../api.rst:1274
+#: ../../api.rst:1285
 msgid ""
 "The system message when a user is removed from a group private message or"
 " a thread."
 msgstr ""
 
-#: ../../api.rst:1278
+#: ../../api.rst:1289
 msgid ""
 "The system message denoting call state, e.g. missed call, started call, "
 "etc."
 msgstr ""
 
-#: ../../api.rst:1282
+#: ../../api.rst:1293
 msgid "The system message denoting that a channel's name has been changed."
 msgstr ""
 
-#: ../../api.rst:1285
+#: ../../api.rst:1296
 msgid "The system message denoting that a channel's icon has been changed."
 msgstr ""
 
-#: ../../api.rst:1288
+#: ../../api.rst:1299
 msgid ""
 "The system message denoting that a pinned message has been added to a "
 "channel."
 msgstr ""
 
-#: ../../api.rst:1291
+#: ../../api.rst:1302
 msgid "The system message denoting that a new member has joined a Guild."
 msgstr ""
 
-#: ../../api.rst:1295
+#: ../../api.rst:1306
 msgid "The system message denoting that a member has \"nitro boosted\" a guild."
 msgstr ""
 
-#: ../../api.rst:1298
+#: ../../api.rst:1309
 msgid ""
 "The system message denoting that a member has \"nitro boosted\" a guild "
 "and it achieved level 1."
 msgstr ""
 
-#: ../../api.rst:1302
+#: ../../api.rst:1313
 msgid ""
 "The system message denoting that a member has \"nitro boosted\" a guild "
 "and it achieved level 2."
 msgstr ""
 
-#: ../../api.rst:1306
+#: ../../api.rst:1317
 msgid ""
 "The system message denoting that a member has \"nitro boosted\" a guild "
 "and it achieved level 3."
 msgstr ""
 
-#: ../../api.rst:1310
+#: ../../api.rst:1321
 msgid ""
 "The system message denoting that an announcement channel has been "
 "followed."
 msgstr ""
 
-#: ../../api.rst:1315
+#: ../../api.rst:1326
 msgid "The system message denoting that a member is streaming in the guild."
 msgstr ""
 
-#: ../../api.rst:1320
+#: ../../api.rst:1331
 msgid ""
 "The system message denoting that the guild is no longer eligible for "
 "Server Discovery."
 msgstr ""
 
-#: ../../api.rst:1326
+#: ../../api.rst:1337
 msgid ""
 "The system message denoting that the guild has become eligible again for "
 "Server Discovery."
 msgstr ""
 
-#: ../../api.rst:1332
+#: ../../api.rst:1343
 msgid ""
 "The system message denoting that the guild has failed to meet the Server "
 "Discovery requirements for one week."
 msgstr ""
 
-#: ../../api.rst:1338
+#: ../../api.rst:1349
 msgid ""
 "The system message denoting that the guild has failed to meet the Server "
 "Discovery requirements for 3 weeks in a row."
 msgstr ""
 
-#: ../../api.rst:1344
+#: ../../api.rst:1355
 msgid ""
 "The system message denoting that a thread has been created. This is only "
 "sent if the thread has been created from an older message. The period of "
@@ -6033,786 +6045,786 @@ msgid ""
 "and is up to Discord."
 msgstr ""
 
-#: ../../api.rst:1352
+#: ../../api.rst:1363
 msgid "The system message denoting that the author is replying to a message."
 msgstr ""
 
-#: ../../api.rst:1357
+#: ../../api.rst:1368
 msgid ""
 "The system message denoting that an application (or \"slash\") command "
 "was executed."
 msgstr ""
 
-#: ../../api.rst:1362
+#: ../../api.rst:1373
 msgid "The system message sent as a reminder to invite people to the guild."
 msgstr ""
 
-#: ../../api.rst:1367
+#: ../../api.rst:1378
 msgid ""
 "The system message denoting the message in the thread that is the one "
 "that started the thread's conversation topic."
 msgstr ""
 
-#: ../../api.rst:1374
+#: ../../api.rst:1385
 msgid "Represents Discord User flags."
 msgstr ""
 
-#: ../../api.rst:1378
+#: ../../api.rst:1389
 msgid "The user is a Discord Employee."
 msgstr ""
 
-#: ../../api.rst:1381
+#: ../../api.rst:1392
 msgid "The user is a Discord Partner."
 msgstr ""
 
-#: ../../api.rst:1384
+#: ../../api.rst:1395
 msgid "The user is a HypeSquad Events member."
 msgstr ""
 
-#: ../../api.rst:1387
+#: ../../api.rst:1398
 msgid "The user is a Bug Hunter."
 msgstr ""
 
-#: ../../api.rst:1390
+#: ../../api.rst:1401
 msgid "The user has SMS recovery for Multi Factor Authentication enabled."
 msgstr ""
 
-#: ../../api.rst:1393
+#: ../../api.rst:1404
 msgid "The user has dismissed the Discord Nitro promotion."
 msgstr ""
 
-#: ../../api.rst:1396
+#: ../../api.rst:1407
 msgid "The user is a HypeSquad Bravery member."
 msgstr ""
 
-#: ../../api.rst:1399
+#: ../../api.rst:1410
 msgid "The user is a HypeSquad Brilliance member."
 msgstr ""
 
-#: ../../api.rst:1402
+#: ../../api.rst:1413
 msgid "The user is a HypeSquad Balance member."
 msgstr ""
 
-#: ../../api.rst:1405
+#: ../../api.rst:1416
 msgid "The user is an Early Supporter."
 msgstr ""
 
-#: ../../api.rst:1408
+#: ../../api.rst:1419
 msgid "The user is a Team User."
 msgstr ""
 
-#: ../../api.rst:1411
+#: ../../api.rst:1422
 msgid "The user is a system user (i.e. represents Discord officially)."
 msgstr ""
 
-#: ../../api.rst:1414
+#: ../../api.rst:1425
 msgid "The user has an unread system message."
 msgstr ""
 
-#: ../../api.rst:1417
+#: ../../api.rst:1428
 msgid "The user is a Bug Hunter Level 2."
 msgstr ""
 
-#: ../../api.rst:1420
+#: ../../api.rst:1431
 msgid "The user is a Verified Bot."
 msgstr ""
 
-#: ../../api.rst:1423
+#: ../../api.rst:1434
 msgid "The user is an Early Verified Bot Developer."
 msgstr ""
 
-#: ../../api.rst:1426
+#: ../../api.rst:1437
 msgid "The user is a Discord Certified Moderator."
 msgstr ""
 
-#: ../../api.rst:1430
+#: ../../api.rst:1441
 msgid ""
 "Specifies the type of :class:`Activity`. This is used to check how to "
 "interpret the activity itself."
 msgstr ""
 
-#: ../../api.rst:1435
+#: ../../api.rst:1446
 msgid "An unknown activity type. This should generally not happen."
 msgstr ""
 
-#: ../../api.rst:1438
+#: ../../api.rst:1449
 msgid "A \"Playing\" activity type."
 msgstr ""
 
-#: ../../api.rst:1441
+#: ../../api.rst:1452
 msgid "A \"Streaming\" activity type."
 msgstr ""
 
-#: ../../api.rst:1444
+#: ../../api.rst:1455
 msgid "A \"Listening\" activity type."
 msgstr ""
 
-#: ../../api.rst:1447
+#: ../../api.rst:1458
 msgid "A \"Watching\" activity type."
 msgstr ""
 
-#: ../../api.rst:1450
+#: ../../api.rst:1461
 msgid "A custom activity type."
 msgstr ""
 
-#: ../../api.rst:1453
+#: ../../api.rst:1464
 msgid "A competing activity type."
 msgstr ""
 
-#: ../../api.rst:1459
+#: ../../api.rst:1470
 msgid "Represents the type of an application command."
 msgstr ""
 
-#: ../../api.rst:1465
+#: ../../api.rst:1476
 msgid "Represents a slash command."
 msgstr ""
 
-#: ../../api.rst:1468
+#: ../../api.rst:1479
 msgid "Represents a user command from the context menu."
 msgstr ""
 
-#: ../../api.rst:1471
+#: ../../api.rst:1482
 msgid "Represents a message command from the context menu."
 msgstr ""
 
-#: ../../api.rst:1475
+#: ../../api.rst:1486
 msgid "Specifies the type of :class:`Interaction`."
 msgstr ""
 
-#: ../../api.rst:1481
+#: ../../api.rst:1492
 msgid ""
 "Represents Discord pinging to see if the interaction response server is "
 "alive."
 msgstr ""
 
-#: ../../api.rst:1484
+#: ../../api.rst:1495
 msgid "Represents a slash command interaction."
 msgstr ""
 
-#: ../../api.rst:1487
+#: ../../api.rst:1498
 msgid ""
 "Represents a component based interaction, i.e. using the Discord Bot UI "
 "Kit."
 msgstr ""
 
-#: ../../api.rst:1491
+#: ../../api.rst:1502
 msgid "Specifies the response type for the interaction."
 msgstr ""
 
-#: ../../api.rst:1497
+#: ../../api.rst:1508
 msgid "Pongs the interaction when given a ping."
 msgstr ""
 
-#: ../../api.rst:1499
+#: ../../api.rst:1510
 msgid "See also :meth:`InteractionResponse.pong`"
 msgstr ""
 
-#: ../../api.rst:1502
+#: ../../api.rst:1513
 msgid "Respond to the interaction with a message."
 msgstr ""
 
-#: ../../api.rst:1504
+#: ../../api.rst:1515
 msgid "See also :meth:`InteractionResponse.send_message`"
 msgstr ""
 
-#: ../../api.rst:1507
+#: ../../api.rst:1518
 msgid "Responds to the interaction with a message at a later time."
 msgstr ""
 
-#: ../../api.rst:1509 ../../api.rst:1515
+#: ../../api.rst:1520 ../../api.rst:1526
 msgid "See also :meth:`InteractionResponse.defer`"
 msgstr ""
 
-#: ../../api.rst:1512
+#: ../../api.rst:1523
 msgid ""
 "Acknowledges the component interaction with a promise that the message "
 "will update later (though there is no need to actually update the "
 "message)."
 msgstr ""
 
-#: ../../api.rst:1518
+#: ../../api.rst:1529
 msgid "Responds to the interaction by editing the message."
 msgstr ""
 
-#: ../../api.rst:1520
+#: ../../api.rst:1531
 msgid "See also :meth:`InteractionResponse.edit_message`"
 msgstr ""
 
-#: ../../api.rst:1524
+#: ../../api.rst:1535
 msgid "Represents the component type of a component."
 msgstr ""
 
-#: ../../api.rst:1530
+#: ../../api.rst:1541
 msgid "Represents the group component which holds different components in a row."
 msgstr ""
 
-#: ../../api.rst:1533
+#: ../../api.rst:1544
 msgid "Represents a button component."
 msgstr ""
 
-#: ../../api.rst:1536
+#: ../../api.rst:1547
 msgid "Represents a select component."
 msgstr ""
 
-#: ../../api.rst:1540
+#: ../../api.rst:1551
 msgid "Represents the type of an option."
 msgstr ""
 
-#: ../../api.rst:1546
+#: ../../api.rst:1557
 msgid "Represents a sub command of the main command or group."
 msgstr ""
 
-#: ../../api.rst:1549
+#: ../../api.rst:1560
 msgid "Represents a sub command group of the main command."
 msgstr ""
 
-#: ../../api.rst:1552
+#: ../../api.rst:1563
 msgid "Represents a string option."
 msgstr ""
 
-#: ../../api.rst:1555
+#: ../../api.rst:1566
 msgid "Represents an integer option."
 msgstr ""
 
-#: ../../api.rst:1558
+#: ../../api.rst:1569
 msgid "Represents a boolean option."
 msgstr ""
 
-#: ../../api.rst:1561
+#: ../../api.rst:1572
 msgid "Represents a user option."
 msgstr ""
 
-#: ../../api.rst:1564
+#: ../../api.rst:1575
 msgid "Represents a channel option."
 msgstr ""
 
-#: ../../api.rst:1567
+#: ../../api.rst:1578
 msgid "Represents a role option."
 msgstr ""
 
-#: ../../api.rst:1570
+#: ../../api.rst:1581
 msgid "Represents a role + user option."
 msgstr ""
 
-#: ../../api.rst:1573
+#: ../../api.rst:1584
 msgid "Represents a float option."
 msgstr ""
 
-#: ../../api.rst:1578
+#: ../../api.rst:1589
 msgid "Represents the style of the button component."
 msgstr ""
 
-#: ../../api.rst:1584
+#: ../../api.rst:1595
 msgid "Represents a blurple button for the primary action."
 msgstr ""
 
-#: ../../api.rst:1587
+#: ../../api.rst:1598
 msgid "Represents a grey button for the secondary action."
 msgstr ""
 
-#: ../../api.rst:1590
+#: ../../api.rst:1601
 msgid "Represents a green button for a successful action."
 msgstr ""
 
-#: ../../api.rst:1593
+#: ../../api.rst:1604
 msgid "Represents a red button for a dangerous action."
 msgstr ""
 
-#: ../../api.rst:1596
+#: ../../api.rst:1607
 msgid "Represents a link button."
 msgstr ""
 
-#: ../../api.rst:1600
+#: ../../api.rst:1611
 msgid "An alias for :attr:`primary`."
 msgstr ""
 
-#: ../../api.rst:1603 ../../api.rst:1606
+#: ../../api.rst:1614 ../../api.rst:1617
 msgid "An alias for :attr:`secondary`."
 msgstr ""
 
-#: ../../api.rst:1609
+#: ../../api.rst:1620
 msgid "An alias for :attr:`success`."
 msgstr ""
 
-#: ../../api.rst:1612
+#: ../../api.rst:1623
 msgid "An alias for :attr:`danger`."
 msgstr ""
 
-#: ../../api.rst:1615
+#: ../../api.rst:1626
 msgid "An alias for :attr:`link`."
 msgstr ""
 
-#: ../../api.rst:1619
+#: ../../api.rst:1630
 msgid "Specifies the region a voice server belongs to."
 msgstr ""
 
-#: ../../api.rst:1623
+#: ../../api.rst:1634
 msgid "The Amsterdam region."
 msgstr ""
 
-#: ../../api.rst:1626
+#: ../../api.rst:1637
 msgid "The Brazil region."
 msgstr ""
 
-#: ../../api.rst:1629
+#: ../../api.rst:1640
 msgid "The Dubai region."
 msgstr ""
 
-#: ../../api.rst:1635
+#: ../../api.rst:1646
 msgid "The EU Central region."
 msgstr ""
 
-#: ../../api.rst:1638
+#: ../../api.rst:1649
 msgid "The EU West region."
 msgstr ""
 
-#: ../../api.rst:1641
+#: ../../api.rst:1652
 msgid "The Europe region."
 msgstr ""
 
-#: ../../api.rst:1647
+#: ../../api.rst:1658
 msgid "The Frankfurt region."
 msgstr ""
 
-#: ../../api.rst:1650
+#: ../../api.rst:1661
 msgid "The Hong Kong region."
 msgstr ""
 
-#: ../../api.rst:1653
+#: ../../api.rst:1664
 msgid "The India region."
 msgstr ""
 
-#: ../../api.rst:1659
+#: ../../api.rst:1670
 msgid "The Japan region."
 msgstr ""
 
-#: ../../api.rst:1662
+#: ../../api.rst:1673
 msgid "The London region."
 msgstr ""
 
-#: ../../api.rst:1665
+#: ../../api.rst:1676
 msgid "The Russia region."
 msgstr ""
 
-#: ../../api.rst:1668
+#: ../../api.rst:1679
 msgid "The Singapore region."
 msgstr ""
 
-#: ../../api.rst:1671
+#: ../../api.rst:1682
 msgid "The South Africa region."
 msgstr ""
 
-#: ../../api.rst:1674
+#: ../../api.rst:1685
 msgid "The South Korea region."
 msgstr ""
 
-#: ../../api.rst:1677
+#: ../../api.rst:1688
 msgid "The Sydney region."
 msgstr ""
 
-#: ../../api.rst:1680
+#: ../../api.rst:1691
 msgid "The US Central region."
 msgstr ""
 
-#: ../../api.rst:1683
+#: ../../api.rst:1694
 msgid "The US East region."
 msgstr ""
 
-#: ../../api.rst:1686
+#: ../../api.rst:1697
 msgid "The US South region."
 msgstr ""
 
-#: ../../api.rst:1689
+#: ../../api.rst:1700
 msgid "The US West region."
 msgstr ""
 
-#: ../../api.rst:1692
+#: ../../api.rst:1703
 msgid "The Amsterdam region for VIP guilds."
 msgstr ""
 
-#: ../../api.rst:1695
+#: ../../api.rst:1706
 msgid "The US East region for VIP guilds."
 msgstr ""
 
-#: ../../api.rst:1698
+#: ../../api.rst:1709
 msgid "The US West region for VIP guilds."
 msgstr ""
 
-#: ../../api.rst:1702
+#: ../../api.rst:1713
 msgid ""
 "Specifies a :class:`Guild`\\'s verification level, which is the criteria "
 "in which a member must meet before being able to send messages to the "
 "guild."
 msgstr ""
 
-#: ../../api.rst:1711
+#: ../../api.rst:1722
 msgid "Checks if two verification levels are equal."
 msgstr ""
 
-#: ../../api.rst:1714
+#: ../../api.rst:1725
 msgid "Checks if two verification levels are not equal."
 msgstr ""
 
-#: ../../api.rst:1717
+#: ../../api.rst:1728
 msgid "Checks if a verification level is higher than another."
 msgstr ""
 
-#: ../../api.rst:1720
+#: ../../api.rst:1731
 msgid "Checks if a verification level is lower than another."
 msgstr ""
 
-#: ../../api.rst:1723
+#: ../../api.rst:1734
 msgid "Checks if a verification level is higher or equal to another."
 msgstr ""
 
-#: ../../api.rst:1726
+#: ../../api.rst:1737
 msgid "Checks if a verification level is lower or equal to another."
 msgstr ""
 
-#: ../../api.rst:1730
+#: ../../api.rst:1741
 msgid "No criteria set."
 msgstr ""
 
-#: ../../api.rst:1733
+#: ../../api.rst:1744
 msgid "Member must have a verified email on their Discord account."
 msgstr ""
 
-#: ../../api.rst:1736
+#: ../../api.rst:1747
 msgid ""
 "Member must have a verified email and be registered on Discord for more "
 "than five minutes."
 msgstr ""
 
-#: ../../api.rst:1740
+#: ../../api.rst:1751
 msgid ""
 "Member must have a verified email, be registered on Discord for more than"
 " five minutes, and be a member of the guild itself for more than ten "
 "minutes."
 msgstr ""
 
-#: ../../api.rst:1745
+#: ../../api.rst:1756
 msgid "Member must have a verified phone on their Discord account."
 msgstr ""
 
-#: ../../api.rst:1749
+#: ../../api.rst:1760
 msgid ""
 "Specifies whether a :class:`Guild` has notifications on for all messages "
 "or mentions only by default."
 msgstr ""
 
-#: ../../api.rst:1757
+#: ../../api.rst:1768
 msgid "Checks if two notification levels are equal."
 msgstr ""
 
-#: ../../api.rst:1760
+#: ../../api.rst:1771
 msgid "Checks if two notification levels are not equal."
 msgstr ""
 
-#: ../../api.rst:1763
+#: ../../api.rst:1774
 msgid "Checks if a notification level is higher than another."
 msgstr ""
 
-#: ../../api.rst:1766
+#: ../../api.rst:1777
 msgid "Checks if a notification level is lower than another."
 msgstr ""
 
-#: ../../api.rst:1769
+#: ../../api.rst:1780
 msgid "Checks if a notification level is higher or equal to another."
 msgstr ""
 
-#: ../../api.rst:1772
+#: ../../api.rst:1783
 msgid "Checks if a notification level is lower or equal to another."
 msgstr ""
 
-#: ../../api.rst:1776
+#: ../../api.rst:1787
 msgid ""
 "Members receive notifications for every message regardless of them being "
 "mentioned."
 msgstr ""
 
-#: ../../api.rst:1779
+#: ../../api.rst:1790
 msgid "Members receive notifications for messages they are mentioned in."
 msgstr ""
 
-#: ../../api.rst:1783
+#: ../../api.rst:1794
 msgid ""
 "Specifies a :class:`Guild`\\'s explicit content filter, which is the "
 "machine learning algorithms that Discord uses to detect if an image "
 "contains pornography or otherwise explicit content."
 msgstr ""
 
-#: ../../api.rst:1793
+#: ../../api.rst:1804
 msgid "Checks if two content filter levels are equal."
 msgstr ""
 
-#: ../../api.rst:1796
+#: ../../api.rst:1807
 msgid "Checks if two content filter levels are not equal."
 msgstr ""
 
-#: ../../api.rst:1799
+#: ../../api.rst:1810
 msgid "Checks if a content filter level is higher than another."
 msgstr ""
 
-#: ../../api.rst:1802
+#: ../../api.rst:1813
 msgid "Checks if a content filter level is lower than another."
 msgstr ""
 
-#: ../../api.rst:1805
+#: ../../api.rst:1816
 msgid "Checks if a content filter level is higher or equal to another."
 msgstr ""
 
-#: ../../api.rst:1808
+#: ../../api.rst:1819
 msgid "Checks if a content filter level is lower or equal to another."
 msgstr ""
 
-#: ../../api.rst:1812
+#: ../../api.rst:1823
 msgid "The guild does not have the content filter enabled."
 msgstr ""
 
-#: ../../api.rst:1815
+#: ../../api.rst:1826
 msgid "The guild has the content filter enabled for members without a role."
 msgstr ""
 
-#: ../../api.rst:1818
+#: ../../api.rst:1829
 msgid "The guild has the content filter enabled for every member."
 msgstr ""
 
-#: ../../api.rst:1822
+#: ../../api.rst:1833
 msgid "Specifies a :class:`Member` 's status."
 msgstr ""
 
-#: ../../api.rst:1826
+#: ../../api.rst:1837
 msgid "The member is online."
 msgstr ""
 
-#: ../../api.rst:1829
+#: ../../api.rst:1840
 msgid "The member is offline."
 msgstr ""
 
-#: ../../api.rst:1832
+#: ../../api.rst:1843
 msgid "The member is idle."
 msgstr ""
 
-#: ../../api.rst:1835
+#: ../../api.rst:1846
 msgid "The member is \"Do Not Disturb\"."
 msgstr ""
 
-#: ../../api.rst:1838
+#: ../../api.rst:1849
 msgid "An alias for :attr:`dnd`."
 msgstr ""
 
-#: ../../api.rst:1841
+#: ../../api.rst:1852
 msgid ""
 "The member is \"invisible\". In reality, this is only used in sending a "
 "presence a la :meth:`Client.change_presence`. When you receive a user's "
 "presence this will be :attr:`offline` instead."
 msgstr ""
 
-#: ../../api.rst:1848
+#: ../../api.rst:1859
 msgid ""
 "Represents the type of action being done for a :class:`AuditLogEntry`\\, "
 "which is retrievable via :meth:`Guild.audit_logs`."
 msgstr ""
 
-#: ../../api.rst:1853
+#: ../../api.rst:1864
 msgid "The guild has updated. Things that trigger this include:"
 msgstr ""
 
-#: ../../api.rst:1855
+#: ../../api.rst:1866
 msgid "Changing the guild vanity URL"
 msgstr ""
 
-#: ../../api.rst:1856
+#: ../../api.rst:1867
 msgid "Changing the guild invite splash"
 msgstr ""
 
-#: ../../api.rst:1857
+#: ../../api.rst:1868
 msgid "Changing the guild AFK channel or timeout"
 msgstr ""
 
-#: ../../api.rst:1858
+#: ../../api.rst:1869
 msgid "Changing the guild voice server region"
 msgstr ""
 
-#: ../../api.rst:1859
+#: ../../api.rst:1870
 msgid "Changing the guild icon, banner, or discovery splash"
 msgstr ""
 
-#: ../../api.rst:1860
+#: ../../api.rst:1871
 msgid "Changing the guild moderation settings"
 msgstr ""
 
-#: ../../api.rst:1861
+#: ../../api.rst:1872
 msgid "Changing things related to the guild widget"
 msgstr ""
 
-#: ../../api.rst:1863
+#: ../../api.rst:1874
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Guild`."
 msgstr ""
 
-#: ../../api.rst:1866 ../../api.rst:1892 ../../api.rst:1911 ../../api.rst:1933
-#: ../../api.rst:1952 ../../api.rst:1968 ../../api.rst:1983 ../../api.rst:2042
-#: ../../api.rst:2056 ../../api.rst:2101 ../../api.rst:2121 ../../api.rst:2136
-#: ../../api.rst:2151 ../../api.rst:2175 ../../api.rst:2192 ../../api.rst:2208
-#: ../../api.rst:2221 ../../api.rst:2234 ../../api.rst:2245 ../../api.rst:2256
-#: ../../api.rst:2353 ../../api.rst:2368 ../../api.rst:2389 ../../api.rst:2408
-#: ../../api.rst:2427 ../../api.rst:2446 ../../api.rst:2463 ../../api.rst:2480
+#: ../../api.rst:1877 ../../api.rst:1903 ../../api.rst:1922 ../../api.rst:1944
+#: ../../api.rst:1963 ../../api.rst:1979 ../../api.rst:1994 ../../api.rst:2053
+#: ../../api.rst:2067 ../../api.rst:2112 ../../api.rst:2132 ../../api.rst:2147
+#: ../../api.rst:2162 ../../api.rst:2186 ../../api.rst:2203 ../../api.rst:2219
+#: ../../api.rst:2232 ../../api.rst:2245 ../../api.rst:2256 ../../api.rst:2267
+#: ../../api.rst:2364 ../../api.rst:2379 ../../api.rst:2400 ../../api.rst:2419
+#: ../../api.rst:2438 ../../api.rst:2457 ../../api.rst:2474 ../../api.rst:2491
 msgid "Possible attributes for :class:`AuditLogDiff`:"
 msgstr ""
 
-#: ../../api.rst:1868
+#: ../../api.rst:1879
 msgid ":attr:`~AuditLogDiff.afk_channel`"
 msgstr ""
 
-#: ../../api.rst:1869
+#: ../../api.rst:1880
 msgid ":attr:`~AuditLogDiff.system_channel`"
 msgstr ""
 
-#: ../../api.rst:1870
+#: ../../api.rst:1881
 msgid ":attr:`~AuditLogDiff.afk_timeout`"
 msgstr ""
 
-#: ../../api.rst:1871
+#: ../../api.rst:1882
 msgid ":attr:`~AuditLogDiff.default_message_notifications`"
 msgstr ""
 
-#: ../../api.rst:1872
+#: ../../api.rst:1883
 msgid ":attr:`~AuditLogDiff.explicit_content_filter`"
 msgstr ""
 
-#: ../../api.rst:1873
+#: ../../api.rst:1884
 msgid ":attr:`~AuditLogDiff.mfa_level`"
 msgstr ""
 
-#: ../../api.rst:1874 ../../api.rst:1894 ../../api.rst:1913 ../../api.rst:1935
-#: ../../api.rst:2106 ../../api.rst:2126 ../../api.rst:2141 ../../api.rst:2195
-#: ../../api.rst:2211 ../../api.rst:2224 ../../api.rst:2236 ../../api.rst:2247
-#: ../../api.rst:2258 ../../api.rst:2391 ../../api.rst:2410 ../../api.rst:2429
-#: ../../api.rst:2448 ../../api.rst:2465 ../../api.rst:2482
+#: ../../api.rst:1885 ../../api.rst:1905 ../../api.rst:1924 ../../api.rst:1946
+#: ../../api.rst:2117 ../../api.rst:2137 ../../api.rst:2152 ../../api.rst:2206
+#: ../../api.rst:2222 ../../api.rst:2235 ../../api.rst:2247 ../../api.rst:2258
+#: ../../api.rst:2269 ../../api.rst:2402 ../../api.rst:2421 ../../api.rst:2440
+#: ../../api.rst:2459 ../../api.rst:2476 ../../api.rst:2493
 msgid ":attr:`~AuditLogDiff.name`"
 msgstr ""
 
-#: ../../api.rst:1875
+#: ../../api.rst:1886
 msgid ":attr:`~AuditLogDiff.owner`"
 msgstr ""
 
-#: ../../api.rst:1876
+#: ../../api.rst:1887
 msgid ":attr:`~AuditLogDiff.splash`"
 msgstr ""
 
-#: ../../api.rst:1877
+#: ../../api.rst:1888
 msgid ":attr:`~AuditLogDiff.discovery_splash`"
 msgstr ""
 
-#: ../../api.rst:1878
+#: ../../api.rst:1889
 msgid ":attr:`~AuditLogDiff.icon`"
 msgstr ""
 
-#: ../../api.rst:1879
+#: ../../api.rst:1890
 msgid ":attr:`~AuditLogDiff.banner`"
 msgstr ""
 
-#: ../../api.rst:1880
+#: ../../api.rst:1891
 msgid ":attr:`~AuditLogDiff.vanity_url_code`"
 msgstr ""
 
-#: ../../api.rst:1884
+#: ../../api.rst:1895
 msgid "A new channel was created."
 msgstr ""
 
-#: ../../api.rst:1886
+#: ../../api.rst:1897
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is "
 "either a :class:`abc.GuildChannel` or :class:`Object` with an ID."
 msgstr ""
 
-#: ../../api.rst:1889
+#: ../../api.rst:1900
 msgid ""
 "A more filled out object in the :class:`Object` case can be found by "
 "using :attr:`~AuditLogEntry.after`."
 msgstr ""
 
-#: ../../api.rst:1895 ../../api.rst:1914 ../../api.rst:1936 ../../api.rst:1957
-#: ../../api.rst:1973 ../../api.rst:1988 ../../api.rst:2393 ../../api.rst:2412
-#: ../../api.rst:2431
+#: ../../api.rst:1906 ../../api.rst:1925 ../../api.rst:1947 ../../api.rst:1968
+#: ../../api.rst:1984 ../../api.rst:1999 ../../api.rst:2404 ../../api.rst:2423
+#: ../../api.rst:2442
 msgid ":attr:`~AuditLogDiff.type`"
 msgstr ""
 
-#: ../../api.rst:1896 ../../api.rst:1916 ../../api.rst:1937
+#: ../../api.rst:1907 ../../api.rst:1927 ../../api.rst:1948
 msgid ":attr:`~AuditLogDiff.overwrites`"
 msgstr ""
 
-#: ../../api.rst:1900
+#: ../../api.rst:1911
 msgid "A channel was updated. Things that trigger this include:"
 msgstr ""
 
-#: ../../api.rst:1902
+#: ../../api.rst:1913
 msgid "The channel name or topic was changed"
 msgstr ""
 
-#: ../../api.rst:1903
+#: ../../api.rst:1914
 msgid "The channel bitrate was changed"
 msgstr ""
 
-#: ../../api.rst:1905 ../../api.rst:1943
+#: ../../api.rst:1916 ../../api.rst:1954
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`abc.GuildChannel` or :class:`Object` with an ID."
 msgstr ""
 
-#: ../../api.rst:1908
+#: ../../api.rst:1919
 msgid ""
 "A more filled out object in the :class:`Object` case can be found by "
 "using :attr:`~AuditLogEntry.after` or :attr:`~AuditLogEntry.before`."
 msgstr ""
 
-#: ../../api.rst:1915
+#: ../../api.rst:1926
 msgid ":attr:`~AuditLogDiff.position`"
 msgstr ""
 
-#: ../../api.rst:1917 ../../api.rst:2355 ../../api.rst:2370
+#: ../../api.rst:1928 ../../api.rst:2366 ../../api.rst:2381
 msgid ":attr:`~AuditLogDiff.topic`"
 msgstr ""
 
-#: ../../api.rst:1918
+#: ../../api.rst:1929
 msgid ":attr:`~AuditLogDiff.bitrate`"
 msgstr ""
 
-#: ../../api.rst:1919
+#: ../../api.rst:1930
 msgid ":attr:`~AuditLogDiff.rtc_region`"
 msgstr ""
 
-#: ../../api.rst:1920
+#: ../../api.rst:1931
 msgid ":attr:`~AuditLogDiff.video_quality_mode`"
 msgstr ""
 
-#: ../../api.rst:1921
+#: ../../api.rst:1932
 msgid ":attr:`~AuditLogDiff.default_auto_archive_duration`"
 msgstr ""
 
-#: ../../api.rst:1925
+#: ../../api.rst:1936
 msgid "A channel was deleted."
 msgstr ""
 
-#: ../../api.rst:1927
+#: ../../api.rst:1938
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is an "
 ":class:`Object` with an ID."
 msgstr ""
 
-#: ../../api.rst:1930
+#: ../../api.rst:1941
 msgid ""
 "A more filled out object can be found by using the "
 ":attr:`~AuditLogEntry.before` object."
 msgstr ""
 
-#: ../../api.rst:1941
+#: ../../api.rst:1952
 msgid "A channel permission overwrite was created."
 msgstr ""
 
-#: ../../api.rst:1946
+#: ../../api.rst:1957
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.extra` is "
 "either a :class:`Role` or :class:`Member`. If the object is not found "
@@ -6821,867 +6833,867 @@ msgid ""
 "dictate what type of ID it is."
 msgstr ""
 
-#: ../../api.rst:1954 ../../api.rst:1970 ../../api.rst:1985
+#: ../../api.rst:1965 ../../api.rst:1981 ../../api.rst:1996
 msgid ":attr:`~AuditLogDiff.deny`"
 msgstr ""
 
-#: ../../api.rst:1955 ../../api.rst:1971 ../../api.rst:1986
+#: ../../api.rst:1966 ../../api.rst:1982 ../../api.rst:1997
 msgid ":attr:`~AuditLogDiff.allow`"
 msgstr ""
 
-#: ../../api.rst:1956 ../../api.rst:1972 ../../api.rst:1987
+#: ../../api.rst:1967 ../../api.rst:1983 ../../api.rst:1998
 msgid ":attr:`~AuditLogDiff.id`"
 msgstr ""
 
-#: ../../api.rst:1961
+#: ../../api.rst:1972
 msgid ""
 "A channel permission overwrite was changed, this is typically when the "
 "permission values change."
 msgstr ""
 
-#: ../../api.rst:1964 ../../api.rst:1979
+#: ../../api.rst:1975 ../../api.rst:1990
 msgid ""
 "See :attr:`overwrite_create` for more information on how the "
 ":attr:`~AuditLogEntry.target` and :attr:`~AuditLogEntry.extra` fields are"
 " set."
 msgstr ""
 
-#: ../../api.rst:1977
+#: ../../api.rst:1988
 msgid "A channel permission overwrite was deleted."
 msgstr ""
 
-#: ../../api.rst:1992
+#: ../../api.rst:2003
 msgid "A member was kicked."
 msgstr ""
 
-#: ../../api.rst:1994
+#: ../../api.rst:2005
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`User` who got kicked."
 msgstr ""
 
-#: ../../api.rst:1997 ../../api.rst:2012 ../../api.rst:2021 ../../api.rst:2030
+#: ../../api.rst:2008 ../../api.rst:2023 ../../api.rst:2032 ../../api.rst:2041
 msgid "When this is the action, :attr:`~AuditLogEntry.changes` is empty."
 msgstr ""
 
-#: ../../api.rst:2001
+#: ../../api.rst:2012
 msgid "A member prune was triggered."
 msgstr ""
 
-#: ../../api.rst:2003
+#: ../../api.rst:2014
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is set"
 " to ``None``."
 msgstr ""
 
-#: ../../api.rst:2006 ../../api.rst:2065 ../../api.rst:2268 ../../api.rst:2295
-#: ../../api.rst:2310
+#: ../../api.rst:2017 ../../api.rst:2076 ../../api.rst:2279 ../../api.rst:2306
+#: ../../api.rst:2321
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.extra` is set "
 "to an unspecified proxy object with two attributes:"
 msgstr ""
 
-#: ../../api.rst:2009
+#: ../../api.rst:2020
 msgid "``delete_members_days``: An integer specifying how far the prune was."
 msgstr ""
 
-#: ../../api.rst:2010
+#: ../../api.rst:2021
 msgid "``members_removed``: An integer specifying how many members were removed."
 msgstr ""
 
-#: ../../api.rst:2016
+#: ../../api.rst:2027
 msgid "A member was banned."
 msgstr ""
 
-#: ../../api.rst:2018
+#: ../../api.rst:2029
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`User` who got banned."
 msgstr ""
 
-#: ../../api.rst:2025
+#: ../../api.rst:2036
 msgid "A member was unbanned."
 msgstr ""
 
-#: ../../api.rst:2027
+#: ../../api.rst:2038
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`User` who got unbanned."
 msgstr ""
 
-#: ../../api.rst:2034
+#: ../../api.rst:2045
 msgid "A member has updated. This triggers in the following situations:"
 msgstr ""
 
-#: ../../api.rst:2036
+#: ../../api.rst:2047
 msgid "A nickname was changed"
 msgstr ""
 
-#: ../../api.rst:2037
+#: ../../api.rst:2048
 msgid "They were server muted or deafened (or it was undo'd)"
 msgstr ""
 
-#: ../../api.rst:2039
+#: ../../api.rst:2050
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Member` or :class:`User` who got updated."
 msgstr ""
 
-#: ../../api.rst:2044
+#: ../../api.rst:2055
 msgid ":attr:`~AuditLogDiff.nick`"
 msgstr ""
 
-#: ../../api.rst:2045
+#: ../../api.rst:2056
 msgid ":attr:`~AuditLogDiff.mute`"
 msgstr ""
 
-#: ../../api.rst:2046
+#: ../../api.rst:2057
 msgid ":attr:`~AuditLogDiff.deaf`"
 msgstr ""
 
-#: ../../api.rst:2050
+#: ../../api.rst:2061
 msgid ""
 "A member's role has been updated. This triggers when a member either "
 "gains a role or loses a role."
 msgstr ""
 
-#: ../../api.rst:2053
+#: ../../api.rst:2064
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Member` or :class:`User` who got the role."
 msgstr ""
 
-#: ../../api.rst:2058
+#: ../../api.rst:2069
 msgid ":attr:`~AuditLogDiff.roles`"
 msgstr ""
 
-#: ../../api.rst:2062
+#: ../../api.rst:2073
 msgid ""
 "A member's voice channel has been updated. This triggers when a member is"
 " moved to a different voice channel."
 msgstr ""
 
-#: ../../api.rst:2068
+#: ../../api.rst:2079
 msgid ""
 "``channel``: A :class:`TextChannel` or :class:`Object` with the channel "
 "ID where the members were moved."
 msgstr ""
 
-#: ../../api.rst:2069
+#: ../../api.rst:2080
 msgid "``count``: An integer specifying how many members were moved."
 msgstr ""
 
-#: ../../api.rst:2075
+#: ../../api.rst:2086
 msgid ""
 "A member's voice state has changed. This triggers when a member is force "
 "disconnected from voice."
 msgstr ""
 
-#: ../../api.rst:2078 ../../api.rst:2281
+#: ../../api.rst:2089 ../../api.rst:2292
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.extra` is set "
 "to an unspecified proxy object with one attribute:"
 msgstr ""
 
-#: ../../api.rst:2081
+#: ../../api.rst:2092
 msgid "``count``: An integer specifying how many members were disconnected."
 msgstr ""
 
-#: ../../api.rst:2087
+#: ../../api.rst:2098
 msgid "A bot was added to the guild."
 msgstr ""
 
-#: ../../api.rst:2089
+#: ../../api.rst:2100
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Member` or :class:`User` which was added to the guild."
 msgstr ""
 
-#: ../../api.rst:2096
+#: ../../api.rst:2107
 msgid "A new role was created."
 msgstr ""
 
-#: ../../api.rst:2098 ../../api.rst:2118 ../../api.rst:2133
+#: ../../api.rst:2109 ../../api.rst:2129 ../../api.rst:2144
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Role` or a :class:`Object` with the ID."
 msgstr ""
 
-#: ../../api.rst:2103 ../../api.rst:2123 ../../api.rst:2138
+#: ../../api.rst:2114 ../../api.rst:2134 ../../api.rst:2149
 msgid ":attr:`~AuditLogDiff.colour`"
 msgstr ""
 
-#: ../../api.rst:2104 ../../api.rst:2124 ../../api.rst:2139
+#: ../../api.rst:2115 ../../api.rst:2135 ../../api.rst:2150
 msgid ":attr:`~AuditLogDiff.mentionable`"
 msgstr ""
 
-#: ../../api.rst:2105 ../../api.rst:2125 ../../api.rst:2140
+#: ../../api.rst:2116 ../../api.rst:2136 ../../api.rst:2151
 msgid ":attr:`~AuditLogDiff.hoist`"
 msgstr ""
 
-#: ../../api.rst:2107 ../../api.rst:2127 ../../api.rst:2142
+#: ../../api.rst:2118 ../../api.rst:2138 ../../api.rst:2153
 msgid ":attr:`~AuditLogDiff.permissions`"
 msgstr ""
 
-#: ../../api.rst:2111
+#: ../../api.rst:2122
 msgid "A role was updated. This triggers in the following situations:"
 msgstr ""
 
-#: ../../api.rst:2113
+#: ../../api.rst:2124
 msgid "The name has changed"
 msgstr ""
 
-#: ../../api.rst:2114
+#: ../../api.rst:2125
 msgid "The permissions have changed"
 msgstr ""
 
-#: ../../api.rst:2115
+#: ../../api.rst:2126
 msgid "The colour has changed"
 msgstr ""
 
-#: ../../api.rst:2116
+#: ../../api.rst:2127
 msgid "Its hoist/mentionable state has changed"
 msgstr ""
 
-#: ../../api.rst:2131
+#: ../../api.rst:2142
 msgid "A role was deleted."
 msgstr ""
 
-#: ../../api.rst:2146
+#: ../../api.rst:2157
 msgid "An invite was created."
 msgstr ""
 
-#: ../../api.rst:2148
+#: ../../api.rst:2159
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Invite` that was created."
 msgstr ""
 
-#: ../../api.rst:2153 ../../api.rst:2177
+#: ../../api.rst:2164 ../../api.rst:2188
 msgid ":attr:`~AuditLogDiff.max_age`"
 msgstr ""
 
-#: ../../api.rst:2154 ../../api.rst:2178
+#: ../../api.rst:2165 ../../api.rst:2189
 msgid ":attr:`~AuditLogDiff.code`"
 msgstr ""
 
-#: ../../api.rst:2155 ../../api.rst:2179
+#: ../../api.rst:2166 ../../api.rst:2190
 msgid ":attr:`~AuditLogDiff.temporary`"
 msgstr ""
 
-#: ../../api.rst:2156 ../../api.rst:2180
+#: ../../api.rst:2167 ../../api.rst:2191
 msgid ":attr:`~AuditLogDiff.inviter`"
 msgstr ""
 
-#: ../../api.rst:2157 ../../api.rst:2181 ../../api.rst:2194 ../../api.rst:2210
-#: ../../api.rst:2223
+#: ../../api.rst:2168 ../../api.rst:2192 ../../api.rst:2205 ../../api.rst:2221
+#: ../../api.rst:2234
 msgid ":attr:`~AuditLogDiff.channel`"
 msgstr ""
 
-#: ../../api.rst:2158 ../../api.rst:2182
+#: ../../api.rst:2169 ../../api.rst:2193
 msgid ":attr:`~AuditLogDiff.uses`"
 msgstr ""
 
-#: ../../api.rst:2159 ../../api.rst:2183
+#: ../../api.rst:2170 ../../api.rst:2194
 msgid ":attr:`~AuditLogDiff.max_uses`"
 msgstr ""
 
-#: ../../api.rst:2163
+#: ../../api.rst:2174
 msgid "An invite was updated."
 msgstr ""
 
-#: ../../api.rst:2165
+#: ../../api.rst:2176
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Invite` that was updated."
 msgstr ""
 
-#: ../../api.rst:2170
+#: ../../api.rst:2181
 msgid "An invite was deleted."
 msgstr ""
 
-#: ../../api.rst:2172
+#: ../../api.rst:2183
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Invite` that was deleted."
 msgstr ""
 
-#: ../../api.rst:2187
+#: ../../api.rst:2198
 msgid "A webhook was created."
 msgstr ""
 
-#: ../../api.rst:2189 ../../api.rst:2205 ../../api.rst:2218
+#: ../../api.rst:2200 ../../api.rst:2216 ../../api.rst:2229
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Object` with the webhook ID."
 msgstr ""
 
-#: ../../api.rst:2196 ../../api.rst:2225
+#: ../../api.rst:2207 ../../api.rst:2236
 msgid ":attr:`~AuditLogDiff.type` (always set to ``1`` if so)"
 msgstr ""
 
-#: ../../api.rst:2200
+#: ../../api.rst:2211
 msgid "A webhook was updated. This trigger in the following situations:"
 msgstr ""
 
-#: ../../api.rst:2202
+#: ../../api.rst:2213
 msgid "The webhook name changed"
 msgstr ""
 
-#: ../../api.rst:2203
+#: ../../api.rst:2214
 msgid "The webhook channel changed"
 msgstr ""
 
-#: ../../api.rst:2212
+#: ../../api.rst:2223
 msgid ":attr:`~AuditLogDiff.avatar`"
 msgstr ""
 
-#: ../../api.rst:2216
+#: ../../api.rst:2227
 msgid "A webhook was deleted."
 msgstr ""
 
-#: ../../api.rst:2229
+#: ../../api.rst:2240
 msgid "An emoji was created."
 msgstr ""
 
-#: ../../api.rst:2231 ../../api.rst:2242
+#: ../../api.rst:2242 ../../api.rst:2253
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Emoji` or :class:`Object` with the emoji ID."
 msgstr ""
 
-#: ../../api.rst:2240
+#: ../../api.rst:2251
 msgid "An emoji was updated. This triggers when the name has changed."
 msgstr ""
 
-#: ../../api.rst:2251
+#: ../../api.rst:2262
 msgid "An emoji was deleted."
 msgstr ""
 
-#: ../../api.rst:2253
+#: ../../api.rst:2264
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Object` with the emoji ID."
 msgstr ""
 
-#: ../../api.rst:2262
+#: ../../api.rst:2273
 msgid ""
 "A message was deleted by a moderator. Note that this only triggers if the"
 " message was deleted by someone other than the author."
 msgstr ""
 
-#: ../../api.rst:2265
+#: ../../api.rst:2276
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Member` or :class:`User` who had their message deleted."
 msgstr ""
 
-#: ../../api.rst:2271 ../../api.rst:2284
+#: ../../api.rst:2282 ../../api.rst:2295
 msgid "``count``: An integer specifying how many messages were deleted."
 msgstr ""
 
-#: ../../api.rst:2272
+#: ../../api.rst:2283
 msgid ""
 "``channel``: A :class:`TextChannel` or :class:`Object` with the channel "
 "ID where the message got deleted."
 msgstr ""
 
-#: ../../api.rst:2276
+#: ../../api.rst:2287
 msgid "Messages were bulk deleted by a moderator."
 msgstr ""
 
-#: ../../api.rst:2278
+#: ../../api.rst:2289
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`TextChannel` or :class:`Object` with the ID of the channel that "
 "was purged."
 msgstr ""
 
-#: ../../api.rst:2290
+#: ../../api.rst:2301
 msgid "A message was pinned in a channel."
 msgstr ""
 
-#: ../../api.rst:2292
+#: ../../api.rst:2303
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Member` or :class:`User` who had their message pinned."
 msgstr ""
 
-#: ../../api.rst:2298
+#: ../../api.rst:2309
 msgid ""
 "``channel``: A :class:`TextChannel` or :class:`Object` with the channel "
 "ID where the message was pinned."
 msgstr ""
 
-#: ../../api.rst:2299
+#: ../../api.rst:2310
 msgid "``message_id``: the ID of the message which was pinned."
 msgstr ""
 
-#: ../../api.rst:2305
+#: ../../api.rst:2316
 msgid "A message was unpinned in a channel."
 msgstr ""
 
-#: ../../api.rst:2307
+#: ../../api.rst:2318
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Member` or :class:`User` who had their message unpinned."
 msgstr ""
 
-#: ../../api.rst:2313
+#: ../../api.rst:2324
 msgid ""
 "``channel``: A :class:`TextChannel` or :class:`Object` with the channel "
 "ID where the message was unpinned."
 msgstr ""
 
-#: ../../api.rst:2314
+#: ../../api.rst:2325
 msgid "``message_id``: the ID of the message which was unpinned."
 msgstr ""
 
-#: ../../api.rst:2320
+#: ../../api.rst:2331
 msgid "A guild integration was created."
 msgstr ""
 
-#: ../../api.rst:2322
+#: ../../api.rst:2333
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Object` with the integration ID of the integration which was "
 "created."
 msgstr ""
 
-#: ../../api.rst:2329
+#: ../../api.rst:2340
 msgid "A guild integration was updated."
 msgstr ""
 
-#: ../../api.rst:2331
+#: ../../api.rst:2342
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Object` with the integration ID of the integration which was "
 "updated."
 msgstr ""
 
-#: ../../api.rst:2338
+#: ../../api.rst:2349
 msgid "A guild integration was deleted."
 msgstr ""
 
-#: ../../api.rst:2340
+#: ../../api.rst:2351
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Object` with the integration ID of the integration which was "
 "deleted."
 msgstr ""
 
-#: ../../api.rst:2347
+#: ../../api.rst:2358
 msgid "A stage instance was started."
 msgstr ""
 
-#: ../../api.rst:2349
+#: ../../api.rst:2360
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`StageInstance` or :class:`Object` with the ID of the stage "
 "instance which was created."
 msgstr ""
 
-#: ../../api.rst:2356 ../../api.rst:2371
+#: ../../api.rst:2367 ../../api.rst:2382
 msgid ":attr:`~AuditLogDiff.privacy_level`"
 msgstr ""
 
-#: ../../api.rst:2362
+#: ../../api.rst:2373
 msgid "A stage instance was updated."
 msgstr ""
 
-#: ../../api.rst:2364
+#: ../../api.rst:2375
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`StageInstance` or :class:`Object` with the ID of the stage "
 "instance which was updated."
 msgstr ""
 
-#: ../../api.rst:2377
+#: ../../api.rst:2388
 msgid "A stage instance was ended."
 msgstr ""
 
-#: ../../api.rst:2383
+#: ../../api.rst:2394
 msgid "A sticker was created."
 msgstr ""
 
-#: ../../api.rst:2385 ../../api.rst:2404 ../../api.rst:2423
+#: ../../api.rst:2396 ../../api.rst:2415 ../../api.rst:2434
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`GuildSticker` or :class:`Object` with the ID of the sticker "
 "which was updated."
 msgstr ""
 
-#: ../../api.rst:2392 ../../api.rst:2411 ../../api.rst:2430
+#: ../../api.rst:2403 ../../api.rst:2422 ../../api.rst:2441
 msgid ":attr:`~AuditLogDiff.emoji`"
 msgstr ""
 
-#: ../../api.rst:2394 ../../api.rst:2413 ../../api.rst:2432
+#: ../../api.rst:2405 ../../api.rst:2424 ../../api.rst:2443
 msgid ":attr:`~AuditLogDiff.format_type`"
 msgstr ""
 
-#: ../../api.rst:2395 ../../api.rst:2414 ../../api.rst:2433
+#: ../../api.rst:2406 ../../api.rst:2425 ../../api.rst:2444
 msgid ":attr:`~AuditLogDiff.description`"
 msgstr ""
 
-#: ../../api.rst:2396 ../../api.rst:2415 ../../api.rst:2434
+#: ../../api.rst:2407 ../../api.rst:2426 ../../api.rst:2445
 msgid ":attr:`~AuditLogDiff.available`"
 msgstr ""
 
-#: ../../api.rst:2402
+#: ../../api.rst:2413
 msgid "A sticker was updated."
 msgstr ""
 
-#: ../../api.rst:2421
+#: ../../api.rst:2432
 msgid "A sticker was deleted."
 msgstr ""
 
-#: ../../api.rst:2440
+#: ../../api.rst:2451
 msgid "A thread was created."
 msgstr ""
 
-#: ../../api.rst:2442
+#: ../../api.rst:2453
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Thread` or :class:`Object` with the ID of the thread which was "
 "created."
 msgstr ""
 
-#: ../../api.rst:2449 ../../api.rst:2466 ../../api.rst:2483
+#: ../../api.rst:2460 ../../api.rst:2477 ../../api.rst:2494
 msgid ":attr:`~AuditLogDiff.archived`"
 msgstr ""
 
-#: ../../api.rst:2450 ../../api.rst:2467 ../../api.rst:2484
+#: ../../api.rst:2461 ../../api.rst:2478 ../../api.rst:2495
 msgid ":attr:`~AuditLogDiff.locked`"
 msgstr ""
 
-#: ../../api.rst:2451 ../../api.rst:2468 ../../api.rst:2485
+#: ../../api.rst:2462 ../../api.rst:2479 ../../api.rst:2496
 msgid ":attr:`~AuditLogDiff.auto_archive_duration`"
 msgstr ""
 
-#: ../../api.rst:2457
+#: ../../api.rst:2468
 msgid "A thread was updated."
 msgstr ""
 
-#: ../../api.rst:2459
+#: ../../api.rst:2470
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Thread` or :class:`Object` with the ID of the thread which was "
 "updated."
 msgstr ""
 
-#: ../../api.rst:2474
+#: ../../api.rst:2485
 msgid "A thread was deleted."
 msgstr ""
 
-#: ../../api.rst:2476
+#: ../../api.rst:2487
 msgid ""
 "When this is the action, the type of :attr:`~AuditLogEntry.target` is the"
 " :class:`Thread` or :class:`Object` with the ID of the thread which was "
 "deleted."
 msgstr ""
 
-#: ../../api.rst:2491
+#: ../../api.rst:2502
 msgid "Represents the category that the :class:`AuditLogAction` belongs to."
 msgstr ""
 
-#: ../../api.rst:2493
+#: ../../api.rst:2504
 msgid "This can be retrieved via :attr:`AuditLogEntry.category`."
 msgstr ""
 
-#: ../../api.rst:2497
+#: ../../api.rst:2508
 msgid "The action is the creation of something."
 msgstr ""
 
-#: ../../api.rst:2501
+#: ../../api.rst:2512
 msgid "The action is the deletion of something."
 msgstr ""
 
-#: ../../api.rst:2505
+#: ../../api.rst:2516
 msgid "The action is the update of something."
 msgstr ""
 
-#: ../../api.rst:2509
+#: ../../api.rst:2520
 msgid ""
 "Represents the membership state of a team member retrieved through "
 ":func:`Client.application_info`."
 msgstr ""
 
-#: ../../api.rst:2515
+#: ../../api.rst:2526
 msgid "Represents an invited member."
 msgstr ""
 
-#: ../../api.rst:2519
+#: ../../api.rst:2530
 msgid "Represents a member currently in the team."
 msgstr ""
 
-#: ../../api.rst:2523
+#: ../../api.rst:2534
 msgid "Represents the type of webhook that can be received."
 msgstr ""
 
-#: ../../api.rst:2529
+#: ../../api.rst:2540
 msgid "Represents a webhook that can post messages to channels with a token."
 msgstr ""
 
-#: ../../api.rst:2533
+#: ../../api.rst:2544
 msgid ""
 "Represents a webhook that is internally managed by Discord, used for "
 "following channels."
 msgstr ""
 
-#: ../../api.rst:2537
+#: ../../api.rst:2548
 msgid "Represents a webhook that is used for interactions or applications."
 msgstr ""
 
-#: ../../api.rst:2543
+#: ../../api.rst:2554
 msgid ""
 "Represents the behaviour the :class:`Integration` should perform when a "
 "user's subscription has finished."
 msgstr ""
 
-#: ../../api.rst:2546
+#: ../../api.rst:2557
 msgid "There is an alias for this called ``ExpireBehavior``."
 msgstr ""
 
-#: ../../api.rst:2552
+#: ../../api.rst:2563
 msgid ""
 "This will remove the :attr:`StreamIntegration.role` from the user when "
 "their subscription is finished."
 msgstr ""
 
-#: ../../api.rst:2557
+#: ../../api.rst:2568
 msgid "This will kick the user when their subscription is finished."
 msgstr ""
 
-#: ../../api.rst:2561
+#: ../../api.rst:2572
 msgid "Represents the default avatar of a Discord :class:`User`"
 msgstr ""
 
-#: ../../api.rst:2565
+#: ../../api.rst:2576
 msgid ""
 "Represents the default avatar with the color blurple. See also "
 ":attr:`Colour.blurple`"
 msgstr ""
 
-#: ../../api.rst:2569
+#: ../../api.rst:2580
 msgid ""
 "Represents the default avatar with the color grey. See also "
 ":attr:`Colour.greyple`"
 msgstr ""
 
-#: ../../api.rst:2573
+#: ../../api.rst:2584
 msgid "An alias for :attr:`grey`."
 msgstr ""
 
-#: ../../api.rst:2576
+#: ../../api.rst:2587
 msgid ""
 "Represents the default avatar with the color green. See also "
 ":attr:`Colour.green`"
 msgstr ""
 
-#: ../../api.rst:2580
+#: ../../api.rst:2591
 msgid ""
 "Represents the default avatar with the color orange. See also "
 ":attr:`Colour.orange`"
 msgstr ""
 
-#: ../../api.rst:2584
+#: ../../api.rst:2595
 msgid ""
 "Represents the default avatar with the color red. See also "
 ":attr:`Colour.red`"
 msgstr ""
 
-#: ../../api.rst:2589
+#: ../../api.rst:2600
 msgid "Represents the type of sticker."
 msgstr ""
 
-#: ../../api.rst:2595
+#: ../../api.rst:2606
 msgid "Represents a standard sticker that all Nitro users can use."
 msgstr ""
 
-#: ../../api.rst:2599
+#: ../../api.rst:2610
 msgid "Represents a custom sticker created in a guild."
 msgstr ""
 
-#: ../../api.rst:2603
+#: ../../api.rst:2614
 msgid "Represents the type of sticker images."
 msgstr ""
 
-#: ../../api.rst:2609
+#: ../../api.rst:2620
 msgid "Represents a sticker with a png image."
 msgstr ""
 
-#: ../../api.rst:2613
+#: ../../api.rst:2624
 msgid "Represents a sticker with an apng image."
 msgstr ""
 
-#: ../../api.rst:2617
+#: ../../api.rst:2628
 msgid "Represents a sticker with a lottie image."
 msgstr ""
 
-#: ../../api.rst:2621
+#: ../../api.rst:2632
 msgid "Represents the invite type for voice channel invites."
 msgstr ""
 
-#: ../../api.rst:2627
+#: ../../api.rst:2638
 msgid "The invite doesn't target anyone or anything."
 msgstr ""
 
-#: ../../api.rst:2631
+#: ../../api.rst:2642
 msgid "A stream invite that targets a user."
 msgstr ""
 
-#: ../../api.rst:2635
+#: ../../api.rst:2646
 msgid "A stream invite that targets an embedded application."
 msgstr ""
 
-#: ../../api.rst:2639
+#: ../../api.rst:2650
 msgid "Represents the camera video quality mode for voice channel participants."
 msgstr ""
 
-#: ../../api.rst:2645
+#: ../../api.rst:2656
 msgid "Represents auto camera video quality."
 msgstr ""
 
-#: ../../api.rst:2649
+#: ../../api.rst:2660
 msgid "Represents full camera video quality."
 msgstr ""
 
-#: ../../api.rst:2653
+#: ../../api.rst:2664
 msgid "Represents a stage instance's privacy level."
 msgstr ""
 
-#: ../../api.rst:2659
+#: ../../api.rst:2670
 msgid "The stage instance can be joined by external users."
 msgstr ""
 
-#: ../../api.rst:2663
+#: ../../api.rst:2674
 msgid "The stage instance can only be joined by members of the guild."
 msgstr ""
 
-#: ../../api.rst:2667
+#: ../../api.rst:2678
 msgid "Alias for :attr:`.closed`"
 msgstr ""
 
-#: ../../api.rst:2671
+#: ../../api.rst:2682
 msgid "Represents the NSFW level of a guild."
 msgstr ""
 
-#: ../../api.rst:2679
+#: ../../api.rst:2690
 msgid "Checks if two NSFW levels are equal."
 msgstr ""
 
-#: ../../api.rst:2682
+#: ../../api.rst:2693
 msgid "Checks if two NSFW levels are not equal."
 msgstr ""
 
-#: ../../api.rst:2685
+#: ../../api.rst:2696
 msgid "Checks if a NSFW level is higher than another."
 msgstr ""
 
-#: ../../api.rst:2688
+#: ../../api.rst:2699
 msgid "Checks if a NSFW level is lower than another."
 msgstr ""
 
-#: ../../api.rst:2691
+#: ../../api.rst:2702
 msgid "Checks if a NSFW level is higher or equal to another."
 msgstr ""
 
-#: ../../api.rst:2694
+#: ../../api.rst:2705
 msgid "Checks if a NSFW level is lower or equal to another."
 msgstr ""
 
-#: ../../api.rst:2698
+#: ../../api.rst:2709
 msgid "The guild has not been categorised yet."
 msgstr ""
 
-#: ../../api.rst:2702
+#: ../../api.rst:2713
 msgid "The guild contains NSFW content."
 msgstr ""
 
-#: ../../api.rst:2706
+#: ../../api.rst:2717
 msgid "The guild does not contain any NSFW content."
 msgstr ""
 
-#: ../../api.rst:2710
+#: ../../api.rst:2721
 msgid "The guild may contain NSFW content."
 msgstr ""
 
-#: ../../api.rst:2713
+#: ../../api.rst:2724
 msgid "Async Iterator"
 msgstr ""
 
-#: ../../api.rst:2715
+#: ../../api.rst:2726
 msgid ""
 "Some API functions return an \"async iterator\". An async iterator is "
 "something that is capable of being used in an :ref:`async for statement "
 "<py:async for>`."
 msgstr ""
 
-#: ../../api.rst:2718
+#: ../../api.rst:2729
 msgid "These async iterators can be used as follows: ::"
 msgstr ""
 
-#: ../../api.rst:2723
+#: ../../api.rst:2734
 msgid ""
 "Certain utilities make working with async iterators easier, detailed "
 "below."
 msgstr ""
 
-#: ../../api.rst:2727
+#: ../../api.rst:2738
 msgid ""
 "Represents the \"AsyncIterator\" concept. Note that no such class exists,"
 " it is purely abstract."
 msgstr ""
 
-#: ../../api.rst:2734
+#: ../../api.rst:2745
 msgid "Iterates over the contents of the async iterator."
 msgstr ""
 
-#: ../../api.rst:2742
+#: ../../api.rst:2753
 msgid ""
 "Advances the iterator by one, if possible. If no more items are found "
 "then this raises :exc:`NoMoreItems`."
 msgstr ""
 
-#: ../../api.rst:2750
+#: ../../api.rst:2761
 msgid "Similar to :func:`utils.get` except run over the async iterator."
 msgstr ""
 
-#: ../../api.rst:2752
+#: ../../api.rst:2763
 msgid "Getting the last message by a user named 'Dave' or ``None``: ::"
 msgstr ""
 
-#: ../../api.rst:2761
+#: ../../api.rst:2772
 msgid "Similar to :func:`utils.find` except run over the async iterator."
 msgstr ""
 
-#: ../../api.rst:2763
+#: ../../api.rst:2774
 msgid ""
 "Unlike :func:`utils.find`\\, the predicate provided can be a "
 "|coroutine_link|_."
 msgstr ""
 
-#: ../../api.rst:2766
+#: ../../api.rst:2777
 msgid "Getting the last audit log with a reason or ``None``: ::"
 msgstr ""
 
-#: ../../api.rst:2773
+#: ../../api.rst:2784
 msgid "The predicate to use. Could be a |coroutine_link|_."
 msgstr ""
 
-#: ../../api.rst:2774
+#: ../../api.rst:2785
 msgid "The first element that returns ``True`` for the predicate or ``None``."
 msgstr ""
 
-#: ../../api.rst:2781
+#: ../../api.rst:2792
 msgid "Flattens the async iterator into a :class:`list` with all the elements."
 msgstr ""
 
-#: ../../api.rst:2783
+#: ../../api.rst:2794
 msgid "A list of every element in the async iterator."
 msgstr ""
 
-#: ../../api.rst:2788
+#: ../../api.rst:2799
 msgid ""
 "Collects items into chunks of up to a given maximum size. Another "
 ":class:`AsyncIterator` is returned which collects items into "
@@ -7689,19 +7701,19 @@ msgid ""
 "positive integer."
 msgstr ""
 
-#: ../../api.rst:2794
+#: ../../api.rst:2805
 msgid "Collecting groups of users: ::"
 msgstr ""
 
-#: ../../api.rst:2803
+#: ../../api.rst:2814
 msgid "The size of individual chunks."
 msgstr ""
 
-#: ../../api.rst:2804 ../../api.rst:2822 ../../api.rst:2839
+#: ../../api.rst:2815 ../../api.rst:2833 ../../api.rst:2850
 msgid ":class:`AsyncIterator`"
 msgstr ""
 
-#: ../../api.rst:2808
+#: ../../api.rst:2819
 msgid ""
 "This is similar to the built-in :func:`map <py:map>` function. Another "
 ":class:`AsyncIterator` is returned that executes the function on every "
@@ -7709,15 +7721,15 @@ msgid ""
 "function or a |coroutine_link|_."
 msgstr ""
 
-#: ../../api.rst:2813
+#: ../../api.rst:2824
 msgid "Creating a content iterator: ::"
 msgstr ""
 
-#: ../../api.rst:2821
+#: ../../api.rst:2832
 msgid "The function to call on every element. Could be a |coroutine_link|_."
 msgstr ""
 
-#: ../../api.rst:2826
+#: ../../api.rst:2837
 msgid ""
 "This is similar to the built-in :func:`filter <py:filter>` function. "
 "Another :class:`AsyncIterator` is returned that filters over the original"
@@ -7725,19 +7737,19 @@ msgid ""
 "|coroutine_link|_."
 msgstr ""
 
-#: ../../api.rst:2830
+#: ../../api.rst:2841
 msgid "Getting messages by non-bot accounts: ::"
 msgstr ""
 
-#: ../../api.rst:2838
+#: ../../api.rst:2849
 msgid "The predicate to call on every element. Could be a |coroutine_link|_."
 msgstr ""
 
-#: ../../api.rst:2844
+#: ../../api.rst:2855
 msgid "Audit Log Data"
 msgstr ""
 
-#: ../../api.rst:2846
+#: ../../api.rst:2857
 msgid ""
 "Working with :meth:`Guild.audit_logs` is a complicated process with a lot"
 " of machinery involved. The library attempts to make it easy to use and "
@@ -7745,7 +7757,7 @@ msgid ""
 "of data classes that aid in this goal."
 msgstr ""
 
-#: ../../api.rst:2851
+#: ../../api.rst:2862
 msgid "AuditLogEntry"
 msgstr ""
 
@@ -7850,95 +7862,95 @@ msgstr ""
 msgid "The target's subsequent state."
 msgstr ""
 
-#: ../../api.rst:2859
+#: ../../api.rst:2870
 msgid "AuditLogChanges"
 msgstr ""
 
-#: ../../api.rst:2865
+#: ../../api.rst:2876
 msgid "An audit log change set."
 msgstr ""
 
-#: ../../api.rst:2869
+#: ../../api.rst:2880
 msgid "The old value. The attribute has the type of :class:`AuditLogDiff`."
 msgstr ""
 
-#: ../../api.rst:2871 ../../api.rst:2891
+#: ../../api.rst:2882 ../../api.rst:2902
 msgid ""
 "Depending on the :class:`AuditLogActionCategory` retrieved by "
 ":attr:`~AuditLogEntry.category`\\, the data retrieved by this attribute "
 "differs:"
 msgstr ""
 
-#: ../../api.rst:2876 ../../api.rst:2896
+#: ../../api.rst:2887 ../../api.rst:2907
 msgid "Category"
 msgstr ""
 
-#: ../../api.rst:2878 ../../api.rst:2898
+#: ../../api.rst:2889 ../../api.rst:2909
 msgid ":attr:`~AuditLogActionCategory.create`"
 msgstr ""
 
-#: ../../api.rst:2878
+#: ../../api.rst:2889
 msgid "All attributes are set to ``None``."
 msgstr ""
 
-#: ../../api.rst:2880 ../../api.rst:2900
+#: ../../api.rst:2891 ../../api.rst:2911
 msgid ":attr:`~AuditLogActionCategory.delete`"
 msgstr ""
 
-#: ../../api.rst:2880
+#: ../../api.rst:2891
 msgid "All attributes are set the value before deletion."
 msgstr ""
 
-#: ../../api.rst:2882 ../../api.rst:2902
+#: ../../api.rst:2893 ../../api.rst:2913
 msgid ":attr:`~AuditLogActionCategory.update`"
 msgstr ""
 
-#: ../../api.rst:2882
+#: ../../api.rst:2893
 msgid "All attributes are set the value before updating."
 msgstr ""
 
-#: ../../api.rst:2884 ../../api.rst:2904
+#: ../../api.rst:2895 ../../api.rst:2915
 msgid "``None``"
 msgstr ""
 
-#: ../../api.rst:2884 ../../api.rst:2904
+#: ../../api.rst:2895 ../../api.rst:2915
 msgid "No attributes are set."
 msgstr ""
 
-#: ../../api.rst:2889
+#: ../../api.rst:2900
 msgid "The new value. The attribute has the type of :class:`AuditLogDiff`."
 msgstr ""
 
-#: ../../api.rst:2898
+#: ../../api.rst:2909
 msgid "All attributes are set to the created value"
 msgstr ""
 
-#: ../../api.rst:2900
+#: ../../api.rst:2911
 msgid "All attributes are set to ``None``"
 msgstr ""
 
-#: ../../api.rst:2902
+#: ../../api.rst:2913
 msgid "All attributes are set the value after updating."
 msgstr ""
 
-#: ../../api.rst:2908
+#: ../../api.rst:2919
 msgid "AuditLogDiff"
 msgstr ""
 
-#: ../../api.rst:2914
+#: ../../api.rst:2925
 msgid ""
 "Represents an audit log \"change\" object. A change object has dynamic "
 "attributes that depend on the type of action being done. Certain actions "
 "map to certain attributes being set."
 msgstr ""
 
-#: ../../api.rst:2918
+#: ../../api.rst:2929
 msgid ""
 "Note that accessing an attribute that does not match the specified action"
 " will lead to an attribute error."
 msgstr ""
 
-#: ../../api.rst:2921
+#: ../../api.rst:2932
 msgid ""
 "To get a list of attributes that have been set, you can iterate over "
 "them. To see a list of all possible attributes that could be set based on"
@@ -7947,20 +7959,20 @@ msgid ""
 "attributes that are possible."
 msgstr ""
 
-#: ../../api.rst:2930
+#: ../../api.rst:2941
 msgid "Returns an iterator over (attribute, value) tuple of this diff."
 msgstr ""
 
-#: ../../api.rst:2934
+#: ../../api.rst:2945
 msgid "A name of something."
 msgstr ""
 
-#: ../../api.rst:2940
+#: ../../api.rst:2951
 msgid "A guild's icon. See also :attr:`Guild.icon`."
 msgstr ""
 
-#: ../../api.rst:2942 ../../api.rst:2948 ../../api.rst:2954 ../../api.rst:2960
-#: ../../api.rst:3274 disnake.ClientUser.default_avatar:3
+#: ../../api.rst:2953 ../../api.rst:2959 ../../api.rst:2965 ../../api.rst:2971
+#: ../../api.rst:3285 disnake.ClientUser.default_avatar:3
 #: disnake.ClientUser.display_avatar:7 disnake.Member.display_avatar:9
 #: disnake.StickerPack.banner:3 disnake.SyncWebhook.avatar:6
 #: disnake.User.default_avatar:3 disnake.User.display_avatar:7
@@ -7971,186 +7983,186 @@ msgstr ""
 msgid ":class:`Asset`"
 msgstr ""
 
-#: ../../api.rst:2946
+#: ../../api.rst:2957
 msgid "The guild's invite splash. See also :attr:`Guild.splash`."
 msgstr ""
 
-#: ../../api.rst:2952
+#: ../../api.rst:2963
 msgid "The guild's discovery splash. See also :attr:`Guild.discovery_splash`."
 msgstr ""
 
-#: ../../api.rst:2958
+#: ../../api.rst:2969
 msgid "The guild's banner. See also :attr:`Guild.banner`."
 msgstr ""
 
-#: ../../api.rst:2964
+#: ../../api.rst:2975
 msgid "The guild's owner. See also :attr:`Guild.owner`"
 msgstr ""
 
-#: ../../api.rst:2966
+#: ../../api.rst:2977
 msgid "Union[:class:`Member`, :class:`User`]"
 msgstr ""
 
-#: ../../api.rst:2970
+#: ../../api.rst:2981
 msgid "The guild's voice region. See also :attr:`Guild.region`."
 msgstr ""
 
-#: ../../api.rst:2972 ../../api.rst:3292 disnake.guild.Guild:48 of
+#: ../../api.rst:2983 ../../api.rst:3303 disnake.guild.Guild:48 of
 msgid ":class:`VoiceRegion`"
 msgstr ""
 
-#: ../../api.rst:2976
+#: ../../api.rst:2987
 msgid "The guild's AFK channel."
 msgstr ""
 
-#: ../../api.rst:2978 ../../api.rst:2989
+#: ../../api.rst:2989 ../../api.rst:3000
 msgid ""
 "If this could not be found, then it falls back to a :class:`Object` with "
 "the ID being set."
 msgstr ""
 
-#: ../../api.rst:2981
+#: ../../api.rst:2992
 msgid "See :attr:`Guild.afk_channel`."
 msgstr ""
 
-#: ../../api.rst:2983
+#: ../../api.rst:2994
 msgid "Union[:class:`VoiceChannel`, :class:`Object`]"
 msgstr ""
 
-#: ../../api.rst:2987
+#: ../../api.rst:2998
 msgid "The guild's system channel."
 msgstr ""
 
-#: ../../api.rst:2992
+#: ../../api.rst:3003
 msgid "See :attr:`Guild.system_channel`."
 msgstr ""
 
-#: ../../api.rst:2994 ../../api.rst:3006 ../../api.rst:3018 ../../api.rst:3045
+#: ../../api.rst:3005 ../../api.rst:3017 ../../api.rst:3029 ../../api.rst:3056
 msgid "Union[:class:`TextChannel`, :class:`Object`]"
 msgstr ""
 
-#: ../../api.rst:2999
+#: ../../api.rst:3010
 msgid "The guild's rules channel."
 msgstr ""
 
-#: ../../api.rst:3001 ../../api.rst:3013 ../../api.rst:3042
+#: ../../api.rst:3012 ../../api.rst:3024 ../../api.rst:3053
 msgid ""
 "If this could not be found then it falls back to a :class:`Object` with "
 "the ID being set."
 msgstr ""
 
-#: ../../api.rst:3004
+#: ../../api.rst:3015
 msgid "See :attr:`Guild.rules_channel`."
 msgstr ""
 
-#: ../../api.rst:3011
+#: ../../api.rst:3022
 msgid "The guild's public updates channel."
 msgstr ""
 
-#: ../../api.rst:3016
+#: ../../api.rst:3027
 msgid "See :attr:`Guild.public_updates_channel`."
 msgstr ""
 
-#: ../../api.rst:3022
+#: ../../api.rst:3033
 msgid "The guild's AFK timeout. See :attr:`Guild.afk_timeout`."
 msgstr ""
 
-#: ../../api.rst:3028
+#: ../../api.rst:3039
 msgid "The guild's MFA level. See :attr:`Guild.mfa_level`."
 msgstr ""
 
-#: ../../api.rst:3034
+#: ../../api.rst:3045
 msgid "The guild's widget has been enabled or disabled."
 msgstr ""
 
-#: ../../api.rst:3040
+#: ../../api.rst:3051
 msgid "The widget's channel."
 msgstr ""
 
-#: ../../api.rst:3049 disnake.guild.Guild:124 of
+#: ../../api.rst:3060 disnake.guild.Guild:124 of
 msgid "The guild's verification level."
 msgstr ""
 
-#: ../../api.rst:3051
+#: ../../api.rst:3062
 msgid "See also :attr:`Guild.verification_level`."
 msgstr ""
 
-#: ../../api.rst:3053 disnake.guild.Guild:126
+#: ../../api.rst:3064 disnake.guild.Guild:126
 #: disnake.invite.PartialInviteGuild:40 of
 msgid ":class:`VerificationLevel`"
 msgstr ""
 
-#: ../../api.rst:3057
+#: ../../api.rst:3068
 msgid "The guild's default notification level."
 msgstr ""
 
-#: ../../api.rst:3059
+#: ../../api.rst:3070
 msgid "See also :attr:`Guild.default_notifications`."
 msgstr ""
 
-#: ../../api.rst:3061 disnake.guild.Guild:138 of
+#: ../../api.rst:3072 disnake.guild.Guild:138 of
 msgid ":class:`NotificationLevel`"
 msgstr ""
 
-#: ../../api.rst:3065
+#: ../../api.rst:3076
 msgid "The guild's content filter."
 msgstr ""
 
-#: ../../api.rst:3067
+#: ../../api.rst:3078
 msgid "See also :attr:`Guild.explicit_content_filter`."
 msgstr ""
 
-#: ../../api.rst:3069 disnake.guild.Guild:132 of
+#: ../../api.rst:3080 disnake.guild.Guild:132 of
 msgid ":class:`ContentFilter`"
 msgstr ""
 
-#: ../../api.rst:3073
+#: ../../api.rst:3084
 msgid "The guild's default message notification setting."
 msgstr ""
 
-#: ../../api.rst:3079
+#: ../../api.rst:3090
 msgid "The guild's vanity URL."
 msgstr ""
 
-#: ../../api.rst:3081
+#: ../../api.rst:3092
 msgid "See also :meth:`Guild.vanity_invite` and :meth:`Guild.edit`."
 msgstr ""
 
-#: ../../api.rst:3087
+#: ../../api.rst:3098
 msgid "The position of a :class:`Role` or :class:`abc.GuildChannel`."
 msgstr ""
 
-#: ../../api.rst:3093
+#: ../../api.rst:3104
 msgid "The type of channel or sticker."
 msgstr ""
 
-#: ../../api.rst:3095
+#: ../../api.rst:3106
 msgid "Union[:class:`ChannelType`, :class:`StickerType`]"
 msgstr ""
 
-#: ../../api.rst:3099
+#: ../../api.rst:3110
 msgid "The topic of a :class:`TextChannel` or :class:`StageChannel`."
 msgstr ""
 
-#: ../../api.rst:3101
+#: ../../api.rst:3112
 msgid "See also :attr:`TextChannel.topic` or :attr:`StageChannel.topic`."
 msgstr ""
 
-#: ../../api.rst:3107
+#: ../../api.rst:3118
 msgid "The bitrate of a :class:`VoiceChannel`."
 msgstr ""
 
-#: ../../api.rst:3109
+#: ../../api.rst:3120
 msgid "See also :attr:`VoiceChannel.bitrate`."
 msgstr ""
 
-#: ../../api.rst:3115
+#: ../../api.rst:3126
 msgid ""
 "A list of permission overwrite tuples that represents a target and a "
 ":class:`PermissionOverwrite` for said target."
 msgstr ""
 
-#: ../../api.rst:3118
+#: ../../api.rst:3129
 msgid ""
 "The first element is the object being targeted, which can either be a "
 ":class:`Member` or :class:`User` or :class:`Role`. If this object is not "
@@ -8159,65 +8171,65 @@ msgid ""
 "type of ID it is."
 msgstr ""
 
-#: ../../api.rst:3124
+#: ../../api.rst:3135
 msgid "List[Tuple[target, :class:`PermissionOverwrite`]]"
 msgstr ""
 
-#: ../../api.rst:3128 disnake.stage_instance.StageInstance:45 of
+#: ../../api.rst:3139 disnake.stage_instance.StageInstance:45 of
 msgid "The privacy level of the stage instance."
 msgstr ""
 
-#: ../../api.rst:3130 disnake.stage_instance.StageInstance:47 of
+#: ../../api.rst:3141 disnake.stage_instance.StageInstance:47 of
 msgid ":class:`StagePrivacyLevel`"
 msgstr ""
 
-#: ../../api.rst:3134
+#: ../../api.rst:3145
 msgid "A list of roles being added or removed from a member."
 msgstr ""
 
-#: ../../api.rst:3136
+#: ../../api.rst:3147
 msgid ""
 "If a role is not found then it is a :class:`Object` with the ID and name "
 "being filled in."
 msgstr ""
 
-#: ../../api.rst:3139
+#: ../../api.rst:3150
 msgid "List[Union[:class:`Role`, :class:`Object`]]"
 msgstr ""
 
-#: ../../api.rst:3143
+#: ../../api.rst:3154
 msgid "The nickname of a member."
 msgstr ""
 
-#: ../../api.rst:3145
+#: ../../api.rst:3156
 msgid "See also :attr:`Member.nick`"
 msgstr ""
 
-#: ../../api.rst:3151
+#: ../../api.rst:3162
 msgid "Whether the member is being server deafened."
 msgstr ""
 
-#: ../../api.rst:3153
+#: ../../api.rst:3164
 msgid "See also :attr:`VoiceState.deaf`."
 msgstr ""
 
-#: ../../api.rst:3159
+#: ../../api.rst:3170
 msgid "Whether the member is being server muted."
 msgstr ""
 
-#: ../../api.rst:3161
+#: ../../api.rst:3172
 msgid "See also :attr:`VoiceState.mute`."
 msgstr ""
 
-#: ../../api.rst:3167
+#: ../../api.rst:3178
 msgid "The permissions of a role."
 msgstr ""
 
-#: ../../api.rst:3169
+#: ../../api.rst:3180
 msgid "See also :attr:`Role.permissions`."
 msgstr ""
 
-#: ../../api.rst:3171 ../../api.rst:3260 disnake.Interaction.permissions:5
+#: ../../api.rst:3182 ../../api.rst:3271 disnake.Interaction.permissions:5
 #: disnake.Member.guild_permissions:11 disnake.Role.permissions:3
 #: disnake.channel.DMChannel.permissions_for:17
 #: disnake.channel.GroupChannel.permissions_for:18
@@ -8226,15 +8238,15 @@ msgstr ""
 msgid ":class:`Permissions`"
 msgstr ""
 
-#: ../../api.rst:3176
+#: ../../api.rst:3187
 msgid "The colour of a role."
 msgstr ""
 
-#: ../../api.rst:3178
+#: ../../api.rst:3189
 msgid "See also :attr:`Role.colour`"
 msgstr ""
 
-#: ../../api.rst:3180 disnake.ClientUser.color:6 disnake.ClientUser.colour:6
+#: ../../api.rst:3191 disnake.ClientUser.color:6 disnake.ClientUser.colour:6
 #: disnake.Member.color:7 disnake.Member.colour:7 disnake.Role.color:3
 #: disnake.Role.colour:3 disnake.Spotify.color:5 disnake.Spotify.colour:5
 #: disnake.User.color:6 disnake.User.colour:6 disnake.WidgetMember.color:6
@@ -8242,211 +8254,211 @@ msgstr ""
 msgid ":class:`Colour`"
 msgstr ""
 
-#: ../../api.rst:3184
+#: ../../api.rst:3195
 msgid "Whether the role is being hoisted or not."
 msgstr ""
 
-#: ../../api.rst:3186
+#: ../../api.rst:3197
 msgid "See also :attr:`Role.hoist`"
 msgstr ""
 
-#: ../../api.rst:3192
+#: ../../api.rst:3203
 msgid "Whether the role is mentionable or not."
 msgstr ""
 
-#: ../../api.rst:3194
+#: ../../api.rst:3205
 msgid "See also :attr:`Role.mentionable`"
 msgstr ""
 
-#: ../../api.rst:3200
+#: ../../api.rst:3211
 msgid "The invite's code."
 msgstr ""
 
-#: ../../api.rst:3202
+#: ../../api.rst:3213
 msgid "See also :attr:`Invite.code`"
 msgstr ""
 
-#: ../../api.rst:3208
+#: ../../api.rst:3219
 msgid "A guild channel."
 msgstr ""
 
-#: ../../api.rst:3210
+#: ../../api.rst:3221
 msgid ""
 "If the channel is not found then it is a :class:`Object` with the ID "
 "being set. In some cases the channel name is also set."
 msgstr ""
 
-#: ../../api.rst:3213
+#: ../../api.rst:3224
 msgid "Union[:class:`abc.GuildChannel`, :class:`Object`]"
 msgstr ""
 
-#: ../../api.rst:3217 disnake.invite.Invite:101 of
+#: ../../api.rst:3228 disnake.invite.Invite:101 of
 msgid "The user who created the invite."
 msgstr ""
 
-#: ../../api.rst:3219
+#: ../../api.rst:3230
 msgid "See also :attr:`Invite.inviter`."
 msgstr ""
 
-#: ../../api.rst:3221 disnake.channel.DMChannel:27
+#: ../../api.rst:3232 disnake.channel.DMChannel:27
 #: disnake.channel.GroupChannel:43 disnake.emoji.Emoji:76
 #: disnake.integrations.IntegrationApplication:39 disnake.invite.Invite:103
 #: disnake.invite.Invite:147 disnake.sticker.GuildSticker:60 of
 msgid "Optional[:class:`User`]"
 msgstr ""
 
-#: ../../api.rst:3225
+#: ../../api.rst:3236
 msgid "The invite's max uses."
 msgstr ""
 
-#: ../../api.rst:3227
+#: ../../api.rst:3238
 msgid "See also :attr:`Invite.max_uses`."
 msgstr ""
 
-#: ../../api.rst:3233
+#: ../../api.rst:3244
 msgid "The invite's current uses."
 msgstr ""
 
-#: ../../api.rst:3235
+#: ../../api.rst:3246
 msgid "See also :attr:`Invite.uses`."
 msgstr ""
 
-#: ../../api.rst:3241
+#: ../../api.rst:3252
 msgid "The invite's max age in seconds."
 msgstr ""
 
-#: ../../api.rst:3243
+#: ../../api.rst:3254
 msgid "See also :attr:`Invite.max_age`."
 msgstr ""
 
-#: ../../api.rst:3249
+#: ../../api.rst:3260
 msgid "If the invite is a temporary invite."
 msgstr ""
 
-#: ../../api.rst:3251
+#: ../../api.rst:3262
 msgid "See also :attr:`Invite.temporary`."
 msgstr ""
 
-#: ../../api.rst:3258
+#: ../../api.rst:3269
 msgid "The permissions being allowed or denied."
 msgstr ""
 
-#: ../../api.rst:3264
+#: ../../api.rst:3275
 msgid "The ID of the object being changed."
 msgstr ""
 
-#: ../../api.rst:3270
+#: ../../api.rst:3281
 msgid "The avatar of a member."
 msgstr ""
 
-#: ../../api.rst:3272
+#: ../../api.rst:3283
 msgid "See also :attr:`User.avatar`."
 msgstr ""
 
-#: ../../api.rst:3278
+#: ../../api.rst:3289
 msgid ""
 "The number of seconds members have to wait before sending another message"
 " in the channel."
 msgstr ""
 
-#: ../../api.rst:3281
+#: ../../api.rst:3292
 msgid "See also :attr:`TextChannel.slowmode_delay`."
 msgstr ""
 
-#: ../../api.rst:3287
+#: ../../api.rst:3298
 msgid ""
 "The region for the voice channel’s voice communication. A value of "
 "``None`` indicates automatic voice region detection."
 msgstr ""
 
-#: ../../api.rst:3290
+#: ../../api.rst:3301
 msgid "See also :attr:`VoiceChannel.rtc_region`."
 msgstr ""
 
-#: ../../api.rst:3296 disnake.channel.VoiceChannel:75
+#: ../../api.rst:3307 disnake.channel.VoiceChannel:75
 #: disnake.channel.VoiceChannel.edit:38
 #: disnake.guild.Guild.create_voice_channel:27 of
 msgid "The camera video quality for the voice channel's participants."
 msgstr ""
 
-#: ../../api.rst:3298
+#: ../../api.rst:3309
 msgid "See also :attr:`VoiceChannel.video_quality_mode`."
 msgstr ""
 
-#: ../../api.rst:3300 disnake.channel.StageChannel:85
+#: ../../api.rst:3311 disnake.channel.StageChannel:85
 #: disnake.channel.VoiceChannel:77 of
 msgid ":class:`VideoQualityMode`"
 msgstr ""
 
-#: ../../api.rst:3304
+#: ../../api.rst:3315
 msgid "The format type of a sticker being changed."
 msgstr ""
 
-#: ../../api.rst:3306
+#: ../../api.rst:3317
 msgid "See also :attr:`GuildSticker.format`"
 msgstr ""
 
-#: ../../api.rst:3308 disnake.sticker.GuildSticker:41
+#: ../../api.rst:3319 disnake.sticker.GuildSticker:41
 #: disnake.sticker.StandardSticker:47 disnake.sticker.Sticker:47
 #: disnake.sticker.StickerItem:35 of
 msgid ":class:`StickerFormatType`"
 msgstr ""
 
-#: ../../api.rst:3312
+#: ../../api.rst:3323
 msgid "The name of the emoji that represents a sticker being changed."
 msgstr ""
 
-#: ../../api.rst:3314
+#: ../../api.rst:3325
 msgid "See also :attr:`GuildSticker.emoji`"
 msgstr ""
 
-#: ../../api.rst:3320
+#: ../../api.rst:3331
 msgid "The description of a sticker being changed."
 msgstr ""
 
-#: ../../api.rst:3322
+#: ../../api.rst:3333
 msgid "See also :attr:`GuildSticker.description`"
 msgstr ""
 
-#: ../../api.rst:3328
+#: ../../api.rst:3339
 msgid "The availability of a sticker being changed."
 msgstr ""
 
-#: ../../api.rst:3330
+#: ../../api.rst:3341
 msgid "See also :attr:`GuildSticker.available`"
 msgstr ""
 
-#: ../../api.rst:3336
+#: ../../api.rst:3347
 msgid "The thread is now archived."
 msgstr ""
 
-#: ../../api.rst:3342
+#: ../../api.rst:3353
 msgid "The thread is being locked or unlocked."
 msgstr ""
 
-#: ../../api.rst:3348
+#: ../../api.rst:3359
 msgid "The thread's auto archive duration being changed."
 msgstr ""
 
-#: ../../api.rst:3350
+#: ../../api.rst:3361
 msgid "See also :attr:`Thread.auto_archive_duration`"
 msgstr ""
 
-#: ../../api.rst:3356
+#: ../../api.rst:3367
 msgid "The default auto archive duration for newly created threads being changed."
 msgstr ""
 
-#: ../../api.rst:3364
+#: ../../api.rst:3375
 msgid "Webhook Support"
 msgstr ""
 
-#: ../../api.rst:3366
+#: ../../api.rst:3377
 msgid ""
 "disnake offers support for creating, editing, and executing webhooks "
 "through the :class:`Webhook` class."
 msgstr ""
 
-#: ../../api.rst:3369
+#: ../../api.rst:3380
 msgid "Webhook"
 msgstr ""
 
@@ -9034,14 +9046,14 @@ msgstr ""
 msgid "The authorization token for the webhook is incorrect."
 msgstr ""
 
-#: disnake.message.Message.edit:62 disnake.message.PartialMessage.edit:67
+#: disnake.message.Message.edit:69 disnake.message.PartialMessage.edit:74
 #: disnake.webhook.async_.Webhook.send:79 of
 msgid "You specified both ``embed`` and ``embeds`` or ``file`` and ``files``."
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:42
+#: disnake.interactions.base.Interaction.edit_original_message:51
 #: disnake.interactions.base.Interaction.send:43
-#: disnake.interactions.base.InteractionMessage.edit:36
+#: disnake.interactions.base.InteractionMessage.edit:45
 #: disnake.interactions.base.InteractionResponse.send_message:35
 #: disnake.webhook.async_.Webhook.send:80 of
 msgid "The length of ``embeds`` was invalid."
@@ -9096,11 +9108,11 @@ msgid "Retrieving the message failed."
 msgstr ""
 
 #: disnake.webhook.async_.Webhook.fetch_message:13
-#: disnake.webhook.async_.WebhookMessage.edit:48
-#: disnake.webhook.sync.SyncWebhook.edit_message:39
+#: disnake.webhook.async_.WebhookMessage.edit:57
+#: disnake.webhook.sync.SyncWebhook.edit_message:48
 #: disnake.webhook.sync.SyncWebhook.fetch_message:11
 #: disnake.webhook.sync.SyncWebhook.send:52
-#: disnake.webhook.sync.SyncWebhookMessage.edit:32 of
+#: disnake.webhook.sync.SyncWebhookMessage.edit:41 of
 msgid "There was no token associated with this webhook."
 msgstr ""
 
@@ -9133,178 +9145,205 @@ msgid ""
 "returned."
 msgstr ""
 
-#: disnake.webhook.async_.Webhook.edit_message:13
-#: disnake.webhook.sync.SyncWebhook.edit_message:8 of
+#: disnake.interactions.base.Interaction.edit_original_message:12
+#: disnake.interactions.base.InteractionMessage.edit:6
+#: disnake.message.Message.edit:11 disnake.message.PartialMessage.edit:11
+#: disnake.webhook.async_.Webhook.edit_message:14
+#: disnake.webhook.async_.WebhookMessage.edit:11
+#: disnake.webhook.sync.SyncWebhook.edit_message:9
+#: disnake.webhook.sync.SyncWebhookMessage.edit:4 of
+msgid ""
+"If the original message has embeds with images that were created from "
+"local files (using the ``file`` parameter with :meth:`Embed.set_image` or"
+" :meth:`Embed.set_thumbnail`), those images will be removed if the "
+"message's attachments are edited in any way (i.e. by setting "
+"``file``/``files``/``attachments``, or adding an embed with local files)."
+msgstr ""
+
+#: disnake.webhook.async_.Webhook.edit_message:19
+#: disnake.webhook.sync.SyncWebhook.edit_message:14 of
 msgid "The message ID to edit."
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:11
-#: disnake.interactions.base.InteractionMessage.edit:5
-#: disnake.webhook.async_.Webhook.edit_message:15
-#: disnake.webhook.async_.WebhookMessage.edit:10
-#: disnake.webhook.sync.SyncWebhook.edit_message:10
-#: disnake.webhook.sync.SyncWebhookMessage.edit:3 of
+#: disnake.interactions.base.Interaction.edit_original_message:17
+#: disnake.interactions.base.InteractionMessage.edit:11
+#: disnake.webhook.async_.Webhook.edit_message:21
+#: disnake.webhook.async_.WebhookMessage.edit:16
+#: disnake.webhook.sync.SyncWebhook.edit_message:16
+#: disnake.webhook.sync.SyncWebhookMessage.edit:9 of
 msgid "The content to edit the message with or ``None`` to clear it."
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:13
-#: disnake.interactions.base.InteractionMessage.edit:7
-#: disnake.interactions.base.InteractionResponse.edit_message:15
-#: disnake.message.Message.edit:13 disnake.message.PartialMessage.edit:13
-#: disnake.webhook.async_.Webhook.edit_message:17
-#: disnake.webhook.async_.WebhookMessage.edit:12
-#: disnake.webhook.sync.SyncWebhook.edit_message:12
-#: disnake.webhook.sync.SyncWebhookMessage.edit:5 of
+#: disnake.interactions.base.Interaction.edit_original_message:19
+#: disnake.interactions.base.InteractionMessage.edit:13
+#: disnake.interactions.base.InteractionResponse.edit_message:21
+#: disnake.message.Message.edit:19 disnake.message.PartialMessage.edit:19
+#: disnake.webhook.async_.Webhook.edit_message:23
+#: disnake.webhook.async_.WebhookMessage.edit:18
+#: disnake.webhook.sync.SyncWebhook.edit_message:18
+#: disnake.webhook.sync.SyncWebhookMessage.edit:11 of
 msgid ""
 "The new embed to replace the original with. This cannot be mixed with the"
 " ``embeds`` parameter. Could be ``None`` to remove the embed."
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:17
-#: disnake.interactions.base.InteractionMessage.edit:11
-#: disnake.interactions.base.InteractionResponse.edit_message:19
-#: disnake.message.Message.edit:17 disnake.message.PartialMessage.edit:17
-#: disnake.webhook.async_.Webhook.edit_message:21
-#: disnake.webhook.async_.WebhookMessage.edit:16
-#: disnake.webhook.sync.SyncWebhook.edit_message:16
-#: disnake.webhook.sync.SyncWebhookMessage.edit:9 of
+#: disnake.interactions.base.Interaction.edit_original_message:23
+#: disnake.interactions.base.InteractionMessage.edit:17
+#: disnake.interactions.base.InteractionResponse.edit_message:25
+#: disnake.message.Message.edit:23 disnake.message.PartialMessage.edit:23
+#: disnake.webhook.async_.Webhook.edit_message:27
+#: disnake.webhook.async_.WebhookMessage.edit:22
+#: disnake.webhook.sync.SyncWebhook.edit_message:22
+#: disnake.webhook.sync.SyncWebhookMessage.edit:15 of
 msgid ""
 "The new embeds to replace the original with. Must be a maximum of 10. "
 "This cannot be mixed with the ``embed`` parameter. To remove all embeds "
 "``[]`` should be passed."
 msgstr ""
 
-#: disnake.webhook.async_.Webhook.edit_message:25
-#: disnake.webhook.async_.WebhookMessage.edit:20 of
+#: disnake.webhook.async_.Webhook.edit_message:31
+#: disnake.webhook.async_.WebhookMessage.edit:26 of
 msgid ""
 "The file to upload. This cannot be mixed with ``files`` parameter. Files "
-"will be appended to the message.  .. versionadded:: 2.0"
-msgstr ""
-
-#: disnake.interactions.base.Interaction.edit_original_message:21
-#: disnake.interactions.base.InteractionMessage.edit:15
-#: disnake.interactions.base.InteractionResponse.edit_message:23
-#: disnake.webhook.async_.Webhook.edit_message:25
-#: disnake.webhook.async_.WebhookMessage.edit:20
-#: disnake.webhook.sync.SyncWebhook.edit_message:20
-#: disnake.webhook.sync.SyncWebhookMessage.edit:13 of
-msgid ""
-"The file to upload. This cannot be mixed with ``files`` parameter. Files "
-"will be appended to the message."
-msgstr ""
-
-#: disnake.webhook.async_.Webhook.edit_message:30 of
-msgid ""
-"A list of files to send with the content. This cannot be mixed with the "
-"``file`` parameter. Files will be appended to the message.  .. "
-"versionadded:: 2.0"
-msgstr ""
-
-#: disnake.webhook.async_.Webhook.edit_message:30 of
-msgid ""
-"A list of files to send with the content. This cannot be mixed with the "
-"``file`` parameter. Files will be appended to the message."
+"will be appended to the message, see the ``attachments`` parameter to "
+"remove/replace existing files.  .. versionadded:: 2.0"
 msgstr ""
 
 #: disnake.interactions.base.Interaction.edit_original_message:27
 #: disnake.interactions.base.InteractionMessage.edit:21
-#: disnake.message.PartialMessage.edit:35
-#: disnake.webhook.async_.Webhook.edit_message:36
-#: disnake.webhook.async_.WebhookMessage.edit:30
+#: disnake.message.Message.edit:29 disnake.message.PartialMessage.edit:29
+#: disnake.webhook.async_.Webhook.edit_message:31
+#: disnake.webhook.async_.WebhookMessage.edit:26
 #: disnake.webhook.sync.SyncWebhook.edit_message:26
 #: disnake.webhook.sync.SyncWebhookMessage.edit:19 of
 msgid ""
-"A list of attachments to keep in the message. If ``[]`` is passed then "
-"all existing attachments are removed.  .. versionadded:: 2.1"
+"The file to upload. This cannot be mixed with ``files`` parameter. Files "
+"will be appended to the message, see the ``attachments`` parameter to "
+"remove/replace existing files."
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:27
-#: disnake.interactions.base.InteractionMessage.edit:21
+#: disnake.webhook.async_.Webhook.edit_message:37
+#: disnake.webhook.async_.WebhookMessage.edit:32 of
+msgid ""
+"A list of files to upload. This cannot be mixed with the ``file`` "
+"parameter. Files will be appended to the message, see the ``attachments``"
+" parameter to remove/replace existing files.  .. versionadded:: 2.0"
+msgstr ""
+
+#: disnake.interactions.base.Interaction.edit_original_message:31
+#: disnake.interactions.base.InteractionMessage.edit:25
 #: disnake.message.Message.edit:35 disnake.message.PartialMessage.edit:35
-#: disnake.webhook.async_.Webhook.edit_message:36
-#: disnake.webhook.async_.WebhookMessage.edit:30
-#: disnake.webhook.sync.SyncWebhook.edit_message:26
-#: disnake.webhook.sync.SyncWebhookMessage.edit:19 of
+#: disnake.webhook.async_.Webhook.edit_message:37
+#: disnake.webhook.async_.WebhookMessage.edit:32
+#: disnake.webhook.sync.SyncWebhook.edit_message:30
+#: disnake.webhook.sync.SyncWebhookMessage.edit:23 of
 msgid ""
-"A list of attachments to keep in the message. If ``[]`` is passed then "
-"all existing attachments are removed."
+"A list of files to upload. This cannot be mixed with the ``file`` "
+"parameter. Files will be appended to the message, see the ``attachments``"
+" parameter to remove/replace existing files."
 msgstr ""
 
-#: disnake.webhook.async_.Webhook.edit_message:41 of
+#: disnake.interactions.base.Interaction.edit_original_message:35
+#: disnake.interactions.base.InteractionMessage.edit:29
+#: disnake.message.PartialMessage.edit:41
+#: disnake.webhook.async_.Webhook.edit_message:43
+#: disnake.webhook.async_.WebhookMessage.edit:38
+#: disnake.webhook.sync.SyncWebhook.edit_message:34
+#: disnake.webhook.sync.SyncWebhookMessage.edit:27 of
+msgid ""
+"A list of attachments to keep in the message. If ``[]`` is passed then "
+"all existing attachments are removed. Keeps existing attachments if not "
+"provided.  .. versionadded:: 2.1"
+msgstr ""
+
+#: disnake.interactions.base.Interaction.edit_original_message:35
+#: disnake.interactions.base.InteractionMessage.edit:29
+#: disnake.message.Message.edit:41 disnake.message.PartialMessage.edit:41
+#: disnake.webhook.async_.Webhook.edit_message:43
+#: disnake.webhook.async_.WebhookMessage.edit:38
+#: disnake.webhook.sync.SyncWebhook.edit_message:34
+#: disnake.webhook.sync.SyncWebhookMessage.edit:27 of
+msgid ""
+"A list of attachments to keep in the message. If ``[]`` is passed then "
+"all existing attachments are removed. Keeps existing attachments if not "
+"provided."
+msgstr ""
+
+#: disnake.webhook.async_.Webhook.edit_message:49 of
 msgid ""
 "The updated view to update this message with. If ``None`` is passed then "
 "the view is removed. The webhook must have state attached, similar to "
 ":meth:`send`.  .. versionadded:: 2.0"
 msgstr ""
 
-#: disnake.webhook.async_.Webhook.edit_message:41 of
+#: disnake.webhook.async_.Webhook.edit_message:49 of
 msgid ""
 "The updated view to update this message with. If ``None`` is passed then "
 "the view is removed. The webhook must have state attached, similar to "
 ":meth:`send`."
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:35
-#: disnake.interactions.base.InteractionMessage.edit:29
-#: disnake.webhook.async_.Webhook.edit_message:47
-#: disnake.webhook.async_.WebhookMessage.edit:40
-#: disnake.webhook.sync.SyncWebhook.edit_message:31
-#: disnake.webhook.sync.SyncWebhookMessage.edit:24 of
+#: disnake.interactions.base.Interaction.edit_original_message:44
+#: disnake.interactions.base.InteractionMessage.edit:38
+#: disnake.webhook.async_.Webhook.edit_message:55
+#: disnake.webhook.async_.WebhookMessage.edit:49
+#: disnake.webhook.sync.SyncWebhook.edit_message:40
+#: disnake.webhook.sync.SyncWebhookMessage.edit:33 of
 msgid ""
 "Controls the mentions being processed in this message. See "
 ":meth:`.abc.Messageable.send` for more information."
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:39
-#: disnake.interactions.base.InteractionMessage.edit:33
-#: disnake.interactions.base.InteractionResponse.edit_message:39
-#: disnake.message.Message.edit:60 disnake.message.PartialMessage.edit:65
-#: disnake.webhook.async_.Webhook.edit_message:51
-#: disnake.webhook.async_.WebhookMessage.edit:44
-#: disnake.webhook.sync.SyncWebhook.edit_message:35
-#: disnake.webhook.sync.SyncWebhookMessage.edit:28 of
+#: disnake.interactions.base.Interaction.edit_original_message:48
+#: disnake.interactions.base.InteractionMessage.edit:42
+#: disnake.interactions.base.InteractionResponse.edit_message:45
+#: disnake.message.Message.edit:67 disnake.message.PartialMessage.edit:72
+#: disnake.webhook.async_.Webhook.edit_message:59
+#: disnake.webhook.async_.WebhookMessage.edit:53
+#: disnake.webhook.sync.SyncWebhook.edit_message:44
+#: disnake.webhook.sync.SyncWebhookMessage.edit:37 of
 msgid "Editing the message failed."
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:40
-#: disnake.interactions.base.InteractionMessage.edit:34
-#: disnake.webhook.async_.Webhook.edit_message:52
-#: disnake.webhook.async_.WebhookMessage.edit:45
-#: disnake.webhook.sync.SyncWebhook.edit_message:36
-#: disnake.webhook.sync.SyncWebhookMessage.edit:29 of
+#: disnake.interactions.base.Interaction.edit_original_message:49
+#: disnake.interactions.base.InteractionMessage.edit:43
+#: disnake.webhook.async_.Webhook.edit_message:60
+#: disnake.webhook.async_.WebhookMessage.edit:54
+#: disnake.webhook.sync.SyncWebhook.edit_message:45
+#: disnake.webhook.sync.SyncWebhookMessage.edit:38 of
 msgid "Edited a message that is not yours."
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:41
-#: disnake.interactions.base.InteractionMessage.edit:35
-#: disnake.webhook.async_.Webhook.edit_message:53
-#: disnake.webhook.async_.WebhookMessage.edit:46
-#: disnake.webhook.sync.SyncWebhook.edit_message:37
+#: disnake.interactions.base.Interaction.edit_original_message:50
+#: disnake.interactions.base.InteractionMessage.edit:44
+#: disnake.webhook.async_.Webhook.edit_message:61
+#: disnake.webhook.async_.WebhookMessage.edit:55
+#: disnake.webhook.sync.SyncWebhook.edit_message:46
 #: disnake.webhook.sync.SyncWebhook.send:50
-#: disnake.webhook.sync.SyncWebhookMessage.edit:30 of
+#: disnake.webhook.sync.SyncWebhookMessage.edit:39 of
 msgid "You specified both ``embed`` and ``embeds`` or ``file`` and ``files``"
 msgstr ""
 
-#: disnake.webhook.async_.Webhook.edit_message:54
-#: disnake.webhook.async_.WebhookMessage.edit:47
-#: disnake.webhook.sync.SyncWebhook.edit_message:38
+#: disnake.webhook.async_.Webhook.edit_message:62
+#: disnake.webhook.async_.WebhookMessage.edit:56
+#: disnake.webhook.sync.SyncWebhook.edit_message:47
 #: disnake.webhook.sync.SyncWebhook.send:51
-#: disnake.webhook.sync.SyncWebhookMessage.edit:31 of
+#: disnake.webhook.sync.SyncWebhookMessage.edit:40 of
 msgid "The length of ``embeds`` was invalid"
 msgstr ""
 
-#: disnake.webhook.async_.Webhook.edit_message:55 of
+#: disnake.webhook.async_.Webhook.edit_message:63 of
 msgid ""
 "There was no token associated with this webhook or the webhook had     no"
 " state."
 msgstr ""
 
-#: disnake.webhook.async_.Webhook.edit_message:57 of
+#: disnake.webhook.async_.Webhook.edit_message:65 of
 msgid "The newly edited webhook message."
 msgstr ""
 
-#: disnake.webhook.async_.Webhook.edit_message:58
-#: disnake.webhook.async_.WebhookMessage.edit:51 of
+#: disnake.webhook.async_.Webhook.edit_message:66
+#: disnake.webhook.async_.WebhookMessage.edit:60 of
 msgid ":class:`WebhookMessage`"
 msgstr ""
 
@@ -9341,7 +9380,7 @@ msgstr ""
 msgid "Deleted a message that is not yours."
 msgstr ""
 
-#: ../../api.rst:3378
+#: ../../api.rst:3389
 msgid "WebhookMessage"
 msgstr ""
 
@@ -9370,44 +9409,27 @@ msgstr ""
 msgid "Edits the message."
 msgstr ""
 
-#: disnake.webhook.async_.WebhookMessage.edit:25 of
-msgid ""
-"A list of files to upload. This cannot be mixed with the ``file`` "
-"parameter. Files will be appended to the message.  .. versionadded:: 2.0"
-msgstr ""
-
-#: disnake.interactions.base.Interaction.edit_original_message:24
-#: disnake.interactions.base.InteractionMessage.edit:18
-#: disnake.interactions.base.InteractionResponse.edit_message:28
-#: disnake.webhook.async_.WebhookMessage.edit:25
-#: disnake.webhook.sync.SyncWebhook.edit_message:23
-#: disnake.webhook.sync.SyncWebhookMessage.edit:16 of
-msgid ""
-"A list of files to upload. This cannot be mixed with the ``file`` "
-"parameter. Files will be appended to the message."
-msgstr ""
-
-#: disnake.message.PartialMessage.edit:58
-#: disnake.webhook.async_.WebhookMessage.edit:35 of
+#: disnake.message.PartialMessage.edit:65
+#: disnake.webhook.async_.WebhookMessage.edit:44 of
 msgid ""
 "The updated view to update this message with. If ``None`` is passed then "
 "the view is removed.  .. versionadded:: 2.0"
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:32
-#: disnake.interactions.base.InteractionMessage.edit:26
-#: disnake.interactions.base.InteractionResponse.edit_message:35
-#: disnake.message.Message.edit:56 disnake.message.PartialMessage.edit:58
-#: disnake.webhook.async_.WebhookMessage.edit:35 of
+#: disnake.interactions.base.Interaction.edit_original_message:41
+#: disnake.interactions.base.InteractionMessage.edit:35
+#: disnake.interactions.base.InteractionResponse.edit_message:41
+#: disnake.message.Message.edit:63 disnake.message.PartialMessage.edit:65
+#: disnake.webhook.async_.WebhookMessage.edit:44 of
 msgid ""
 "The updated view to update this message with. If ``None`` is passed then "
 "the view is removed."
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:44
-#: disnake.interactions.base.InteractionMessage.edit:38
-#: disnake.webhook.async_.WebhookMessage.edit:50
-#: disnake.webhook.sync.SyncWebhookMessage.edit:34 of
+#: disnake.interactions.base.Interaction.edit_original_message:53
+#: disnake.interactions.base.InteractionMessage.edit:47
+#: disnake.webhook.async_.WebhookMessage.edit:59
+#: disnake.webhook.sync.SyncWebhookMessage.edit:43 of
 msgid "The newly edited message."
 msgstr ""
 
@@ -9438,7 +9460,7 @@ msgstr ""
 msgid "The message was deleted already."
 msgstr ""
 
-#: ../../api.rst:3386
+#: ../../api.rst:3397
 msgid "SyncWebhook"
 msgstr ""
 
@@ -9473,7 +9495,7 @@ msgid ""
 " 1.4"
 msgstr ""
 
-#: disnake.interactions.base.InteractionResponse.edit_message:33
+#: disnake.interactions.base.InteractionResponse.edit_message:39
 #: disnake.interactions.base.InteractionResponse.send_message:18
 #: disnake.webhook.sync.SyncWebhook.send:34 of
 msgid "Controls the mentions being processed in this message."
@@ -9508,11 +9530,11 @@ msgstr ""
 msgid ":class:`~disnake.SyncWebhookMessage`"
 msgstr ""
 
-#: ../../api.rst:3395
+#: ../../api.rst:3406
 msgid "SyncWebhookMessage"
 msgstr ""
 
-#: disnake.webhook.sync.SyncWebhookMessage.edit:35 of
+#: disnake.webhook.sync.SyncWebhookMessage.edit:44 of
 msgid ":class:`SyncWebhookMessage`"
 msgstr ""
 
@@ -9522,11 +9544,11 @@ msgid ""
 "This blocks the thread."
 msgstr ""
 
-#: ../../api.rst:3405
+#: ../../api.rst:3416
 msgid "Abstract Base Classes"
 msgstr ""
 
-#: ../../api.rst:3407
+#: ../../api.rst:3418
 msgid ""
 "An :term:`abstract base class` (also known as an ``abc``) is a class that"
 " models can inherit to get their behaviour. **Abstract base classes "
@@ -9534,13 +9556,13 @@ msgid ""
 ":func:`isinstance` and :func:`issubclass`\\."
 msgstr ""
 
-#: ../../api.rst:3411
+#: ../../api.rst:3422
 msgid ""
 "This library has a module related to abstract base classes, in which all "
 "the ABCs are subclasses of :class:`typing.Protocol`."
 msgstr ""
 
-#: ../../api.rst:3415
+#: ../../api.rst:3426
 msgid "Snowflake"
 msgstr ""
 
@@ -9564,7 +9586,7 @@ msgstr ""
 msgid "The model's unique ID."
 msgstr ""
 
-#: ../../api.rst:3423 ../../api.rst:3505
+#: ../../api.rst:3434 ../../api.rst:3516
 msgid "User"
 msgstr ""
 
@@ -9620,7 +9642,7 @@ msgstr ""
 msgid "Returns a string that allows you to mention the given user."
 msgstr ""
 
-#: ../../api.rst:3431
+#: ../../api.rst:3442
 msgid "PrivateChannel"
 msgstr ""
 
@@ -9641,7 +9663,7 @@ msgstr ""
 msgid "The user presenting yourself."
 msgstr ""
 
-#: ../../api.rst:3439
+#: ../../api.rst:3450
 msgid "GuildChannel"
 msgstr ""
 
@@ -10287,7 +10309,7 @@ msgstr ""
 msgid "List[:class:`~disnake.Invite`]"
 msgstr ""
 
-#: ../../api.rst:3447
+#: ../../api.rst:3458
 msgid "Messageable"
 msgstr ""
 
@@ -10560,7 +10582,7 @@ msgstr ""
 msgid "List[:class:`~disnake.Message`]"
 msgstr ""
 
-#: ../../api.rst:3462
+#: ../../api.rst:3473
 msgid "Connectable"
 msgstr ""
 
@@ -10576,29 +10598,29 @@ msgid ""
 "fail :func:`isinstance`/:func:`issubclass` checks."
 msgstr ""
 
-#: ../../api.rst:3471
+#: ../../api.rst:3482
 msgid "Discord Models"
 msgstr ""
 
-#: ../../api.rst:3473
+#: ../../api.rst:3484
 msgid ""
 "Models are classes that are received from Discord and are not meant to be"
 " created by the user of the library."
 msgstr ""
 
-#: ../../api.rst:3478
+#: ../../api.rst:3489
 msgid ""
 "The classes listed below are **not intended to be created by users** and "
 "are also **read-only**."
 msgstr ""
 
-#: ../../api.rst:3481
+#: ../../api.rst:3492
 msgid ""
 "For example, this means that you should not make your own :class:`User` "
 "instances nor should you modify the :class:`User` instance yourself."
 msgstr ""
 
-#: ../../api.rst:3484
+#: ../../api.rst:3495
 msgid ""
 "If you want to get one of these model classes instances they'd have to be"
 " through the cache, and a common way of doing so is through the "
@@ -10606,13 +10628,13 @@ msgid ""
 "receive from the events specified in the :ref:`discord-api-events`."
 msgstr ""
 
-#: ../../api.rst:3491 ../../api.rst:4173
+#: ../../api.rst:3502 ../../api.rst:4184
 msgid ""
 "Nearly all classes here have :ref:`py:slots` defined which means that it "
 "is impossible to have dynamic attributes to the data classes."
 msgstr ""
 
-#: ../../api.rst:3496
+#: ../../api.rst:3507
 msgid "ClientUser"
 msgstr ""
 
@@ -10882,7 +10904,7 @@ msgstr ""
 msgid "Creates a :class:`DMChannel` with this user."
 msgstr ""
 
-#: ../../api.rst:3521
+#: ../../api.rst:3532
 msgid "Attachment"
 msgstr ""
 
@@ -10947,6 +10969,14 @@ msgstr ""
 msgid "The attachment's `media type <https://en.wikipedia.org/wiki/Media_type>`_"
 msgstr ""
 
+#: disnake.message.Attachment:79 of
+msgid "Whether the attachment is ephemeral."
+msgstr ""
+
+#: disnake.message.Attachment:87 of
+msgid "The attachment's description"
+msgstr ""
+
 #: disnake.message.Attachment.is_spoiler:1 of
 msgid ":class:`bool`: Whether this attachment contains a spoiler."
 msgstr ""
@@ -10984,7 +11014,7 @@ msgid "Saving the attachment failed."
 msgstr ""
 
 #: disnake.message.Attachment.read:17 disnake.message.Attachment.save:21
-#: disnake.message.Attachment.to_file:24 of
+#: disnake.message.Attachment.to_file:29 of
 msgid "The attachment was deleted."
 msgstr ""
 
@@ -10996,11 +11026,11 @@ msgstr ""
 msgid "Retrieves the content of this attachment as a :class:`bytes` object."
 msgstr ""
 
-#: disnake.message.Attachment.read:15 disnake.message.Attachment.to_file:22 of
+#: disnake.message.Attachment.read:15 disnake.message.Attachment.to_file:27 of
 msgid "Downloading the attachment failed."
 msgstr ""
 
-#: disnake.message.Attachment.read:16 disnake.message.Attachment.to_file:23 of
+#: disnake.message.Attachment.read:16 disnake.message.Attachment.to_file:28 of
 msgid "You do not have permissions to access this attachment"
 msgstr ""
 
@@ -11032,15 +11062,27 @@ msgstr ""
 msgid "Whether the file is a spoiler."
 msgstr ""
 
-#: disnake.message.Attachment.to_file:26 of
+#: disnake.message.Attachment.to_file:21 of
+msgid ""
+"The file's description. Copies this attachment's description by default, "
+"set to ``None`` to remove.  .. versionadded:: 2.3"
+msgstr ""
+
+#: disnake.message.Attachment.to_file:21 of
+msgid ""
+"The file's description. Copies this attachment's description by default, "
+"set to ``None`` to remove."
+msgstr ""
+
+#: disnake.message.Attachment.to_file:31 of
 msgid "The attachment as a file suitable for sending."
 msgstr ""
 
-#: disnake.message.Attachment.to_file:27 of
+#: disnake.message.Attachment.to_file:32 of
 msgid ":class:`File`"
 msgstr ""
 
-#: ../../api.rst:3529
+#: ../../api.rst:3540
 msgid "Asset"
 msgstr ""
 
@@ -11175,7 +11217,7 @@ msgstr ""
 msgid "Saves this asset into a file-like object."
 msgstr ""
 
-#: ../../api.rst:3538
+#: ../../api.rst:3549
 msgid "Message"
 msgstr ""
 
@@ -11563,48 +11605,34 @@ msgstr ""
 msgid "The ``suppress`` keyword-only parameter was added."
 msgstr ""
 
-#: disnake.message.Message.edit:10 disnake.message.PartialMessage.edit:10 of
+#: disnake.message.Message.edit:16 disnake.message.PartialMessage.edit:16 of
 msgid ""
 "The new content to replace the message with. Could be ``None`` to remove "
 "the content."
 msgstr ""
 
-#: disnake.message.Message.edit:17 of
+#: disnake.message.Message.edit:23 of
 msgid ""
 "The new embeds to replace the original with. Must be a maximum of 10. "
 "This cannot be mixed with the ``embed`` parameter. To remove all embeds "
 "``[]`` should be passed.  .. versionadded:: 2.0"
 msgstr ""
 
-#: disnake.message.Message.edit:23 disnake.message.PartialMessage.edit:23 of
+#: disnake.message.Message.edit:29 disnake.message.PartialMessage.edit:29 of
 msgid ""
 "The file to upload. This cannot be mixed with ``files`` parameter. Files "
 "will be appended to the message, see the ``attachments`` parameter to "
 "remove/replace existing files.  .. versionadded:: 2.1"
 msgstr ""
 
-#: disnake.message.Message.edit:23 disnake.message.PartialMessage.edit:23 of
-msgid ""
-"The file to upload. This cannot be mixed with ``files`` parameter. Files "
-"will be appended to the message, see the ``attachments`` parameter to "
-"remove/replace existing files."
-msgstr ""
-
-#: disnake.message.Message.edit:29 disnake.message.PartialMessage.edit:29 of
+#: disnake.message.Message.edit:35 disnake.message.PartialMessage.edit:35 of
 msgid ""
 "A list of files to upload. This cannot be mixed with the ``file`` "
 "parameter. Files will be appended to the message, see the ``attachments``"
 " parameter to remove/replace existing files.  .. versionadded:: 2.1"
 msgstr ""
 
-#: disnake.message.Message.edit:29 disnake.message.PartialMessage.edit:29 of
-msgid ""
-"A list of files to upload. This cannot be mixed with the ``file`` "
-"parameter. Files will be appended to the message, see the ``attachments``"
-" parameter to remove/replace existing files."
-msgstr ""
-
-#: disnake.message.Message.edit:38 disnake.message.PartialMessage.edit:40 of
+#: disnake.message.Message.edit:45 disnake.message.PartialMessage.edit:47 of
 msgid ""
 "Whether to suppress embeds for the message. This removes all the embeds "
 "if set to ``True``. If set to ``False`` this brings the embeds back if "
@@ -11612,14 +11640,14 @@ msgid ""
 ":attr:`~.Permissions.manage_messages`."
 msgstr ""
 
-#: disnake.message.Message.edit:43 disnake.message.PartialMessage.edit:45 of
+#: disnake.message.Message.edit:50 disnake.message.PartialMessage.edit:52 of
 msgid ""
 "If provided, the number of seconds to wait in the background before "
 "deleting the message we just edited. If the deletion fails, then it is "
 "silently ignored."
 msgstr ""
 
-#: disnake.message.Message.edit:47 of
+#: disnake.message.Message.edit:54 of
 msgid ""
 "Controls the mentions being processed in this message. If this is passed,"
 " then the object is merged with :attr:`Client.allowed_mentions`. The "
@@ -11630,7 +11658,7 @@ msgid ""
 "versionadded:: 1.4"
 msgstr ""
 
-#: disnake.message.Message.edit:47 of
+#: disnake.message.Message.edit:54 of
 msgid ""
 "Controls the mentions being processed in this message. If this is passed,"
 " then the object is merged with :attr:`Client.allowed_mentions`. The "
@@ -11640,19 +11668,19 @@ msgid ""
 "defaults given by :attr:`Client.allowed_mentions` are used instead."
 msgstr ""
 
-#: disnake.message.Message.edit:61 disnake.message.PartialMessage.edit:66 of
+#: disnake.message.Message.edit:68 disnake.message.PartialMessage.edit:73 of
 msgid ""
 "Tried to suppress a message without permissions or     edited a message's"
 " content or embed that isn't yours."
 msgstr ""
 
-#: disnake.message.Message.edit:64 disnake.message.PartialMessage.edit:69 of
+#: disnake.message.Message.edit:71 disnake.message.PartialMessage.edit:76 of
 msgid "The message that was edited."
 msgstr ""
 
 #: ../../docstring disnake.Intents.dm_messages:15
 #: disnake.Intents.guild_messages:15 disnake.Intents.messages:15
-#: disnake.message.Message.edit:65 disnake.message.PartialMessage.edit:70
+#: disnake.message.Message.edit:72 disnake.message.PartialMessage.edit:77
 #: disnake.message.PartialMessage.fetch:10 disnake.reaction.Reaction:48 of
 msgid ":class:`Message`"
 msgstr ""
@@ -11943,7 +11971,7 @@ msgstr ""
 msgid ":class:`~disnake.MessageReference`"
 msgstr ""
 
-#: ../../api.rst:3546
+#: ../../api.rst:3557
 msgid "ApplicationCommand"
 msgstr ""
 
@@ -11951,7 +11979,7 @@ msgstr ""
 msgid "The base class for application commands"
 msgstr ""
 
-#: ../../api.rst:3554
+#: ../../api.rst:3565
 msgid "SlashCommand"
 msgstr ""
 
@@ -11982,15 +12010,15 @@ msgid ""
 "for :class:`Option`"
 msgstr ""
 
-#: ../../api.rst:3562
+#: ../../api.rst:3573
 msgid "UserCommand"
 msgstr ""
 
-#: ../../api.rst:3570
+#: ../../api.rst:3581
 msgid "MessageCommand"
 msgstr ""
 
-#: ../../api.rst:3578 ../../api.rst:4229
+#: ../../api.rst:3589 ../../api.rst:4240
 msgid "Option"
 msgstr ""
 
@@ -12049,7 +12077,7 @@ msgid ""
 "same as for :class:`OptionChoice`"
 msgstr ""
 
-#: ../../api.rst:3586 ../../api.rst:4237
+#: ../../api.rst:3597 ../../api.rst:4248
 msgid "OptionChoice"
 msgstr ""
 
@@ -12065,7 +12093,7 @@ msgstr ""
 msgid "the value of the option choice"
 msgstr ""
 
-#: ../../api.rst:3594
+#: ../../api.rst:3605
 msgid "ApplicationCommandPermissions"
 msgstr ""
 
@@ -12085,7 +12113,7 @@ msgstr ""
 msgid "Allow or deny the access to the command"
 msgstr ""
 
-#: ../../api.rst:3602
+#: ../../api.rst:3613
 msgid "GuildApplicationCommandPermissions"
 msgstr ""
 
@@ -12117,7 +12145,7 @@ msgstr ""
 msgid "Replaces current permissions with specified ones."
 msgstr ""
 
-#: ../../api.rst:3610
+#: ../../api.rst:3621
 msgid "PartialGuildApplicationCommandPermissions"
 msgstr ""
 
@@ -12125,7 +12153,7 @@ msgstr ""
 msgid "Creates an object representing permissions of the application command."
 msgstr ""
 
-#: ../../api.rst:3618
+#: ../../api.rst:3629
 msgid "UnresolvedGuildApplicationCommandPermissions"
 msgstr ""
 
@@ -12171,7 +12199,7 @@ msgstr ""
 msgid ":class:`PartialGuildApplicationCommandPermissions`"
 msgstr ""
 
-#: ../../api.rst:3626
+#: ../../api.rst:3637
 msgid "Component"
 msgstr ""
 
@@ -12208,7 +12236,7 @@ msgstr ""
 msgid ":class:`ComponentType`"
 msgstr ""
 
-#: ../../api.rst:3634
+#: ../../api.rst:3645
 msgid "ActionRow"
 msgstr ""
 
@@ -12228,7 +12256,7 @@ msgstr ""
 msgid "The children components that this holds, if any."
 msgstr ""
 
-#: ../../api.rst:3642 ../../api.rst:4404
+#: ../../api.rst:3653 ../../api.rst:4415
 msgid "Button"
 msgstr ""
 
@@ -12282,7 +12310,7 @@ msgstr ""
 msgid "Optional[:class:`PartialEmoji`]"
 msgstr ""
 
-#: ../../api.rst:3651
+#: ../../api.rst:3662
 msgid "SelectMenu"
 msgstr ""
 
@@ -12339,7 +12367,7 @@ msgstr ""
 msgid "Whether the select is disabled or not."
 msgstr ""
 
-#: ../../api.rst:3661
+#: ../../api.rst:3672
 msgid "DeletedReferencedMessage"
 msgstr ""
 
@@ -12368,7 +12396,7 @@ msgstr ""
 msgid "The guild ID of the deleted referenced message."
 msgstr ""
 
-#: ../../api.rst:3670
+#: ../../api.rst:3681
 msgid "Reaction"
 msgstr ""
 
@@ -12487,7 +12515,7 @@ msgstr ""
 msgid "Clears this reaction from the message."
 msgstr ""
 
-#: ../../api.rst:3682
+#: ../../api.rst:3693
 msgid "Guild"
 msgstr ""
 
@@ -14593,19 +14621,19 @@ msgstr ""
 msgid "List[:class:`GuildApplicationCommandPermissions`]"
 msgstr ""
 
-#: ../../api.rst:3698
+#: ../../api.rst:3709
 msgid "A namedtuple which represents a ban returned from :meth:`~Guild.bans`."
 msgstr ""
 
-#: ../../api.rst:3702
+#: ../../api.rst:3713
 msgid "The reason this user was banned."
 msgstr ""
 
-#: ../../api.rst:3707
+#: ../../api.rst:3718
 msgid "The :class:`User` that was banned."
 msgstr ""
 
-#: ../../api.rst:3713
+#: ../../api.rst:3724
 msgid "Integration"
 msgstr ""
 
@@ -14821,7 +14849,7 @@ msgstr ""
 msgid "Syncing the integration failed."
 msgstr ""
 
-#: ../../api.rst:3731
+#: ../../api.rst:3742
 msgid "Interaction"
 msgstr ""
 
@@ -15009,8 +15037,8 @@ msgid ""
 "message sent was ephemeral."
 msgstr ""
 
-#: disnake.interactions.base.Interaction.edit_original_message:45
-#: disnake.interactions.base.InteractionMessage.edit:39 of
+#: disnake.interactions.base.Interaction.edit_original_message:54
+#: disnake.interactions.base.InteractionMessage.edit:48 of
 msgid ":class:`InteractionMessage`"
 msgstr ""
 
@@ -15057,12 +15085,12 @@ msgid ""
 msgstr ""
 
 #: disnake.interactions.base.Interaction.send:42
-#: disnake.interactions.base.InteractionResponse.edit_message:40
+#: disnake.interactions.base.InteractionResponse.edit_message:46
 #: disnake.interactions.base.InteractionResponse.send_message:34 of
 msgid "You specified both ``embed`` and ``embeds``."
 msgstr ""
 
-#: ../../api.rst:3739
+#: ../../api.rst:3750
 msgid "ApplicationCommandInteraction"
 msgstr ""
 
@@ -15116,7 +15144,7 @@ msgstr ""
 msgid "The options of the command (or sub-command) being invoked"
 msgstr ""
 
-#: ../../api.rst:3747
+#: ../../api.rst:3758
 msgid "MessageInteraction"
 msgstr ""
 
@@ -15155,7 +15183,7 @@ msgstr ""
 msgid "Union[:class:`Button`, :class:`SelectMenu`]"
 msgstr ""
 
-#: ../../api.rst:3755
+#: ../../api.rst:3766
 msgid "InteractionResponse"
 msgstr ""
 
@@ -15200,7 +15228,7 @@ msgstr ""
 
 #: disnake.interactions.base.InteractionResponse.autocomplete:9
 #: disnake.interactions.base.InteractionResponse.defer:13
-#: disnake.interactions.base.InteractionResponse.edit_message:41
+#: disnake.interactions.base.InteractionResponse.edit_message:47
 #: disnake.interactions.base.InteractionResponse.pong:8
 #: disnake.interactions.base.InteractionResponse.send_message:36 of
 msgid "This interaction has already been responded to before."
@@ -15238,20 +15266,41 @@ msgid ""
 "using :meth:`.edit_original_message`."
 msgstr ""
 
-#: disnake.interactions.base.InteractionResponse.edit_message:13 of
+#: disnake.interactions.base.InteractionResponse.edit_message:14 of
+msgid ""
+"If the original message has embeds with images that were created from "
+"local files (using the ``file`` parameter with :meth:`Embed.set_image` or"
+" :meth:`Embed.set_thumbnail`), those images will be removed if the "
+"message's attachments are edited in any way (i.e. by setting "
+"``file``/``files``, or adding an embed with local files)."
+msgstr ""
+
+#: disnake.interactions.base.InteractionResponse.edit_message:19 of
 msgid "The new content to replace the message with. ``None`` removes the content."
 msgstr ""
 
-#: disnake.interactions.base.InteractionResponse.edit_message:23 of
+#: disnake.interactions.base.InteractionResponse.edit_message:29 of
 msgid ""
 "The file to upload. This cannot be mixed with ``files`` parameter. Files "
 "will be appended to the message.  .. versionadded:: 2.1"
 msgstr ""
 
-#: disnake.interactions.base.InteractionResponse.edit_message:28 of
+#: disnake.interactions.base.InteractionResponse.edit_message:29 of
+msgid ""
+"The file to upload. This cannot be mixed with ``files`` parameter. Files "
+"will be appended to the message."
+msgstr ""
+
+#: disnake.interactions.base.InteractionResponse.edit_message:34 of
 msgid ""
 "A list of files to upload. This cannot be mixed with the ``file`` "
 "parameter. Files will be appended to the message.  .. versionadded:: 2.1"
+msgstr ""
+
+#: disnake.interactions.base.InteractionResponse.edit_message:34 of
+msgid ""
+"A list of files to upload. This cannot be mixed with the ``file`` "
+"parameter. Files will be appended to the message."
 msgstr ""
 
 #: disnake.interactions.base.InteractionResponse.autocomplete:1 of
@@ -15268,7 +15317,7 @@ msgstr ""
 msgid "Autocomplete response has failed."
 msgstr ""
 
-#: ../../api.rst:3763
+#: ../../api.rst:3774
 msgid "InteractionMessage"
 msgstr ""
 
@@ -15283,7 +15332,7 @@ msgid ""
 ":meth:`Interaction.original_message`."
 msgstr ""
 
-#: ../../api.rst:3771
+#: ../../api.rst:3782
 msgid "ApplicationCommandInteractionData"
 msgstr ""
 
@@ -15347,7 +15396,7 @@ msgstr ""
 msgid "The focused option"
 msgstr ""
 
-#: ../../api.rst:3779
+#: ../../api.rst:3790
 msgid "ApplicationCommandInteractionDataOption"
 msgstr ""
 
@@ -15397,7 +15446,7 @@ msgid ""
 ":class:`ApplicationCommandAutocompleteInteraction`."
 msgstr ""
 
-#: ../../api.rst:3787
+#: ../../api.rst:3798
 msgid "ApplicationCommandInteractionDataResolved"
 msgstr ""
 
@@ -15460,7 +15509,7 @@ msgstr ""
 msgid "Dict[:class:`int`, :class:`Message`]"
 msgstr ""
 
-#: ../../api.rst:3795
+#: ../../api.rst:3806
 msgid "MessageInteractionData"
 msgstr ""
 
@@ -15480,7 +15529,7 @@ msgstr ""
 msgid "The values the user has selected."
 msgstr ""
 
-#: ../../api.rst:3803
+#: ../../api.rst:3814
 msgid "Member"
 msgstr ""
 
@@ -15996,7 +16045,7 @@ msgstr ""
 msgid "The role or ``None`` if not found in the member's roles."
 msgstr ""
 
-#: ../../api.rst:3819
+#: ../../api.rst:3830
 msgid "Spotify"
 msgstr ""
 
@@ -16112,7 +16161,7 @@ msgstr ""
 msgid "The party ID of the listening party."
 msgstr ""
 
-#: ../../api.rst:3827
+#: ../../api.rst:3838
 msgid "VoiceState"
 msgstr ""
 
@@ -16173,7 +16222,7 @@ msgstr ""
 msgid "Optional[Union[:class:`VoiceChannel`, :class:`StageChannel`]]"
 msgstr ""
 
-#: ../../api.rst:3835
+#: ../../api.rst:3846
 msgid "Emoji"
 msgstr ""
 
@@ -16298,7 +16347,7 @@ msgstr ""
 msgid "The newly updated emoji."
 msgstr ""
 
-#: ../../api.rst:3844
+#: ../../api.rst:3855
 msgid "PartialEmoji"
 msgstr ""
 
@@ -16397,7 +16446,7 @@ msgstr ""
 msgid "If this isn't a custom emoji then an empty string is returned"
 msgstr ""
 
-#: ../../api.rst:3853
+#: ../../api.rst:3864
 msgid "Role"
 msgstr ""
 
@@ -16621,7 +16670,7 @@ msgstr ""
 msgid "Deleting the role failed."
 msgstr ""
 
-#: ../../api.rst:3861
+#: ../../api.rst:3872
 msgid "RoleTags"
 msgstr ""
 
@@ -16649,7 +16698,7 @@ msgstr ""
 msgid "The integration ID that manages the role."
 msgstr ""
 
-#: ../../api.rst:3869
+#: ../../api.rst:3880
 msgid "PartialMessageable"
 msgstr ""
 
@@ -16730,7 +16779,7 @@ msgstr ""
 msgid ":class:`PartialMessage`"
 msgstr ""
 
-#: ../../api.rst:3878
+#: ../../api.rst:3889
 msgid "TextChannel"
 msgstr ""
 
@@ -17271,7 +17320,7 @@ msgstr ""
 msgid ":class:`Thread` -- The archived threads."
 msgstr ""
 
-#: ../../api.rst:3894
+#: ../../api.rst:3905
 msgid "Thread"
 msgstr ""
 
@@ -17679,7 +17728,7 @@ msgstr ""
 msgid "Deleting the thread failed."
 msgstr ""
 
-#: ../../api.rst:3910
+#: ../../api.rst:3921
 msgid "ThreadMember"
 msgstr ""
 
@@ -17719,7 +17768,7 @@ msgstr ""
 msgid "The thread this member belongs to."
 msgstr ""
 
-#: ../../api.rst:3918
+#: ../../api.rst:3929
 msgid "StoreChannel"
 msgstr ""
 
@@ -17748,7 +17797,7 @@ msgstr ""
 msgid "Optional[:class:`.StoreChannel`]"
 msgstr ""
 
-#: ../../api.rst:3927
+#: ../../api.rst:3938
 msgid "VoiceChannel"
 msgstr ""
 
@@ -17868,7 +17917,7 @@ msgstr ""
 msgid "Mapping[:class:`int`, :class:`VoiceState`]"
 msgstr ""
 
-#: ../../api.rst:3936
+#: ../../api.rst:3947
 msgid "StageChannel"
 msgstr ""
 
@@ -17988,7 +18037,7 @@ msgstr ""
 msgid "Optional[:class:`.StageChannel`]"
 msgstr ""
 
-#: ../../api.rst:3946
+#: ../../api.rst:3957
 msgid "StageInstance"
 msgstr ""
 
@@ -18076,7 +18125,7 @@ msgstr ""
 msgid "Deleting the stage instance failed."
 msgstr ""
 
-#: ../../api.rst:3954
+#: ../../api.rst:3965
 msgid "CategoryChannel"
 msgstr ""
 
@@ -18196,7 +18245,7 @@ msgid ""
 ":class:`StageChannel` in the category."
 msgstr ""
 
-#: ../../api.rst:3963
+#: ../../api.rst:3974
 msgid "DMChannel"
 msgstr ""
 
@@ -18267,7 +18316,7 @@ msgstr ""
 msgid "The resolved permissions."
 msgstr ""
 
-#: ../../api.rst:3979
+#: ../../api.rst:3990
 msgid "GroupChannel"
 msgstr ""
 
@@ -18327,7 +18376,7 @@ msgstr ""
 msgid "Leaving the group failed."
 msgstr ""
 
-#: ../../api.rst:3995
+#: ../../api.rst:4006
 msgid "PartialInviteGuild"
 msgstr ""
 
@@ -18381,7 +18430,7 @@ msgstr ""
 msgid "The partial guild's description."
 msgstr ""
 
-#: ../../api.rst:4003
+#: ../../api.rst:4014
 msgid "PartialInviteChannel"
 msgstr ""
 
@@ -18419,7 +18468,7 @@ msgstr ""
 msgid "The partial channel's type."
 msgstr ""
 
-#: ../../api.rst:4011
+#: ../../api.rst:4022
 msgid "Invite"
 msgstr ""
 
@@ -18620,7 +18669,7 @@ msgstr ""
 msgid "The reason for deleting this invite. Shows up on the audit log."
 msgstr ""
 
-#: ../../api.rst:4019
+#: ../../api.rst:4030
 msgid "Template"
 msgstr ""
 
@@ -18716,7 +18765,7 @@ msgstr ""
 msgid "The template url."
 msgstr ""
 
-#: ../../api.rst:4027
+#: ../../api.rst:4038
 msgid "WidgetChannel"
 msgstr ""
 
@@ -18732,7 +18781,7 @@ msgstr ""
 msgid "The channel's position"
 msgstr ""
 
-#: ../../api.rst:4035
+#: ../../api.rst:4046
 msgid "WidgetMember"
 msgstr ""
 
@@ -18812,7 +18861,7 @@ msgstr ""
 msgid "Returns the member's display name."
 msgstr ""
 
-#: ../../api.rst:4044
+#: ../../api.rst:4055
 msgid "Widget"
 msgstr ""
 
@@ -18890,7 +18939,7 @@ msgstr ""
 msgid ":class:`Invite`"
 msgstr ""
 
-#: ../../api.rst:4052
+#: ../../api.rst:4063
 msgid "StickerPack"
 msgstr ""
 
@@ -18950,7 +18999,7 @@ msgstr ""
 msgid "The banner asset of the sticker pack."
 msgstr ""
 
-#: ../../api.rst:4060
+#: ../../api.rst:4071
 msgid "StickerItem"
 msgstr ""
 
@@ -18997,7 +19046,7 @@ msgstr ""
 msgid "Union[:class:`StandardSticker`, :class:`GuildSticker`]"
 msgstr ""
 
-#: ../../api.rst:4068
+#: ../../api.rst:4079
 msgid "Sticker"
 msgstr ""
 
@@ -19033,7 +19082,7 @@ msgstr ""
 msgid "Returns the sticker's creation time in UTC."
 msgstr ""
 
-#: ../../api.rst:4076
+#: ../../api.rst:4087
 msgid "StandardSticker"
 msgstr ""
 
@@ -19069,7 +19118,7 @@ msgstr ""
 msgid ":class:`StickerPack`"
 msgstr ""
 
-#: ../../api.rst:4084
+#: ../../api.rst:4095
 msgid "GuildSticker"
 msgstr ""
 
@@ -19130,7 +19179,7 @@ msgstr ""
 msgid "The newly modified sticker."
 msgstr ""
 
-#: ../../api.rst:4092
+#: ../../api.rst:4103
 msgid "RawMessageDeleteEvent"
 msgstr ""
 
@@ -19155,7 +19204,7 @@ msgstr ""
 msgid "The cached message, if found in the internal message cache."
 msgstr ""
 
-#: ../../api.rst:4100
+#: ../../api.rst:4111
 msgid "RawBulkMessageDeleteEvent"
 msgstr ""
 
@@ -19189,7 +19238,7 @@ msgstr ""
 msgid "List[:class:`Message`]"
 msgstr ""
 
-#: ../../api.rst:4108
+#: ../../api.rst:4119
 msgid "RawMessageUpdateEvent"
 msgstr ""
 
@@ -19228,7 +19277,7 @@ msgid ""
 ":attr:`RawMessageUpdateEvent.data`."
 msgstr ""
 
-#: ../../api.rst:4116
+#: ../../api.rst:4127
 msgid "RawReactionActionEvent"
 msgstr ""
 
@@ -19270,7 +19319,7 @@ msgid ""
 "reaction addition or ``REACTION_REMOVE`` for reaction removal."
 msgstr ""
 
-#: ../../api.rst:4124
+#: ../../api.rst:4135
 msgid "RawReactionClearEvent"
 msgstr ""
 
@@ -19293,7 +19342,7 @@ msgstr ""
 msgid "The guild ID where the reactions got cleared."
 msgstr ""
 
-#: ../../api.rst:4132
+#: ../../api.rst:4143
 msgid "RawReactionClearEmojiEvent"
 msgstr ""
 
@@ -19305,7 +19354,7 @@ msgstr ""
 msgid "The custom or unicode emoji being removed."
 msgstr ""
 
-#: ../../api.rst:4140
+#: ../../api.rst:4151
 msgid "RawIntegrationDeleteEvent"
 msgstr ""
 
@@ -19325,7 +19374,7 @@ msgstr ""
 msgid "The guild ID where the integration got deleted."
 msgstr ""
 
-#: ../../api.rst:4148
+#: ../../api.rst:4159
 msgid "PartialWebhookGuild"
 msgstr ""
 
@@ -19338,7 +19387,7 @@ msgstr ""
 msgid "These are typically given for channel follower webhooks."
 msgstr ""
 
-#: ../../api.rst:4156
+#: ../../api.rst:4167
 msgid "PartialWebhookChannel"
 msgstr ""
 
@@ -19346,27 +19395,27 @@ msgstr ""
 msgid "Represents a partial channel for webhooks."
 msgstr ""
 
-#: ../../api.rst:4166
+#: ../../api.rst:4177
 msgid "Data Classes"
 msgstr ""
 
-#: ../../api.rst:4168
+#: ../../api.rst:4179
 msgid "Some classes are just there to be data containers, this lists them."
 msgstr ""
 
-#: ../../api.rst:4170
+#: ../../api.rst:4181
 msgid ""
 "Unlike :ref:`models <discord_api_models>` you are allowed to create most "
 "of these yourself, even if they can also be used to hold attributes."
 msgstr ""
 
-#: ../../api.rst:4176
+#: ../../api.rst:4187
 msgid ""
 "The only exception to this rule is :class:`Object`, which is made with "
 "dynamic attributes in mind."
 msgstr ""
 
-#: ../../api.rst:4181
+#: ../../api.rst:4192
 msgid "Object"
 msgstr ""
 
@@ -19411,7 +19460,7 @@ msgstr ""
 msgid "Returns the snowflake's creation time in UTC."
 msgstr ""
 
-#: ../../api.rst:4189
+#: ../../api.rst:4200
 msgid "Embed"
 msgstr ""
 
@@ -19588,6 +19637,10 @@ msgid "The source URL for the image. Only HTTP(S) is supported."
 msgstr ""
 
 #: disnake.embeds.Embed.set_image:11 disnake.embeds.Embed.set_thumbnail:11 of
+msgid "The file to use as the image.  .. versionadded:: 2.2"
+msgstr ""
+
+#: disnake.embeds.Embed.set_image:11 disnake.embeds.Embed.set_thumbnail:11 of
 msgid "The file to use as the image."
 msgstr ""
 
@@ -19746,7 +19799,7 @@ msgstr ""
 msgid "Converts this embed object into a dict."
 msgstr ""
 
-#: ../../api.rst:4197
+#: ../../api.rst:4208
 msgid "AllowedMentions"
 msgstr ""
 
@@ -19805,7 +19858,7 @@ msgid ""
 "set to ``False``"
 msgstr ""
 
-#: ../../api.rst:4205
+#: ../../api.rst:4216
 msgid "MessageReference"
 msgstr ""
 
@@ -19889,7 +19942,7 @@ msgstr ""
 msgid "Returns a URL that allows the client to jump to the referenced message."
 msgstr ""
 
-#: ../../api.rst:4213
+#: ../../api.rst:4224
 msgid "InteractionReference"
 msgstr ""
 
@@ -19920,7 +19973,7 @@ msgstr ""
 msgid "The user who invoked the interaction"
 msgstr ""
 
-#: ../../api.rst:4221
+#: ../../api.rst:4232
 msgid "PartialMessage"
 msgstr ""
 
@@ -19980,7 +20033,7 @@ msgstr ""
 msgid "Fetches the partial message to a full :class:`Message`."
 msgstr ""
 
-#: disnake.message.PartialMessage.edit:64
+#: disnake.message.PartialMessage.edit:71
 #: disnake.message.PartialMessage.fetch:5 of
 msgid "The message was not found."
 msgstr ""
@@ -19993,14 +20046,14 @@ msgstr ""
 msgid ":class:`disnake.Message` is always returned."
 msgstr ""
 
-#: disnake.message.PartialMessage.edit:17 of
+#: disnake.message.PartialMessage.edit:23 of
 msgid ""
 "The new embeds to replace the original with. Must be a maximum of 10. "
 "This cannot be mixed with the ``embed`` parameter. To remove all embeds "
 "``[]`` should be passed.  .. versionadded:: 2.1"
 msgstr ""
 
-#: disnake.message.PartialMessage.edit:49 of
+#: disnake.message.PartialMessage.edit:56 of
 msgid ""
 "Controls the mentions being processed in this message. If this is passed,"
 " then the object is merged with :attr:`Client.allowed_mentions`. The "
@@ -20011,7 +20064,7 @@ msgid ""
 ":attr:`Client.allowed_mentions` if no object is passed."
 msgstr ""
 
-#: disnake.message.PartialMessage.edit:49 of
+#: disnake.message.PartialMessage.edit:56 of
 msgid ""
 "Controls the mentions being processed in this message. If this is passed,"
 " then the object is merged with :attr:`Client.allowed_mentions`. The "
@@ -20020,13 +20073,13 @@ msgid ""
 ":attr:`Client.allowed_mentions`."
 msgstr ""
 
-#: disnake.message.PartialMessage.edit:55 of
+#: disnake.message.PartialMessage.edit:62 of
 msgid ""
 "Unlike :meth:`Message.edit`, this does not default to "
 ":attr:`Client.allowed_mentions` if no object is passed."
 msgstr ""
 
-#: ../../api.rst:4245
+#: ../../api.rst:4256
 msgid "SelectOption"
 msgstr ""
 
@@ -20069,7 +20122,7 @@ msgstr ""
 msgid "Whether this option is selected by default."
 msgstr ""
 
-#: ../../api.rst:4253
+#: ../../api.rst:4264
 msgid "Intents"
 msgstr ""
 
@@ -20193,7 +20246,7 @@ msgstr ""
 #: ../../docstring disnake.Intents.dm_messages:13
 #: disnake.Intents.dm_reactions:14 disnake.Intents.emojis_and_stickers:10
 #: disnake.Intents.guild_messages:13 disnake.Intents.guild_reactions:14
-#: disnake.Intents.guilds:14 disnake.Intents.members:10
+#: disnake.Intents.guilds:14 disnake.Intents.members:11
 #: disnake.Intents.messages:13 disnake.Intents.presences:7
 #: disnake.Intents.reactions:14 disnake.Intents.voice_states:7 of
 msgid ""
@@ -20240,64 +20293,68 @@ msgid ":func:`on_member_update`"
 msgstr ""
 
 #: ../../docstring disnake.Intents.members:8 of
+msgid ":func:`on_member_screening_decline`"
+msgstr ""
+
+#: ../../docstring disnake.Intents.members:9 of
 msgid ":func:`on_user_update`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:12 of
+#: ../../docstring disnake.Intents.members:13 of
 msgid ":meth:`Client.get_all_members`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:13 of
+#: ../../docstring disnake.Intents.members:14 of
 msgid ":meth:`Client.get_user`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:14 of
+#: ../../docstring disnake.Intents.members:15 of
 msgid ":meth:`Guild.chunk`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:15 of
+#: ../../docstring disnake.Intents.members:16 of
 msgid ":meth:`Guild.fetch_members`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:16 of
+#: ../../docstring disnake.Intents.members:17 of
 msgid ":meth:`Guild.get_member`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:17 of
+#: ../../docstring disnake.Intents.members:18 of
 msgid ":attr:`Guild.members`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:18 of
+#: ../../docstring disnake.Intents.members:19 of
 msgid ":attr:`Member.roles`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:19 of
+#: ../../docstring disnake.Intents.members:20 of
 msgid ":attr:`Member.nick`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:20 of
+#: ../../docstring disnake.Intents.members:21 of
 msgid ":attr:`Member.premium_since`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:21 of
+#: ../../docstring disnake.Intents.members:22 of
 msgid ":attr:`User.name`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:22 of
+#: ../../docstring disnake.Intents.members:23 of
 msgid ":attr:`User.avatar`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:23 of
+#: ../../docstring disnake.Intents.members:24 of
 msgid ":attr:`User.discriminator`"
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:25 of
+#: ../../docstring disnake.Intents.members:26 of
 msgid ""
 "For more information go to the :ref:`member intent documentation "
 "<need_members_intent>`."
 msgstr ""
 
-#: ../../docstring disnake.Intents.members:29 disnake.Intents.presences:17 of
+#: ../../docstring disnake.Intents.members:30 disnake.Intents.presences:17 of
 msgid ""
 "Currently, this requires opting in explicitly via the developer portal as"
 " well. Bots in over 100 guilds will need to apply to Discord for "
@@ -20711,7 +20768,7 @@ msgstr ""
 msgid ":func:`on_typing` (only for DMs)"
 msgstr ""
 
-#: ../../api.rst:4261
+#: ../../api.rst:4272
 msgid "MemberCacheFlags"
 msgstr ""
 
@@ -20790,7 +20847,7 @@ msgstr ""
 msgid ":class:`MemberCacheFlags`"
 msgstr ""
 
-#: ../../api.rst:4269
+#: ../../api.rst:4280
 msgid "ApplicationFlags"
 msgstr ""
 
@@ -20861,7 +20918,7 @@ msgid ""
 " limited message content over the gateway."
 msgstr ""
 
-#: ../../api.rst:4277
+#: ../../api.rst:4288
 msgid "File"
 msgstr ""
 
@@ -20908,7 +20965,11 @@ msgstr ""
 msgid "Whether the attachment is a spoiler."
 msgstr ""
 
-#: ../../api.rst:4285
+#: disnake.file.File:40 of
+msgid "The file's description."
+msgstr ""
+
+#: ../../api.rst:4296
 msgid "Colour"
 msgstr ""
 
@@ -21166,7 +21227,7 @@ msgid ""
 "``0xFEE75C``."
 msgstr ""
 
-#: ../../api.rst:4293
+#: ../../api.rst:4304
 msgid "BaseActivity"
 msgstr ""
 
@@ -21210,7 +21271,7 @@ msgstr ""
 msgid "When the user started doing this activity in UTC."
 msgstr ""
 
-#: ../../api.rst:4301
+#: ../../api.rst:4312
 msgid "Activity"
 msgstr ""
 
@@ -21362,7 +21423,7 @@ msgstr ""
 msgid "Returns the small image asset hover text of this activity if applicable."
 msgstr ""
 
-#: ../../api.rst:4309
+#: ../../api.rst:4320
 msgid "Game"
 msgstr ""
 
@@ -21414,7 +21475,7 @@ msgstr ""
 msgid "When the user will stop playing this game in UTC, if applicable."
 msgstr ""
 
-#: ../../api.rst:4317
+#: ../../api.rst:4328
 msgid "Streaming"
 msgstr ""
 
@@ -21487,7 +21548,7 @@ msgid ""
 "Typically set by the Discord client."
 msgstr ""
 
-#: ../../api.rst:4325
+#: ../../api.rst:4336
 msgid "CustomActivity"
 msgstr ""
 
@@ -21511,7 +21572,7 @@ msgstr ""
 msgid "It always returns :attr:`ActivityType.custom`."
 msgstr ""
 
-#: ../../api.rst:4333
+#: ../../api.rst:4344
 msgid "Permissions"
 msgstr ""
 
@@ -21954,7 +22015,7 @@ msgstr ""
 msgid "Returns ``True`` if a user can send messages in threads."
 msgstr ""
 
-#: ../../api.rst:4341
+#: ../../api.rst:4352
 msgid "PermissionOverwrite"
 msgstr ""
 
@@ -22020,7 +22081,7 @@ msgstr ""
 msgid "A list of key/value pairs to bulk update with."
 msgstr ""
 
-#: ../../api.rst:4349
+#: ../../api.rst:4360
 msgid "ShardInfo"
 msgstr ""
 
@@ -22072,7 +22133,7 @@ msgid ""
 "this shard."
 msgstr ""
 
-#: ../../api.rst:4357
+#: ../../api.rst:4368
 msgid "SystemChannelFlags"
 msgstr ""
 
@@ -22113,7 +22174,7 @@ msgid ""
 "tips notifications."
 msgstr ""
 
-#: ../../api.rst:4365
+#: ../../api.rst:4376
 msgid "MessageFlags"
 msgstr ""
 
@@ -22159,7 +22220,7 @@ msgstr ""
 msgid "Returns ``True`` if the source message is ephemeral."
 msgstr ""
 
-#: ../../api.rst:4373
+#: ../../api.rst:4384
 msgid "PublicUserFlags"
 msgstr ""
 
@@ -22241,15 +22302,15 @@ msgstr ""
 msgid "List[:class:`UserFlags`]: Returns all public flags the user has."
 msgstr ""
 
-#: ../../api.rst:4383
+#: ../../api.rst:4394
 msgid "Bot UI Kit"
 msgstr ""
 
-#: ../../api.rst:4385
+#: ../../api.rst:4396
 msgid "The library has helpers to help create component-based UIs."
 msgstr ""
 
-#: ../../api.rst:4388
+#: ../../api.rst:4399
 msgid "View"
 msgstr ""
 
@@ -22444,7 +22505,7 @@ msgid ""
 " normally."
 msgstr ""
 
-#: ../../api.rst:4396
+#: ../../api.rst:4407
 msgid "Item"
 msgstr ""
 
@@ -22557,7 +22618,7 @@ msgid ""
 ":class:`.PartialEmoji` or a full :class:`.Emoji`."
 msgstr ""
 
-#: ../../api.rst:4415
+#: ../../api.rst:4426
 msgid "Select"
 msgstr ""
 
@@ -22670,11 +22731,11 @@ msgstr ""
 msgid "Whether the select is disabled or not. Defaults to ``False``."
 msgstr ""
 
-#: ../../api.rst:4427
+#: ../../api.rst:4438
 msgid "Exceptions"
 msgstr ""
 
-#: ../../api.rst:4429
+#: ../../api.rst:4440
 msgid "The following exceptions are thrown by the library."
 msgstr ""
 
@@ -22875,79 +22936,122 @@ msgstr ""
 msgid "An exception that is thrown for when libopus is not loaded."
 msgstr ""
 
-#: ../../api.rst:4471
+#: ../../api.rst:4482
 msgid "Exception Hierarchy"
 msgstr ""
 
-#: ../../api.rst:4491
+#: ../../api.rst:4502
 msgid ":exc:`Exception`"
 msgstr ""
 
-#: ../../api.rst:4491
+#: ../../api.rst:4502
 msgid ":exc:`DiscordException`"
 msgstr ""
 
-#: ../../api.rst:4485
+#: ../../api.rst:4496
 msgid ":exc:`ClientException`"
 msgstr ""
 
-#: ../../api.rst:4478
+#: ../../api.rst:4489
 msgid ":exc:`InvalidData`"
 msgstr ""
 
-#: ../../api.rst:4479
+#: ../../api.rst:4490
 msgid ":exc:`InvalidArgument`"
 msgstr ""
 
-#: ../../api.rst:4480
+#: ../../api.rst:4491
 msgid ":exc:`LoginFailure`"
 msgstr ""
 
-#: ../../api.rst:4481
+#: ../../api.rst:4492
 msgid ":exc:`ConnectionClosed`"
 msgstr ""
 
-#: ../../api.rst:4482
+#: ../../api.rst:4493
 msgid ":exc:`PrivilegedIntentsRequired`"
 msgstr ""
 
-#: ../../api.rst:4485
+#: ../../api.rst:4496
 msgid ":exc:`InteractionException`"
 msgstr ""
 
-#: ../../api.rst:4484
+#: ../../api.rst:4495
 msgid ":exc:`InteractionResponded`"
 msgstr ""
 
-#: ../../api.rst:4485
+#: ../../api.rst:4496
 msgid ":exc:`InteractionNotResponded`"
 msgstr ""
 
-#: ../../api.rst:4486
+#: ../../api.rst:4497
 msgid ":exc:`InteractionTimedOut`"
 msgstr ""
 
-#: ../../api.rst:4487
+#: ../../api.rst:4498
 msgid ":exc:`NoMoreItems`"
 msgstr ""
 
-#: ../../api.rst:4488
+#: ../../api.rst:4499
 msgid ":exc:`GatewayNotFound`"
 msgstr ""
 
-#: ../../api.rst:4491
+#: ../../api.rst:4502
 msgid ":exc:`HTTPException`"
 msgstr ""
 
-#: ../../api.rst:4490
+#: ../../api.rst:4501
 msgid ":exc:`Forbidden`"
 msgstr ""
 
-#: ../../api.rst:4491
+#: ../../api.rst:4502
 msgid ":exc:`NotFound`"
 msgstr ""
 
-#: ../../api.rst:4492
+#: ../../api.rst:4503
 msgid ":exc:`DiscordServerError`"
 msgstr ""
+
+#~ msgid ""
+#~ "The file to upload. This cannot be"
+#~ " mixed with ``files`` parameter. Files "
+#~ "will be appended to the message.  "
+#~ ".. versionadded:: 2.0"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A list of files to send with "
+#~ "the content. This cannot be mixed "
+#~ "with the ``file`` parameter. Files will"
+#~ " be appended to the message.  .. "
+#~ "versionadded:: 2.0"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A list of files to send with "
+#~ "the content. This cannot be mixed "
+#~ "with the ``file`` parameter. Files will"
+#~ " be appended to the message."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A list of attachments to keep in"
+#~ " the message. If ``[]`` is passed "
+#~ "then all existing attachments are "
+#~ "removed.  .. versionadded:: 2.1"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A list of attachments to keep in"
+#~ " the message. If ``[]`` is passed "
+#~ "then all existing attachments are "
+#~ "removed."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "A list of files to upload. This"
+#~ " cannot be mixed with the ``file``"
+#~ " parameter. Files will be appended to"
+#~ " the message.  .. versionadded:: 2.0"
+#~ msgstr ""
 
