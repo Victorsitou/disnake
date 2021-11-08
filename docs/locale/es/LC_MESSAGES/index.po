@@ -70,7 +70,7 @@ msgid ""
 "Is this your first time using the library? This is the place to get "
 "started!"
 msgstr ""
-"¿Es ésta su primera vez usando la libreria? Este es el lugar adecuado "
+"¿Es esta su primera vez usando la librería? ¡Este es el lugar adecuado "
 "para comenzar!"
 
 #: ../../index.rst:28
@@ -114,12 +114,12 @@ msgid ""
 "If you're looking for something specific, try the :ref:`index <genindex>`"
 " or :ref:`searching <search>`."
 msgstr ""
-"Si busca algo en especifico, pruebe consultar el :ref:`índice <genindex>`"
+"Si busca algo en específico, pruebe consultar el :ref:`índice <genindex>`"
 " o realizar una :ref:`búsqueda <search>`."
 
 #: ../../index.rst:40
 msgid "Report bugs in the :resource:`issue tracker <issues>`."
-msgstr "Reporta fallos en el :resource:`segumiento de fallos <issues>`."
+msgstr "Reporta fallos en el :resource:`seguimiento de fallos <issues>`."
 
 #: ../../index.rst:43
 msgid "Extensions"
@@ -147,7 +147,7 @@ msgstr "Meta"
 
 #: ../../index.rst:68
 msgid "If you're looking for something related to the project itself, it's here."
-msgstr "Si busca algo relacionado con el proyecto en sí, aquí está."
+msgstr "Si busca algo relacionado con el proyecto en sí, lo puede encontrar aquí."
 
 #~ msgid "Ask in our :resource:`GitHub discussions page <discussions>`."
 #~ msgstr "OBSOLETO, PREGUNTAR A EQ."

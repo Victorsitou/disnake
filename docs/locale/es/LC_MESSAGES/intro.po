@@ -26,7 +26,7 @@ msgid ""
 "This is the documentation for disnake, a library for Python to aid in "
 "creating applications that utilise the Discord API."
 msgstr ""
-"Esta es la documentación para disnake, una librera para Python que ayuda en "
+"Esta es la documentación para disnake, una librería para Python que ayuda a "
 "crear aplicaciones que utilizan la API de Discord"
 
 #: ../../intro.rst:14
@@ -40,7 +40,7 @@ msgid ""
 "or lower is not supported."
 msgstr ""
 "disnake funciona con Python 3.8 o superior. No hay soporte para versiones "
-"anteriores de Python. Python 2.7 o inferior no es compatible. Python 3.7 "
+"inferiores de Python. Python 2.7 o inferior no es compatible. Python 3.7 "
 "o inferior no es compatible."
 
 #: ../../intro.rst:23
@@ -49,18 +49,18 @@ msgstr "Instalación"
 
 #: ../../intro.rst:25
 msgid "You can get the library directly from PyPI: ::"
-msgstr "Puede obtener esta libreria directamente de PyPI: ::"
+msgstr "Puede obtener esta librería directamente de PyPI: ::"
 
 #: ../../intro.rst:29
 msgid "If you are using Windows, then the following should be used instead: ::"
-msgstr "Si está utilizando Windows, deberá usar lo siguente: ::"
+msgstr "Si está utilizando Windows, deberá usar lo siguiente: ::"
 
 #: ../../intro.rst:34
 msgid ""
 "To get voice support, you should use ``disnake[voice]`` instead of "
 "``disnake``, e.g. ::"
 msgstr ""
-"Para obtener soporte de voz, usted debe usar ``disnake[voice]`` en cambio de "
+"Para obtener soporte de voz, usted debe usar ``disnake[voice]`` en vez de "
 "``disnake``, p. ej. ::"
 
 #: ../../intro.rst:38
@@ -68,7 +68,7 @@ msgid ""
 "On Linux environments, installing voice requires getting the following "
 "dependencies:"
 msgstr ""
-"En entornos Linux, la instalación de voz requiere tener las siguentes "
+"En entornos Linux, la instalación de voz requiere tener las siguientes "
 "dependencias: "
 
 #: ../../intro.rst:40
@@ -88,12 +88,12 @@ msgid ""
 "For a Debian-based system, the following command will get these "
 "dependencies:"
 msgstr ""
-"Para sistemas basados en Debian, el siguente comando instalará las "
-"dependencias:"
+"Para sistemas basados en Debian, el siguiente comando instalará las "
+"dependencias requeridas:"
 
 #: ../../intro.rst:50
 msgid "Remember to check your permissions!"
-msgstr "Recuerda comprobar sus permisos!"
+msgstr "¡No te olvides de comprobar tus permisos!"
 
 #: ../../intro.rst:53
 msgid "Virtual Environments"
@@ -108,12 +108,12 @@ msgid ""
 "a concept called \"Virtual Environment\"s to help maintain these separate"
 " versions."
 msgstr ""
-"A veces quiere evitar que las librerias estén en las instalaciones del sistema "
-"o quiera utilizar una versión diferente de las librerias. "
-"También es posible que no tenga permisos para instalar las librerias "
-"en el sistema. Para este proposito, la libreria estándar a partir de Python 3.3 "
+"A veces quiere evitar que las librerías estén en las instalaciones del sistema "
+"o quiere utilizar una versión diferente de las librerías. "
+"También es posible que no tenga permisos para instalar las librerías "
+"en el sistema. Para este propósito, la librería estándar a partir de Python 3.3 "
 "viene con un elemento llamado \"Entorno Virtual\" para ayudar a mantener "
-"estas versiones separadas."
+"estas versiones separadas del sistema."
 
 #: ../../intro.rst:60
 msgid "A more in-depth tutorial is found on :doc:`py:tutorial/venv`."
@@ -125,7 +125,7 @@ msgstr "Sin embargo, aquí hay un pequeño tutorial:"
 
 #: ../../intro.rst:64
 msgid "Go to your project's working directory:"
-msgstr "Vaya al directorio de trabajo de su proyecto:"
+msgstr "Vaya al directorio de trabajo de su proyecto y cree un entorno virtual:"
 
 #: ../../intro.rst:71
 msgid "Activate the virtual environment:"
@@ -133,7 +133,7 @@ msgstr "Active el entorno virtual:"
 
 #: ../../intro.rst:77
 msgid "On Windows you activate it with:"
-msgstr "En Windows puedes activarlo con:"
+msgstr "En Windows puede activarlo con el siguiente comando:"
 
 #: ../../intro.rst:83
 msgid "Use pip like usual:"
@@ -154,12 +154,12 @@ msgid ""
 "example, when a message happens, you will receive an event about it that "
 "you can respond to."
 msgstr ""
-"disnake funciona en torno al concepto de :ref:`eventos <discord-api-"
+"disnake gira en torno al concepto de :ref:`eventos <discord-api-"
 "events>`. Un evento es algo que se escucha y luego se responde. Por "
-"ejemplo, cuando un mensaje es enviado, usted recibirá un evento sobre "
-"él que puede responder."
+"ejemplo, cuando un mensaje es enviado, usted recibirá un evento al "
+"que posteriormente puede responder."
 
 #: ../../intro.rst:98
 msgid "A quick example to showcase how events work:"
-msgstr "Un ejemplo rápido para mostrar cómo funcionan los eventos:"
+msgstr "Aquí hay un ejemplo rápido para mostrar cómo funcionan los eventos:"
 
