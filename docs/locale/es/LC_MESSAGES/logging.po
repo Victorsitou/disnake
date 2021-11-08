@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: disnake 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-01 22:36-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-11-07 22:22-0300\n"
+"Last-Translator: Victor github.com/Victorsitou\n"
+"Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../logging.rst:7
 msgid "Setting Up Logging"
-msgstr ""
+msgstr "Configurando el Registro"
 
 #: ../../logging.rst:9
 msgid ""
@@ -28,6 +28,12 @@ msgid ""
 "configured, as no errors or warnings will be output if it is not set up. "
 "Configuration of the ``logging`` module can be as simple as::"
 msgstr ""
+"*disnake* registra errores e información de depuración a través del "
+"módulo de Python :mod:`logging`. Es muy recomendable que el módulo "
+"esté configurado, ya que no se mostrarán errores o advertencias "
+"si no lo está. A continuación te enseñáremos como configurar "
+"el módulo ``logging``:: "
+
 
 #: ../../logging.rst:18
 msgid ""
@@ -35,6 +41,9 @@ msgid ""
 "disnake as well as other libraries that use the ``logging`` module "
 "directly to the console."
 msgstr ""
+"Se coloca al principio de la aplicación. Esto dará salida a los registros "
+"de disnake, así como otras librerías utilizan el módulo ``logging`` "
+"directamente a la consola."
 
 #: ../../logging.rst:22
 msgid ""
@@ -42,6 +51,10 @@ msgid ""
 " and can be any of ``CRITICAL``, ``ERROR``, ``WARNING``, ``INFO``, and "
 "``DEBUG`` and if not specified defaults to ``WARNING``."
 msgstr ""
+"El argumento opcional ``level`` especifica el nivel de los eventos que "
+"se van a registrar y puede ser cualquiera de los siguientes: ``CRITICAL``, "
+"``ERROR``, ``WARNING``, ``INFO`` y ``DEBUG``, si no se especifica uno, el nivel "
+"predeterminado es ``WARNING``."
 
 #: ../../logging.rst:26
 msgid ""
@@ -49,6 +62,10 @@ msgid ""
 "example to write the logs to a file called ``disnake.log`` instead of "
 "outputting them to the console the following snippet can be used::"
 msgstr ""
+"Es posible realizar configuraciones más avanzadas con el módulo "
+":mod:`logging`. Por ejemplo, para escribir los registros en un "
+"archivo llamado ``disnake.log`` en vez de escribirlos en la "
+"consola, se puede utilizar el siguiente código:"
 
 #: ../../logging.rst:39
 msgid ""
@@ -56,10 +73,15 @@ msgid ""
 "``DEBUG``, as there are a lot of events logged and it would clog the "
 "stdout of your program."
 msgstr ""
+"Esto se recomienda bastante, especialmente en los niveles que tienen "
+"muchos datos como ``INFO`` y ``DEBUG``, ya que se registran muchos "
+"eventos y esto obstruiría la consola de su programa."
 
 #: ../../logging.rst:45
 msgid ""
 "For more information, check the documentation and tutorial of the "
 ":mod:`logging` module."
 msgstr ""
+"Para más información, consulte la documentación y el tutorial del "
+"módulo :mod:`logging`."
 
