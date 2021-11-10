@@ -61,6 +61,46 @@ AutoShardedBot
 .. autoclass:: disnake.ext.commands.AutoShardedBot
     :members:
 
+InteractionBot
+~~~~~~~~~~~~~~~~
+
+.. attributetable:: disnake.ext.commands.InteractionBot
+
+.. autoclass:: disnake.ext.commands.InteractionBot
+    :members:
+    :inherited-members:
+    :exclude-members: after_invoke, before_invoke, check, check_once, command, event, group, listen, slash_command, user_command, message_command
+
+    .. automethod:: InteractionBot.after_invoke()
+        :decorator:
+
+    .. automethod:: InteractionBot.before_invoke()
+        :decorator:
+
+    .. automethod:: InteractionBot.check()
+        :decorator:
+
+    .. automethod:: InteractionBot.check_once()
+        :decorator:
+
+    .. automethod:: InteractionBot.slash_command(*args, **kwargs)
+        :decorator:
+
+    .. automethod:: InteractionBot.user_command(*args, **kwargs)
+        :decorator:
+
+    .. automethod:: InteractionBot.message_command(*args, **kwargs)
+        :decorator:
+
+    .. automethod:: InteractionBot.event()
+        :decorator:
+
+    .. automethod:: InteractionBot.group(*args, **kwargs)
+        :decorator:
+
+    .. automethod:: InteractionBot.listen(name=None)
+        :decorator:
+
 Prefix Helpers
 ----------------
 
