@@ -71,10 +71,22 @@ InteractionBot
     :inherited-members:
     :exclude-members: after_invoke, before_invoke, check, check_once, command, event, group, listen, slash_command, user_command, message_command
 
-    .. automethod:: InteractionBot.after_invoke()
+    .. automethod:: InteractionBot.after_slash_command_invoke()
         :decorator:
 
-    .. automethod:: InteractionBot.before_invoke()
+    .. authomethod:: InteractionBot.after_user_command_invoke()
+        :decorator:
+
+    .. authomethod:: InteractionBot.after_message_command_invoke()
+        :decorator:
+
+    .. automethod:: InteractionBot.before_slash_command_invoke()
+        :decorator:
+
+    .. automethod:: InteractionBot.before_user_command_invoke()
+        :decorator:
+
+    .. automethod:: InteractionBot.before_messsage_command_invoke()
         :decorator:
 
     .. automethod:: InteractionBot.check()
