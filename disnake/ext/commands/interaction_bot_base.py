@@ -41,6 +41,7 @@ from typing import (
     Union,
     cast,
 )
+import warnings
 
 import disnake
 
@@ -60,6 +61,7 @@ from disnake.app_commands import (
     ApplicationCommand,
     PartialGuildApplicationCommandPermissions,
 )
+from disnake.custom_warnings import ConfigWarning, SyncWarning
 from disnake.enums import ApplicationCommandType
 
 if TYPE_CHECKING:
@@ -689,7 +691,7 @@ class InteractionBotBase(CommonBotBase):
                 to_send.extend(diff["change_type"])
                 await self.bulk_overwrite_global_commands(to_send)
             except Exception as e:
-                print(f"[WARNING] Failed to overwrite global commands due to {e}")
+                warnings.warn(f"Failed to overwrite global commands due to {e}", SyncWarning)
         # Same process but for each specified guild individually.
         # Notice that we're not doing this for every single guild for optimisation purposes.
         # See the note in :meth:`_cache_application_commands` about guild app commands.
@@ -720,8 +722,9 @@ class InteractionBotBase(CommonBotBase):
                     to_send.extend(diff["change_type"])
                     await self.bulk_overwrite_guild_commands(guild_id, to_send)
                 except Exception as e:
-                    print(
-                        f"[WARNING] Failed to overwrite commands in <Guild id={guild_id}> due to {e}"
+                    warnings.warn(
+                        f"Failed to overwrite commands in <Guild id={guild_id}> due to {e}",
+                        SyncWarning,
                     )
         # Last debug message
         if self._sync_commands_debug:
@@ -741,9 +744,10 @@ class InteractionBotBase(CommonBotBase):
 
         if not self._sync_permissions:
             if guilds_to_cache:
-                print(
-                    "[WARNING] You're using the @commands.guild_permissions decorator, however,"
-                    f" the 'sync_permissions' kwarg of '{self.__class__.__name__}' is set to 'False'."
+                warnings.warn(
+                    "You're using the @commands.guild_permissions decorator, however, the"
+                    f" 'sync_permissions' kwarg of '{self.__class__.__name__}' is set to 'False'.",
+                    ConfigWarning,
                 )
             return
 
@@ -813,8 +817,9 @@ class InteractionBotBase(CommonBotBase):
             try:
                 await self.bulk_edit_command_permissions(guild_id, new_array)
             except Exception as err:
-                print(
-                    f"[WARNING] Failed to overwrite permissions in <Guild id={guild_id}> due to {err}"
+                warnings.warn(
+                    f"Failed to overwrite permissions in <Guild id={guild_id}> due to {err}",
+                    SyncWarning,
                 )
             finally:
                 if self._sync_commands_debug:
@@ -944,7 +949,7 @@ class InteractionBotBase(CommonBotBase):
             The function that was used as a global check.
         call_once: :class:`bool`
             If the function should only be called once per
-            :meth:`.invoke` call.
+            :meth:`invoke` call.
         slash_commands: :class:`bool`
             If this check is for slash commands.
         user_commands: :class:`bool`
@@ -1095,7 +1100,7 @@ class InteractionBotBase(CommonBotBase):
         ----------
         call_once: :class:`bool`
             If the function should only be called once per
-            :meth:`.invoke` call.
+            :meth:`invoke` call.
         text_commands: :class:`bool`
             If this check is for text commands.
         slash_commands: :class:`bool`
@@ -1148,7 +1153,7 @@ class InteractionBotBase(CommonBotBase):
         return await disnake.utils.async_all(f(inter) for f in checks)  # type: ignore
 
     def before_slash_command_invoke(self, coro: CFT) -> CFT:
-        """Similar to :meth:`.before_invoke` but for slash commands."""
+        """Similar to :meth:`Bot.before_invoke` but for slash commands."""
 
         if not asyncio.iscoroutinefunction(coro):
             raise TypeError("The pre-invoke hook must be a coroutine.")
@@ -1157,7 +1162,7 @@ class InteractionBotBase(CommonBotBase):
         return coro
 
     def after_slash_command_invoke(self, coro: CFT) -> CFT:
-        """Similar to :meth:`.after_invoke` but for slash commands."""
+        """Similar to :meth:`Bot.after_invoke` but for slash commands."""
 
         if not asyncio.iscoroutinefunction(coro):
             raise TypeError("The post-invoke hook must be a coroutine.")
@@ -1166,7 +1171,7 @@ class InteractionBotBase(CommonBotBase):
         return coro
 
     def before_user_command_invoke(self, coro: CFT) -> CFT:
-        """Similar to :meth:`.before_invoke` but for user commands."""
+        """Similar to :meth:`Bot.before_invoke` but for user commands."""
 
         if not asyncio.iscoroutinefunction(coro):
             raise TypeError("The pre-invoke hook must be a coroutine.")
@@ -1175,7 +1180,7 @@ class InteractionBotBase(CommonBotBase):
         return coro
 
     def after_user_command_invoke(self, coro: CFT) -> CFT:
-        """Similar to :meth:`.after_invoke` but for user commands."""
+        """Similar to :meth:`Bot.after_invoke` but for user commands."""
 
         if not asyncio.iscoroutinefunction(coro):
             raise TypeError("The post-invoke hook must be a coroutine.")
@@ -1184,7 +1189,7 @@ class InteractionBotBase(CommonBotBase):
         return coro
 
     def before_message_command_invoke(self, coro: CFT) -> CFT:
-        """Similar to :meth:`.before_invoke` but for message commands."""
+        """Similar to :meth:`Bot.before_invoke` but for message commands."""
 
         if not asyncio.iscoroutinefunction(coro):
             raise TypeError("The pre-invoke hook must be a coroutine.")
@@ -1193,7 +1198,7 @@ class InteractionBotBase(CommonBotBase):
         return coro
 
     def after_message_command_invoke(self, coro: CFT) -> CFT:
-        """Similar to :meth:`.after_invoke` but for message commands."""
+        """Similar to :meth:`Bot.after_invoke` but for message commands."""
 
         if not asyncio.iscoroutinefunction(coro):
             raise TypeError("The post-invoke hook must be a coroutine.")
@@ -1226,6 +1231,7 @@ class InteractionBotBase(CommonBotBase):
             return
 
         inter.bot = self  # type: ignore
+        inter.application_command = slash_command
         if slash_command.guild_ids is None or inter.guild_id in slash_command.guild_ids:
             await slash_command._call_relevant_autocompleter(inter)
 
