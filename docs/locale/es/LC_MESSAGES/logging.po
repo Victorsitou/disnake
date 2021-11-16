@@ -42,7 +42,7 @@ msgid ""
 "directly to the console."
 msgstr ""
 "Se coloca al principio de la aplicación. Esto dará salida a los registros "
-"de disnake, así como otras librerías utilizan el módulo ``logging`` "
+"de disnake, así como otras librerías que utilizan el módulo ``logging`` "
 "directamente a la consola."
 
 #: ../../logging.rst:22
@@ -53,8 +53,8 @@ msgid ""
 msgstr ""
 "El argumento opcional ``level`` especifica el nivel de los eventos que "
 "se van a registrar y puede ser cualquiera de los siguientes: ``CRITICAL``, "
-"``ERROR``, ``WARNING``, ``INFO`` y ``DEBUG``, si no se especifica uno, el nivel "
-"predeterminado es ``WARNING``."
+"``ERROR``, ``WARNING``, ``INFO`` y ``DEBUG``, si no se especifica ninguno, el nivel "
+"predeterminado será ``WARNING``."
 
 #: ../../logging.rst:26
 msgid ""

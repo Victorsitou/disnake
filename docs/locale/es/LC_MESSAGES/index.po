@@ -119,7 +119,7 @@ msgstr ""
 
 #: ../../index.rst:40
 msgid "Report bugs in the :resource:`issue tracker <issues>`."
-msgstr "Reporta fallos en el :resource:`seguimiento de fallos <issues>`."
+msgstr "Reporte fallos en el :resource:`seguimiento de fallos <issues>`."
 
 #: ../../index.rst:43
 msgid "Extensions"

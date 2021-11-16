@@ -43,7 +43,7 @@ msgstr ""
 
 #: ../../quickstart.rst:18
 msgid "It looks something like this:"
-msgstr "Se parece a esto:"
+msgstr "Se ve algo así:"
 
 #: ../../quickstart.rst:40
 msgid ""
@@ -51,7 +51,7 @@ msgid ""
 "``disnake`` as that'll conflict with the library."
 msgstr ""
 "Llamemos a este archivo ``example_bot.py``. Asegúrate de no llamarlo "
-"``disnake``, ya que tendrá conflicto con la librería."
+"``disnake``, ya que tendrá conflictos con la librería."
 
 #: ../../quickstart.rst:43
 msgid "There's a lot going on here, so let's walk you through it step by step."
@@ -94,7 +94,7 @@ msgid ""
 msgstr ""
 "Un callback es esencialmente una función que es llamada cuando algo sucede. "
 "En nuestro caso, el evento :func:`on_ready` es llamado cuando el bot ha "
-"terminado de iniciar sesión y configurar las cosas, y el evento "
+"terminado de iniciar sesión y de configurar todo, y el evento "
 ":func:`on_message` es llamado cuando el bot ha recibido un mensaje."
 
 #: ../../quickstart.rst:54
