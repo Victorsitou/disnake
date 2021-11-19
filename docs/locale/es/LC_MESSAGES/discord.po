@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: disnake 2.2.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-01 22:36-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-11-19 15-50-0300\n"
+"Last-Translator: Victor github.com/Victorsitou\n"
+"Language-Team: Spanish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ../../discord.rst:6
 msgid "Creating a Bot Account"
-msgstr "Crear una cuenta Bot"
+msgstr "Crear un Bot de Discord"
 
 #: ../../discord.rst:8
 msgid ""
@@ -31,14 +31,14 @@ msgstr ""
 
 #: ../../discord.rst:10
 msgid "Creating a Bot account is a pretty straightforward process."
-msgstr "La creación de un Bot es un proceso bastante sencillo."
+msgstr "La creación de un Bot es un proceso bastante sencillo, aquí hay una guía de como hacerlo:"
 
 #: ../../discord.rst:12 ../../discord.rst:66
 msgid ""
 "Make sure you're logged on to the `Discord website "
 "<https://discord.com>`_."
 msgstr ""
-"Asegúrate de haber iniciado sesión en la `página "
+"Asegúrese de haber iniciado sesión en la `página "
 "de Discord <https://discord.com>`_."
 
 #: ../../discord.rst:13 ../../discord.rst:67
@@ -46,12 +46,12 @@ msgid ""
 "Navigate to the `application page "
 "<https://discord.com/developers/applications>`_"
 msgstr ""
-"Navegue a la página de aplicación "
+"Navegue a la `página de aplicaciones "
 "<https://discord.com/developers/applications>`_"
 
 #: ../../discord.rst:14
 msgid "Click on the \"New Application\" button."
-msgstr "Haga click en el botón \"New application\"."
+msgstr "Haga clic en el botón \"New application\"."
 
 #: ../../discord.rst
 msgid "The new application button."
@@ -59,7 +59,7 @@ msgstr "The new application button."
 
 #: ../../discord.rst:19
 msgid "Give the application a name and click \"Create\"."
-msgstr "Dé un nombre a la applicación y haz click en \"Create\""
+msgstr "Dé un nombre a la aplicación y haga clic en \"Create\""
 
 #: ../../discord.rst
 msgid "The new application form filled in."
@@ -70,12 +70,12 @@ msgid ""
 "Create a Bot User by navigating to the \"Bot\" tab and clicking \"Add "
 "Bot\"."
 msgstr ""
-"Cree un usuario de Bot navegando a la pestaña \"Bot\" y haga click en "
+"Cree un Bot de Discord yendo a la pestaña \"Bot\" y haga clic en "
 "\"Add Bot\"."
 
 #: ../../discord.rst:26
 msgid "Click \"Yes, do it!\" to continue."
-msgstr "Haga click en \"Yes, do it!\" para continuar."
+msgstr "Haga clic en \"Yes, do it!\" para continuar."
 
 #: ../../discord.rst
 msgid "The Add Bot button."
@@ -119,15 +119,15 @@ msgid ""
 "servers, ban all members inside a server, or pinging everyone "
 "maliciously."
 msgstr ""
-"Vale la pena señalar que este token esencialmente la contraseña de tu bot. "
+"Vale la pena señalar que este token es básicamente la contraseña de su bot. "
 "Nunca debe compartirla con otra persona. Al hacerlo, alguien puede entrar "
-"en tu bot y hacer cosas maliciosas, como salir de los servidores, banear "
+"en su bot y hacer cosas maliciosas, como salir de los servidores, banear "
 "a todos los miembros dentro de un servidor, o etiquetar a todos "
 "maliciosamente."
 
 #: ../../discord.rst:49
 msgid "The possibilities are endless, so **do not share this token.**"
-msgstr "Las posibilidades son infinitas, así que **no compartas este token.**"
+msgstr "Las posibilidades son infinitas, así que **no comparta su token.**"
 
 #: ../../discord.rst:51
 msgid ""
@@ -135,7 +135,7 @@ msgid ""
 " soon as possible. This revokes your old token and re-generates a new "
 "one. Now you need to use the new token to login."
 msgstr ""
-"Si accidentalmente ha filtrado su token, haga click en el botón \"Regenerar\" "
+"Si accidentalmente ha filtrado su token, haga clic en el botón \"Regenerate\" "
 "tan pronto como sea posible. Esto elimina su antiguo token y vuelve a generar "
 "otro. Ahora tiene que usar su nuevo token para iniciar sesión en su bot."
 
@@ -144,7 +144,7 @@ msgid ""
 "And that's it. You now have a bot account and you can login with that "
 "token."
 msgstr ""
-"Y eso es todo. Ahora tiene un Bot de Discord y puede iniciar sesión "
+"Y eso es todo. Ahora tiene un Bot de Discord y puede usarlo "
 "con su token."
 
 #: ../../discord.rst:60
@@ -153,16 +153,17 @@ msgstr "Invitar su Bot."
 
 #: ../../discord.rst:62
 msgid "So you've made a Bot User but it's not actually in any server."
-msgstr "Así que has hecho un Usuario Bot, pero realmente no está en "
+msgstr "Así que has hecho un Bot de Discord, pero realmente no está en "
 "ningún servidor."
 
 #: ../../discord.rst:64
 msgid "If you want to invite your bot you must create an invite URL for it."
-msgstr "Si quiere invitar a su Bot debe crear un URL de invitación para el Bot."
+msgstr "Si quiere invitar a su Bot debe crear un URL de invitación para el Bot,"
+" aquí hay una guía de como hacerlo:"
 
 #: ../../discord.rst:68
 msgid "Click on your bot's page."
-msgstr "Haga click en la página de su bot."
+msgstr "Haga clic en la página de su bot."
 
 #: ../../discord.rst:69
 msgid "Go to the \"OAuth2\" tab."
@@ -193,7 +194,7 @@ msgid ""
 "Please be aware of the consequences of requiring your bot to have the "
 "\"Administrator\" permission."
 msgstr ""
-"Tenga en cuenta las consecuencias de solicitar a tu bot el permiso de "
+"Tenga en cuenta las consecuencias de solicitar a su bot el permiso de "
 "\"Administrador\"."
 
 #: ../../discord.rst:83
@@ -205,7 +206,7 @@ msgid ""
 msgstr ""
 "Los propietarios de bots deben tener 2FA habilitado para ciertas acciones "
 "y permisos cuando se añaden en servidores que tienen el nivel 2FA habilitado. "
-"Consulte la `página de soporte de 2FA https://support.discord.com/hc/en-us/articles/219576828"
+"Consulte la `página de soporte de 2FA <https://support.discord.com/hc/en-us/articles/219576828"
 "-Setting-up-Two-Factor-Authentication>`_ para más información."
 
 #: ../../discord.rst
@@ -218,8 +219,8 @@ msgid ""
 "paste the URL into your browser, choose a server to invite the bot to, "
 "and click \"Authorize\"."
 msgstr ""
-"Ahora el URL resultante puede ser usado para añadir tu bot a un servidor. "
-"Copie y pegue el URL en su navegador, elija un servidor y dé click en \"Autorizar\""
+"Ahora el URL resultante puede ser usado para añadir su bot a un servidor. "
+"Copie y pegue el URL en su navegador, elija un servidor y dé clic en \"Autorizar\""
 
 #: ../../discord.rst:93
 msgid "The person adding the bot needs \"Manage Server\" permissions to do so."
