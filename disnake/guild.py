@@ -930,9 +930,7 @@ class Guild(Hashable):
         return list(self._scheduled_events.values())
 
     def get_scheduled_event(self, event_id: int, /) -> Optional[GuildScheduledEvent]:
-        """
-
-        Returns a scheduled event with the given ID.
+        """Returns a scheduled event with the given ID.
 
         .. versionadded:: 2.3
 
