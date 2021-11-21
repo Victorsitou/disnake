@@ -1126,7 +1126,7 @@ to handle it, which defaults to print a traceback and ignoring the exception.
 
     Called when a user subscribes to or unsubscribes from a guild scheduled event.
     Unlike :func:`on_guild_scheduled_event_subscribe` and :func:`on_guild_scheduled_event_unsubscribe`,
-    this is called regardless of the guild scheduled event cache
+    this is called regardless of the guild scheduled event cache.
 
     :param payload: The raw event payload data.
     :type payload: :class:`RawGuildScheduledEventUserActionEvent`
