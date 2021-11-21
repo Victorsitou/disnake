@@ -1090,7 +1090,32 @@ to handle it, which defaults to print a traceback and ignoring the exception.
 
     .. versionadded:: 2.3
 
-    :param event: The :class:`GuildScheduledEvent`.
+    :param event: The guild scheduled event that was created.
+    :type event: :class:`GuildScheduledEvent`
+
+.. function:: on_scheduled_event_delete(event)
+
+    Called when a guild scheduled event is deleted.
+
+    This requires :attr:`Intents.guild_scheduled_events` to be enabled.
+
+    .. versionadded:: 2.3
+
+    :param event: The guild scheduled event that was deleted.
+    :type event: :class:`GuildScheduledEvent`
+
+
+.. function:: on_scheduled_event_create(event)
+              on_scheduled_event_delete(event)
+
+    Called when a guild scheduled event is created or deleted.
+
+    This requires :attr:`Intents.guild_scheduled_events` to be enabled.
+
+    .. versionadded:: 2.3
+
+    :param event: The guild scheduled event that was created or deleted.
+    :type event: :class:`GuildScheduledEvent`
 
 .. function:: on_scheduled_event_update(before, after)
 
@@ -1101,21 +1126,12 @@ to handle it, which defaults to print a traceback and ignoring the exception.
 
     .. versionadded:: 2.3
 
-    :param before: The :class:`GuildScheduledEvent` before update.
+    :param before: The guild scheduled event before the update.
+    :type before: :class:`GuildScheduledEvent`
+    :param after: The guild scheduled event after the update.
+    :type after: :class:`GuildScheduledEvent`
 
-    :param after: The :class:`GuildScheduledEvent` after update.
-
-.. function:: on_scheduled_event_delete(event)
-
-    Called when a guild scheduled event is deleted.
-
-    This requires :attr:`Intents.guild_scheduled_events` to be enabled.
-
-    .. versionadded:: 2.3
-
-    :param event: The :class:`GuildScheduledEvent`.
-
-.. function:: on_scheduled_event_subscribe(event)
+.. function:: on_scheduled_event_subscribe(event, user)
 
     Called when a user subscribes to a guild scheduled event.
 
@@ -1123,11 +1139,12 @@ to handle it, which defaults to print a traceback and ignoring the exception.
 
     .. versionadded:: 2.3
 
-    :param event: The :class:`GuildScheduledEvent`.
+    :param event: The guild scheduled event that the user subscribed to.
+    :type event: :class:`GuildScheduledEvent`
+    :param user: The user that subscribed to the scheduled event. ``Union[:class:`Member`, :class:`User`]``?
+    :type user: :class:`User`
 
-    :param user: The :class:`User` that subscribed to the event.
-
-.. function:: on_scheduled_event_unsubscribe(event)
+.. function:: on_scheduled_event_unsubscribe(event, user)
 
     Called when a user unsubscribes from a guild scheduled event.
 
@@ -1135,9 +1152,10 @@ to handle it, which defaults to print a traceback and ignoring the exception.
 
     .. versionadded:: 2.3
 
-    :param event: The :class:`GuildScheduledEvent`.
-
-    :param user: The :class:`User` that unsubscribed from the event.
+    :param event: The guild scheduled event that the user unsubscribed from.
+    :type event: :class:`GuildScheduledEvent`
+    :param user: The user that unsubscribed from the scheduled event. ``Union[:class:`Member`, :class:`User`]``?
+    :type user: :class:`User`
 
 .. function:: on_stage_instance_create(stage_instance)
               on_stage_instance_delete(stage_instance)
@@ -2923,7 +2941,7 @@ of :class:`enum.Enum`.
 
 .. class:: GuildScheduledEventEntityType
 
-    Represents the type of a scheduled event entity.
+    Represents the type of a scheduled event entity. **Or instance?**
 
     .. versionadded:: 2.3
 
@@ -2941,7 +2959,7 @@ of :class:`enum.Enum`.
 
 .. class:: GuildScheduledEventStatus
 
-    Represents the scheduled event status.
+    Represents the status of a scheduled event.
 
     .. versionadded:: 2.3
 
@@ -2963,7 +2981,7 @@ of :class:`enum.Enum`.
 
 .. class:: GuildScheduledEventPrivacyLevel
 
-    Represents the scheduled event privacy level.
+    Represents the privacy level of a scheduled event.
 
     .. versionadded:: 2.3
 
@@ -3622,19 +3640,19 @@ AuditLogDiff
 
     .. attribute:: entity_type
 
-        The entity type of a guild scheduled event being changed.
+        The entity type of a guild`?` scheduled event being changed.
 
         :type: :class:`GuildScheduledEventEntityType`
 
     .. attribute:: location
 
-        The location of a guild scheduled event being changed.
+        The location of a guild`?` scheduled event being changed.
 
         :type: :class:`str`
 
     .. attribute:: status
 
-        The status of a guild scheduled event being changed.
+        The status of a guild`?` scheduled event being changed.
 
         :type: :class:`GuildScheduledEventStatus`
 

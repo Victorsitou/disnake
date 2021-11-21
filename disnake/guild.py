@@ -923,14 +923,16 @@ class Guild(Hashable):
 
     @property
     def scheduled_events(self) -> List[GuildScheduledEvent]:
-        """List[:class:`GuildScheduledEvent`]: Returns a :class:`list` of the existing guild scheduled events.
+        """List[:class:`GuildScheduledEvent`]: Returns a :class:`list` of existing guild`?` scheduled events.
 
         .. versionadded:: 2.3
         """
         return list(self._scheduled_events.values())
 
     def get_scheduled_event(self, event_id: int, /) -> Optional[GuildScheduledEvent]:
-        """Returns a scheduled event with the given ID.
+        """
+
+        Returns a scheduled event with the given ID.
 
         .. versionadded:: 2.3
 
@@ -1784,7 +1786,7 @@ class Guild(Hashable):
     ) -> List[GuildScheduledEvent]:
         """|coro|
 
-        Returns a list of :class:`GuildScheduledEvent`s of this guild.
+        Returns a list of :class:`GuildScheduledEvent` instances for the guild.
 
         .. versionadded:: 2.3
 
@@ -1867,9 +1869,9 @@ class Guild(Hashable):
             The channel ID in which the scheduled event will be hosted.
         privacy_level: :class:`GuildScheduledEventPrivacyLevel`
             The privacy level of the scheduled event.
-        scheduled_start_time: :class:`datetime`
+        scheduled_start_time: :class:`datetime.datetime`
             The time to schedule the event.
-        scheduled_end_time: :class:`datetime`
+        scheduled_end_time: :class:`datetime.datetime`
             The time when the scheduled event is scheduled to end.
         entity_type: :class:`GuildScheduledEventEntityType`
             The entity type of the scheduled event.
