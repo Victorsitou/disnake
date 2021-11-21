@@ -917,13 +917,13 @@ class Intents(BaseFlags):
 
         This corresponds to the following events:
 
-        - :func:`on_scheduled_event_create`
-        - :func:`on_scheduled_event_update`
-        - :func:`on_scheduled_event_delete`
-        - :func:`on_scheduled_event_subscribe`
-        - :func:`on_scheduled_event_unsubscribe`
-        - :func:`on_raw_scheduled_event_subscribe`
-        - :func:`on_raw_scheduled_event_unsubscribe`
+        - :func:`on_guild_scheduled_event_create`
+        - :func:`on_guild_scheduled_event_delete`
+        - :func:`on_guild_scheduled_event_update`
+        - :func:`on_guild_scheduled_event_subscribe`
+        - :func:`on_guild_scheduled_event_unsubscribe`
+        - :func:`on_guild_raw_scheduled_event_subscribe`
+        - :func:`on_guild_raw_scheduled_event_unsubscribe`
 
         This also corresponds to the following attributes and classes in terms of cache:
 

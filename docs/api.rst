@@ -1081,32 +1081,8 @@ to handle it, which defaults to print a traceback and ignoring the exception.
     :param after: The voice state after the changes.
     :type after: :class:`VoiceState`
 
-
-.. function:: on_scheduled_event_create(event)
-
-    Called when a guild scheduled event is created.
-
-    This requires :attr:`Intents.guild_scheduled_events` to be enabled.
-
-    .. versionadded:: 2.3
-
-    :param event: The guild scheduled event that was created.
-    :type event: :class:`GuildScheduledEvent`
-
-.. function:: on_scheduled_event_delete(event)
-
-    Called when a guild scheduled event is deleted.
-
-    This requires :attr:`Intents.guild_scheduled_events` to be enabled.
-
-    .. versionadded:: 2.3
-
-    :param event: The guild scheduled event that was deleted.
-    :type event: :class:`GuildScheduledEvent`
-
-
-.. function:: on_scheduled_event_create(event)
-              on_scheduled_event_delete(event)
+.. function:: on_guild_scheduled_event_create(event)
+              on_guild_scheduled_event_delete(event)
 
     Called when a guild scheduled event is created or deleted.
 
@@ -1117,7 +1093,7 @@ to handle it, which defaults to print a traceback and ignoring the exception.
     :param event: The guild scheduled event that was created or deleted.
     :type event: :class:`GuildScheduledEvent`
 
-.. function:: on_scheduled_event_update(before, after)
+.. function:: on_guild_scheduled_event_update(before, after)
 
     Called when a guild scheduled event is updated.
     The guild must have existed in the :attr:`Client.guilds` cache.
@@ -1131,31 +1107,19 @@ to handle it, which defaults to print a traceback and ignoring the exception.
     :param after: The guild scheduled event after the update.
     :type after: :class:`GuildScheduledEvent`
 
-.. function:: on_scheduled_event_subscribe(event, user)
+.. function:: on_guild_scheduled_event_subscribe(event, user)
+              on_guild_scheduled_event_unsubscribe(event, user)
 
-    Called when a user subscribes to a guild scheduled event.
-
-    This requires :attr:`Intents.guild_scheduled_events` and :attr:`Intents.members` to be enabled.
-
-    .. versionadded:: 2.3
-
-    :param event: The guild scheduled event that the user subscribed to.
-    :type event: :class:`GuildScheduledEvent`
-    :param user: The user that subscribed to the scheduled event. ``Union[:class:`Member`, :class:`User`]``?
-    :type user: :class:`User`
-
-.. function:: on_scheduled_event_unsubscribe(event, user)
-
-    Called when a user unsubscribes from a guild scheduled event.
+    Called when a user subscribes to or unsubscribes from a guild scheduled event.
 
     This requires :attr:`Intents.guild_scheduled_events` and :attr:`Intents.members` to be enabled.
 
     .. versionadded:: 2.3
 
-    :param event: The guild scheduled event that the user unsubscribed from.
+    :param event: The guild scheduled event that the user subscribed to or unsubscribed from.
     :type event: :class:`GuildScheduledEvent`
-    :param user: The user that unsubscribed from the scheduled event. ``Union[:class:`Member`, :class:`User`]``?
-    :type user: :class:`User`
+    :param user: The user who subscribed to or unsubscribed from the event.
+    :type user: Union[:class:`Member`, :class:`User`]
 
 .. function:: on_stage_instance_create(stage_instance)
               on_stage_instance_delete(stage_instance)
