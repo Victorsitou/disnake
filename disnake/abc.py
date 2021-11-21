@@ -1093,7 +1093,7 @@ class GuildChannel(ABC):
 
             .. versionadded:: 2.0
         guild_scheduled_event: Optional[:class:`.GuildScheduledEvent`]
-            The scheduled event to include with the invite.
+            The guild scheduled event to include with the invite.
 
             .. versionadded:: 2.3
 

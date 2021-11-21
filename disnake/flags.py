@@ -922,8 +922,8 @@ class Intents(BaseFlags):
         - :func:`on_guild_scheduled_event_update`
         - :func:`on_guild_scheduled_event_subscribe`
         - :func:`on_guild_scheduled_event_unsubscribe`
-        - :func:`on_guild_raw_scheduled_event_subscribe`
-        - :func:`on_guild_raw_scheduled_event_unsubscribe`
+        - :func:`on_raw_guild_scheduled_event_subscribe`
+        - :func:`on_raw_guild_scheduled_event_unsubscribe`
 
         This also corresponds to the following attributes and classes in terms of cache:
 

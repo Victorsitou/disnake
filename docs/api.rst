@@ -2487,7 +2487,7 @@ of :class:`enum.Enum`.
 
     .. attribute:: guild_scheduled_event_create
 
-        A scheduled event was created.
+        A guild scheduled event was created.
 
         When this is the action, the type of :attr:`~AuditLogEntry.target` is
         the :class:`GuildScheduledEvent` or :class:`Object` with the ID of the event
@@ -2504,7 +2504,7 @@ of :class:`enum.Enum`.
 
     .. attribute:: guild_scheduled_event_update
 
-        A scheduled event was updated.
+        A guild scheduled event was updated.
 
         When this is the action, the type of :attr:`~AuditLogEntry.target` is
         the :class:`GuildScheduledEvent` or :class:`Object` with the ID of the event
@@ -2521,7 +2521,7 @@ of :class:`enum.Enum`.
 
     .. attribute:: guild_scheduled_event_delete
 
-        A scheduled event was deleted.
+        A guild scheduled event was deleted.
 
         When this is the action, the type of :attr:`~AuditLogEntry.target` is
         the :class:`GuildScheduledEvent` or :class:`Object` with the ID of the event
@@ -2905,25 +2905,25 @@ of :class:`enum.Enum`.
 
 .. class:: GuildScheduledEventEntityType
 
-    Represents the type of a scheduled event entity. **Or instance?**
+    Represents the type of a guild scheduled event entity. **Or instance?**
 
     .. versionadded:: 2.3
 
     .. attribute:: stage_instance
 
-        The scheduled event will take place in a stage channel.
+        The guild scheduled event will take place in a stage channel.
 
     .. attribute:: voice
 
-        The scheduled event will take place in a voice channel.
+        The guild scheduled event will take place in a voice channel.
 
     .. attribute:: external
 
-        The scheduled event will take place in a custom location.
+        The guild scheduled event will take place in a custom location.
 
 .. class:: GuildScheduledEventStatus
 
-    Represents the status of a scheduled event.
+    Represents the status of a guild scheduled event.
 
     .. versionadded:: 2.3
 
@@ -2945,13 +2945,13 @@ of :class:`enum.Enum`.
 
 .. class:: GuildScheduledEventPrivacyLevel
 
-    Represents the privacy level of a scheduled event.
+    Represents the privacy level of a guild scheduled event.
 
     .. versionadded:: 2.3
 
     .. attribute:: guild_only
 
-        The scheduled event is only for a specific guild.
+        The guild scheduled event is only for a specific guild.
 
 
 Async Iterator
@@ -3370,7 +3370,7 @@ AuditLogDiff
 
     .. attribute:: privacy_level
 
-        The privacy level of the stage instance or scheduled event.
+        The privacy level of the stage instance or guild scheduled event.
 
         :type: Union[:class:`StagePrivacyLevel`, :class:`GuildScheduledEventPrivacyLevel`]
 
@@ -3604,19 +3604,19 @@ AuditLogDiff
 
     .. attribute:: entity_type
 
-        The entity type of a guild`?` scheduled event being changed.
+        The entity type of a guild scheduled event being changed.
 
         :type: :class:`GuildScheduledEventEntityType`
 
     .. attribute:: location
 
-        The location of a guild`?` scheduled event being changed.
+        The location of a guild scheduled event being changed.
 
         :type: :class:`str`
 
     .. attribute:: status
 
-        The status of a guild`?` scheduled event being changed.
+        The status of a guild scheduled event being changed.
 
         :type: :class:`GuildScheduledEventStatus`
 

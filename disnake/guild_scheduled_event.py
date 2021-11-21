@@ -46,14 +46,14 @@ __all__ = ("GuildScheduledEventMetadata", "GuildScheduledEvent")
 
 class GuildScheduledEventMetadata:
     """
-    Represents scheduled event entity metadata.
+    Represents guild scheduled event entity metadata.
 
     .. versionadded:: 2.3
 
     Attributes
     ----------
     location: Optional[:class:`str`]
-        The location of the scheduled event. If :attr:`GuildScheduledEvent.entity_type` is
+        The location of the guild scheduled event. If :attr:`GuildScheduledEvent.entity_type` is
         :class:`GuildScheduledEventEntityType.external`, this value is not ``None``.
     """
 
@@ -83,52 +83,52 @@ class GuildScheduledEvent(Hashable):
 
         .. describe:: x == y
 
-            Checks if two scheduled events are equal.
+            Checks if two guild scheduled events are equal.
 
         .. describe:: x != y
 
-            Checks if two scheduled events are not equal.
+            Checks if two guild scheduled events are not equal.
 
         .. describe:: hash(x)
 
-            Returns the scheduled event's hash.
+            Returns the guild scheduled event's hash.
 
     Attributes
     ----------
     id: :class:`int`
-        The ID of the scheduled event.
+        The ID of the guild scheduled event.
     guild_id: :class:`int`
-        The guild ID which the scheduled event belongs to.
+        The guild ID which the guild scheduled event belongs to.
     channel_id: Optional[:class:`int`]
-        The channel ID in which the scheduled event will be hosted.
+        The channel ID in which the guild scheduled event will be hosted.
         This field is ``None`` if :attr:`entity_type` is :class:`GuildScheduledEventEntityType.external`
     creator_id: Optional[:class:`int`]
-        The ID of the user that created the scheduled event.
+        The ID of the user that created the guild scheduled event.
         This field is ``None`` for events created before October 25th, 2021.
     name: :class:`str`
-        The name of the scheduled event (1-100 characters).
+        The name of the guild scheduled event (1-100 characters).
     description: :class:`str`
-        The description of the scheduled event (1-1000 characters).
+        The description of the guild scheduled event (1-1000 characters).
     scheduled_start_time: :class:`datetime.datetime`
-        The time when the scheduled event is scheduled to start.
+        The time when the guild scheduled event will start
     scheduled_end_time: Optional[:class:`datetime.datetime`]
-        The time when the scheduled event will end, or ``None`` if the event does not have a scheduled time to end.
+        The time when the guild scheduled event will end, or ``None`` if the event does not have a scheduled time to end.
     privacy_level: :class:`GuildScheduledEventPrivacyLevel`
-        The privacy level of the scheduled event.
+        The privacy level of the guild scheduled event.
     status: :class:`GuildScheduledEventStatus`
-        The status of the scheduled event.
+        The status of the guild scheduled event.
     entity_type: :class:`GuildScheduledEventEntityType`
-        The type of the scheduled event.
+        The type of the guild scheduled event.
     entity_id: Optional[:class:`int`]
-        The ID of an entity associated with the scheduled event.
+        The ID of an entity associated with the guild scheduled event.
     entity_metadata: :class:`GuildScheduledEventMetadata`
-        Additional metadata for the scheduled event.
+        Additional metadata for the guild scheduled event.
     creator: Optional[:class:`User`]
-        The user that created the scheduled event.
+        The user that created the guild scheduled event.
         This field is ``None`` for events created before October 25th, 2021.
     user_count: Optional[:class:`int`]
-        The number of users subscribed to the scheduled event.
-        If the scheduled event was fetched with ``with_user_count`` set to ``False``, this field is ``None``.
+        The number of users subscribed to the guild scheduled event.
+        If the guild scheduled event was fetched with ``with_user_count`` set to ``False``, this field is ``None``.
     """
 
     __slots__ = (
@@ -208,12 +208,19 @@ class GuildScheduledEvent(Hashable):
 
     @cached_slot_property("_cs_guild")
     def guild(self) -> Optional[Guild]:
-        """:class:`Guild` The guild which the scheduled event belongs to. what is this?"""
+        """The guild which the guild scheduled event belongs to. what is this?
+
+        :return type: Optional[:class:`Guild`]
+        """
         return self._state._get_guild(self.guild_id)
 
     @cached_slot_property("_cs_channel")
     def channel(self) -> Optional[GuildChannel]:
-        """:class:`GuildChannel` The channel in which the scheduled event will be hosted. what is this?"""
+        """The channel in which the guild scheduled event will be hosted.
+
+        :return type: Optional[:class:`abc.GuildChannel`]
+
+        """
         if self.channel_id is None:
             return None
         guild = self.guild
@@ -222,7 +229,7 @@ class GuildScheduledEvent(Hashable):
     async def delete(self):
         """|coro|
 
-        Deletes the scheduled event.
+        Deletes the guild scheduled event.
 
         Raises
         ------
@@ -250,7 +257,7 @@ class GuildScheduledEvent(Hashable):
     ):
         """|coro|
 
-        Edits the scheduled event.
+        Edits the guild scheduled event.
 
         If updating ``entity_type`` to :class:`GuildScheduledEventEntityType.external`:
 
@@ -261,29 +268,29 @@ class GuildScheduledEvent(Hashable):
         Parameters
         ----------
         name: :class:`str`
-            The name of the scheduled event.
+            The name of the guild scheduled event.
         description: :class:`str`
-            The description of the scheduled event.
+            The description of the guild scheduled event.
         channel_id: Optional[:class:`int`]
-            The channel ID in which the scheduled event will be hosted.
+            The channel ID in which the guild scheduled event will be hosted.
             Set to ``None`` if changing ``entity_type`` to :class:`GuildScheduledEventEntityType.external`.
         privacy_level: :class:`GuildScheduledEventPrivacyLevel`
-            The privacy level of the scheduled event.
+            The privacy level of the guild scheduled event.
         scheduled_start_time: :class:`datetime.datetime`
-            The time to schedule the event.
+            The time to schedule the guild scheduled event.
         scheduled_end_time: :class:`datetime.datetime`
-            The time when the scheduled event is scheduled to end.
+            The time when the guild scheduled event is scheduled to end.
         entity_type: :class:`GuildScheduledEventEntityType`
-            The entity type of the scheduled event.
+            The entity type of the guild scheduled event.
         entity_metadata: :class:`GuildScheduledEventMetadata`
-            The entity metadata of the scheduled event.
+            The entity metadata of the guild scheduled event.
         status: :class:`GuildScheduledEventStatus`
-            The status of the scheduled event.
+            The status of the guild scheduled event.
 
         Returns
         -------
         :class:`GuildScheduledEvent`
-            The updated scheduled event instance.
+            The updated guild scheduled event instance.
 
         Raises
         ------
@@ -372,7 +379,7 @@ class GuildScheduledEvent(Hashable):
     ) -> List[Union[Member, User]]:
         """|coro|
 
-        Gets a list of users subscribed to the scheduled event.
+        Retrieves a list of users subscribed to the guild scheduled event.
 
         Parameters
         ----------
@@ -388,7 +395,7 @@ class GuildScheduledEvent(Hashable):
         Returns
         -------
         List[Union[:class:`Member`, :class:`User`]]
-            A list of users subscribed to the scheduled event.
+            A list of users subscribed to the guild scheduled event.
 
         Raises
         ------
