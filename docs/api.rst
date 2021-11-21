@@ -1121,6 +1121,16 @@ to handle it, which defaults to print a traceback and ignoring the exception.
     :param user: The user who subscribed to or unsubscribed from the event.
     :type user: Union[:class:`Member`, :class:`User`]
 
+.. function:: on_raw_guild_scheduled_event_subscribe(payload)
+              on_raw_guild_scheduled_event_unsubscribe(payload)
+
+    Called when a user subscribes to or unsubscribes from a guild scheduled event.
+    Unlike :func:`on_guild_scheduled_event_subscribe` and :func:`on_guild_scheduled_event_unsubscribe`,
+    this is called regardless of the guild scheduled event cache
+
+    :param payload: The raw event payload data.
+    :type payload: :class:`RawGuildScheduledEventUserActionEvent`
+
 .. function:: on_stage_instance_create(stage_instance)
               on_stage_instance_delete(stage_instance)
 
@@ -4429,6 +4439,14 @@ RawIntegrationDeleteEvent
 .. attributetable:: RawIntegrationDeleteEvent
 
 .. autoclass:: RawIntegrationDeleteEvent()
+    :members:
+
+RawGuildScheduledEventUserActionEvent
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: RawGuildScheduledEventUserActionEvent
+
+.. autoclass:: RawGuildScheduledEventUserActionEvent()
     :members:
 
 PartialWebhookGuild
