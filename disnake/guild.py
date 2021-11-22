@@ -1801,7 +1801,7 @@ class Guild(Hashable):
         Returns
         --------
         List[:class:`GuildScheduledEvent`]
-            The guild scheduled events. (A list of all the existing guild scheduled events. | The existing guild scheduled events.)
+            The existing guild scheduled events.
         """
         raw_events = await self._state.http.get_guild_scheduled_events(
             self.id, with_user_count=with_user_count

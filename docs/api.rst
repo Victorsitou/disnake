@@ -2915,7 +2915,7 @@ of :class:`enum.Enum`.
 
 .. class:: GuildScheduledEventEntityType
 
-    Represents the type of a guild scheduled event entity. **Or instance?**
+    Represents the type of a guild scheduled event entity.
 
     .. versionadded:: 2.3
 

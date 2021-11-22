@@ -208,7 +208,7 @@ class GuildScheduledEvent(Hashable):
 
     @cached_slot_property("_cs_guild")
     def guild(self) -> Optional[Guild]:
-        """The guild which the guild scheduled event belongs to. what is this?
+        """The guild which the guild scheduled event belongs to.
 
         :return type: Optional[:class:`Guild`]
         """
@@ -219,7 +219,6 @@ class GuildScheduledEvent(Hashable):
         """The channel in which the guild scheduled event will be hosted.
 
         :return type: Optional[:class:`abc.GuildChannel`]
-
         """
         if self.channel_id is None:
             return None
