@@ -714,8 +714,7 @@ def Param(
     large: bool = False,
     **kwargs: Any,
 ) -> Any:
-    """
-    A special function that creates an instance of :class:`ParamInfo` that contains some information about a
+    """A special function that creates an instance of :class:`ParamInfo` that contains some information about a
     slash command option. This instance should be assigned to a parameter of a function representing your slash command.
 
     See :ref:`param_syntax` for more info.

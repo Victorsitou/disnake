@@ -67,7 +67,7 @@ class _RawReprMixin:
 
 
 class RawMessageDeleteEvent(_RawReprMixin):
-    """Represents the event payload for a :func:`on_raw_message_delete` event.
+    """Represents the event payload for :func:`on_raw_message_delete` event.
 
     Attributes
     ------------
@@ -94,16 +94,16 @@ class RawMessageDeleteEvent(_RawReprMixin):
 
 
 class RawBulkMessageDeleteEvent(_RawReprMixin):
-    """Represents the event payload for a :func:`on_raw_bulk_message_delete` event.
+    """Represents the event payload for :func:`on_raw_bulk_message_delete` event.
 
     Attributes
     -----------
     message_ids: Set[:class:`int`]
         A :class:`set` of the message IDs that were deleted.
     channel_id: :class:`int`
-        The channel ID where the message got deleted.
+        The channel ID where the deletion took place.
     guild_id: Optional[:class:`int`]
-        The guild ID where the message got deleted, if applicable.
+        The guild ID where the deletion took place, if applicable.
     cached_messages: List[:class:`Message`]
         The cached messages, if found in the internal message cache.
     """
@@ -114,7 +114,6 @@ class RawBulkMessageDeleteEvent(_RawReprMixin):
         self.message_ids: Set[int] = {int(x) for x in data.get("ids", [])}
         self.channel_id: int = int(data["channel_id"])
         self.cached_messages: List[Message] = []
-
         try:
             self.guild_id: Optional[int] = int(data["guild_id"])
         except KeyError:
@@ -122,7 +121,7 @@ class RawBulkMessageDeleteEvent(_RawReprMixin):
 
 
 class RawMessageUpdateEvent(_RawReprMixin):
-    """Represents the payload for a :func:`on_raw_message_edit` event.
+    """Represents the event payload for :func:`on_raw_message_edit` event.
 
     Attributes
     -----------
@@ -133,10 +132,9 @@ class RawMessageUpdateEvent(_RawReprMixin):
 
         .. versionadded:: 1.3
     guild_id: Optional[:class:`int`]
-        The guild ID where the message got updated, if applicable.
+        The guild ID where the update took place, if applicable.
 
         .. versionadded:: 1.7
-
     data: :class:`dict`
         The raw data given by the `gateway <https://discord.com/developers/docs/topics/gateway#message-update>`_
     cached_message: Optional[:class:`Message`]
@@ -151,7 +149,6 @@ class RawMessageUpdateEvent(_RawReprMixin):
         self.channel_id: int = int(data["channel_id"])
         self.data: MessageUpdateEvent = data
         self.cached_message: Optional[Message] = None
-
         try:
             self.guild_id: Optional[int] = int(data["guild_id"])
         except KeyError:
@@ -159,8 +156,8 @@ class RawMessageUpdateEvent(_RawReprMixin):
 
 
 class RawReactionActionEvent(_RawReprMixin):
-    """Represents the payload for a :func:`on_raw_reaction_add` or
-    :func:`on_raw_reaction_remove` event.
+    """Represents the event payload for :func:`on_raw_reaction_add` and
+    :func:`on_raw_reaction_remove` events.
 
     Attributes
     -----------
@@ -169,16 +166,15 @@ class RawReactionActionEvent(_RawReprMixin):
     user_id: :class:`int`
         The user ID who added the reaction or whose reaction was removed.
     channel_id: :class:`int`
-        The channel ID where the reaction got added or removed.
+        The channel ID where the reaction addition or removal took place.
     guild_id: Optional[:class:`int`]
-        The guild ID where the reaction got added or removed, if applicable.
+        The guild ID where the reaction addition or removal took place, if applicable.
     emoji: :class:`PartialEmoji`
         The custom or unicode emoji being used.
     member: Optional[:class:`Member`]
         The member who added the reaction. Only available if `event_type` is `REACTION_ADD` and the reaction is inside a guild.
 
         .. versionadded:: 1.3
-
     event_type: :class:`str`
         The event type that triggered this action. Can be
         ``REACTION_ADD`` for reaction addition or
@@ -196,7 +192,6 @@ class RawReactionActionEvent(_RawReprMixin):
         self.emoji: PartialEmoji = emoji
         self.event_type: str = event_type
         self.member: Optional[Member] = None
-
         try:
             self.guild_id: Optional[int] = int(data["guild_id"])
         except KeyError:
@@ -204,16 +199,16 @@ class RawReactionActionEvent(_RawReprMixin):
 
 
 class RawReactionClearEvent(_RawReprMixin):
-    """Represents the payload for a :func:`on_raw_reaction_clear` event.
+    """Represents the event payload for :func:`on_raw_reaction_clear` event.
 
     Attributes
     -----------
     message_id: :class:`int`
         The message ID that got its reactions cleared.
     channel_id: :class:`int`
-        The channel ID where the reactions got cleared.
+        The channel ID where the reactions clear took place.
     guild_id: Optional[:class:`int`]
-        The guild ID where the reactions got cleared.
+        The guild ID where the reactions clear took place, if applicable.
     """
 
     __slots__ = ("message_id", "channel_id", "guild_id")
@@ -221,7 +216,6 @@ class RawReactionClearEvent(_RawReprMixin):
     def __init__(self, data: ReactionClearEvent) -> None:
         self.message_id: int = int(data["message_id"])
         self.channel_id: int = int(data["channel_id"])
-
         try:
             self.guild_id: Optional[int] = int(data["guild_id"])
         except KeyError:
@@ -229,7 +223,7 @@ class RawReactionClearEvent(_RawReprMixin):
 
 
 class RawReactionClearEmojiEvent(_RawReprMixin):
-    """Represents the payload for a :func:`on_raw_reaction_clear_emoji` event.
+    """Represents the event payload for :func:`on_raw_reaction_clear_emoji` event.
 
     .. versionadded:: 1.3
 
@@ -238,9 +232,9 @@ class RawReactionClearEmojiEvent(_RawReprMixin):
     message_id: :class:`int`
         The message ID that got its reactions cleared.
     channel_id: :class:`int`
-        The channel ID where the reactions got cleared.
+        The channel ID where the reactions clear took place.
     guild_id: Optional[:class:`int`]
-        The guild ID where the reactions got cleared.
+        The guild ID where the reactions clear took place, if applicable.
     emoji: :class:`PartialEmoji`
         The custom or unicode emoji being removed.
     """
@@ -251,7 +245,6 @@ class RawReactionClearEmojiEvent(_RawReprMixin):
         self.emoji: PartialEmoji = emoji
         self.message_id: int = int(data["message_id"])
         self.channel_id: int = int(data["channel_id"])
-
         try:
             self.guild_id: Optional[int] = int(data["guild_id"])
         except KeyError:
@@ -259,7 +252,7 @@ class RawReactionClearEmojiEvent(_RawReprMixin):
 
 
 class RawMemberScreeningRejectEvent(_RawReprMixin):
-    """Represents the payload for a :func:`on_raw_member_screening_reject` event.
+    """Represents the event payload for :func:`on_raw_member_screening_reject` event.
 
     .. versionadded:: 2.3
 
@@ -279,7 +272,7 @@ class RawMemberScreeningRejectEvent(_RawReprMixin):
 
 
 class RawIntegrationDeleteEvent(_RawReprMixin):
-    """Represents the payload for a :func:`on_raw_integration_delete` event.
+    """Represents the event payload for :func:`on_raw_integration_delete` event.
 
     .. versionadded:: 2.0
 
@@ -290,7 +283,7 @@ class RawIntegrationDeleteEvent(_RawReprMixin):
     application_id: Optional[:class:`int`]
         The ID of the bot/OAuth2 application for this deleted integration.
     guild_id: :class:`int`
-        The guild ID where the integration got deleted.
+        The guild ID where the integration deletion took place.
     """
 
     __slots__ = ("integration_id", "application_id", "guild_id")
@@ -298,7 +291,6 @@ class RawIntegrationDeleteEvent(_RawReprMixin):
     def __init__(self, data: IntegrationDeleteEvent) -> None:
         self.integration_id: int = int(data["id"])
         self.guild_id: int = int(data["guild_id"])
-
         try:
             self.application_id: Optional[int] = int(data["application_id"])
         except KeyError:
@@ -306,8 +298,8 @@ class RawIntegrationDeleteEvent(_RawReprMixin):
 
 
 class RawGuildScheduledEventUserActionEvent(_RawReprMixin):
-    """Represents the payload for :func:`on_raw_guild_scheduled_event_subscribe`
-    and :func:`on_raw_guild_scheduled_event_unsubscribe` event.
+    """Represents the event payload for :func:`on_raw_guild_scheduled_event_subscribe`
+    and :func:`on_raw_guild_scheduled_event_unsubscribe` events.
 
     .. versionadded:: 2.3
 
@@ -331,7 +323,7 @@ class RawGuildScheduledEventUserActionEvent(_RawReprMixin):
 
 
 class RawTypingEvent(_RawReprMixin):
-    """Represents the payload for :func:`on_raw_typing` event.
+    """Represents the event payload for :func:`on_raw_typing` event.
 
     Attributes
     -----------
@@ -344,7 +336,7 @@ class RawTypingEvent(_RawReprMixin):
     member: Optional[:class:`Member`]
         The member object of the user who started typing or ``None`` if it was in a DM.
     timestamp: :class:`datetime.datetime`
-        The timestamp when the user started typing.
+        The UTC datetime when the user started typing.
     """
 
     __slots__ = ("user_id", "channel_id", "guild_id", "member", "timestamp")
@@ -352,9 +344,9 @@ class RawTypingEvent(_RawReprMixin):
     def __init__(self, data: TypingEvent) -> None:
         self.user_id: int = int(data["user_id"])
         self.channel_id: int = int(data["channel_id"])
+        self.member: Optional[Member] = None
+        self.timestamp: datetime.datetime = datetime.datetime.utcfromtimestamp(data["timestamp"])
         try:
             self.guild_id: Optional[int] = int(data["guild_id"])
         except KeyError:
             self.guild_id: Optional[int] = None
-        self.member: Optional[Member] = None
-        self.timestamp: datetime.datetime = datetime.datetime.utcfromtimestamp(data["timestamp"])

@@ -1042,7 +1042,6 @@ class MemberCacheFlags(BaseFlags):
         :class:`MemberCacheFlags`
             The resulting member cache flags.
         """
-
         self = cls.none()
         if intents.members:
             self.joined = True

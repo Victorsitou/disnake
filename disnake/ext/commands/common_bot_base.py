@@ -145,7 +145,7 @@ class CommonBotBase(Generic[CogT]):
     async def is_owner(self, user: Union[disnake.User, disnake.Member]) -> bool:
         """|coro|
 
-        Checks if a :class:`~disnake.User` or :class:`~disnake.Member` is the owner of
+        Checks if a :class:`User` or :class:`Member` is the owner of
         this bot.
 
         If an :attr:`owner_id` is not set, it is fetched automatically
@@ -165,7 +165,6 @@ class CommonBotBase(Generic[CogT]):
         :class:`bool`
             Whether the user is the owner.
         """
-
         if self.owner_id:
             return user.id == self.owner_id
         elif self.owner_ids:
@@ -204,6 +203,10 @@ class CommonBotBase(Generic[CogT]):
             bot.add_listener(on_ready)
             bot.add_listener(my_message, 'on_message')
 
+        Raises
+        ------
+        TypeError
+            The function is not a coroutine.
         """
         name = func.__name__ if name is MISSING else name
 
@@ -226,7 +229,6 @@ class CommonBotBase(Generic[CogT]):
             The name of the event we want to remove. Defaults to
             ``func.__name__``.
         """
-
         name = func.__name__ if name is MISSING else name
 
         if name in self.extra_events:
@@ -299,10 +301,9 @@ class CommonBotBase(Generic[CogT]):
             The cog does not inherit from :class:`.Cog`.
         CommandError
             An error happened during loading.
-        .ClientException
+        ClientException
             A cog with the same name is already loaded.
         """
-
         if not isinstance(cog, Cog):
             raise TypeError("cogs must derive from Cog")
 
@@ -353,9 +354,8 @@ class CommonBotBase(Generic[CogT]):
         Returns
         -------
         Optional[:class:`.Cog`]
-             The cog that was removed. ``None`` if not found.
+            The cog that was removed. Returns ``None`` if not found.
         """
-
         cog = self.__cogs.pop(name, None)
         if cog is None:
             return
@@ -478,7 +478,6 @@ class CommonBotBase(Generic[CogT]):
         ExtensionFailed
             The extension or its setup function had an execution error.
         """
-
         name = self._resolve_name(name, package)
         if name in self.__extensions:
             raise errors.ExtensionAlreadyLoaded(name)
@@ -521,7 +520,6 @@ class CommonBotBase(Generic[CogT]):
         ExtensionNotLoaded
             The extension was not loaded.
         """
-
         name = self._resolve_name(name, package)
         lib = self.__extensions.get(name)
         if lib is None:
@@ -564,7 +562,6 @@ class CommonBotBase(Generic[CogT]):
         ExtensionFailed
             The extension setup function had an execution error.
         """
-
         name = self._resolve_name(name, package)
         lib = self.__extensions.get(name)
         if lib is None:
@@ -586,7 +583,7 @@ class CommonBotBase(Generic[CogT]):
             # if the load failed, the remnants should have been
             # cleaned from the load_extension function call
             # so let's load it from our old compiled library.
-            lib.setup(self)  # type: ignore
+            lib.setup(self)
             self.__extensions[name] = lib
 
             # revert sys.modules back to normal and raise back to caller

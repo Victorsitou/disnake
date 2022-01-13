@@ -236,9 +236,9 @@ class Attachment(Hashable):
     Attributes
     ------------
     id: :class:`int`
-        The attachment ID.
+        The attachment's ID.
     size: :class:`int`
-        The attachment size in bytes.
+        The attachment's size in bytes.
     height: Optional[:class:`int`]
         The attachment's height, in pixels. Only applicable to images and videos.
     width: Optional[:class:`int`]
@@ -440,7 +440,6 @@ class Attachment(Hashable):
         :class:`File`
             The attachment as a file suitable for sending.
         """
-
         if description is MISSING:
             description = self.description
         data = await self.read(use_cached=use_cached)
@@ -514,17 +513,16 @@ class MessageReference:
     Attributes
     -----------
     message_id: Optional[:class:`int`]
-        The id of the message referenced.
+        The ID of the message referenced.
     channel_id: :class:`int`
-        The channel id of the message referenced.
+        The channel ID of the message referenced.
     guild_id: Optional[:class:`int`]
-        The guild id of the message referenced.
+        The guild ID of the message referenced.
     fail_if_not_exists: :class:`bool`
         Whether replying to the referenced message should raise :class:`HTTPException`
         if the message no longer exists or Discord could not fetch the message.
 
         .. versionadded:: 1.7
-
     resolved: Optional[Union[:class:`Message`, :class:`DeletedReferencedMessage`]]
         The message that this reference resolved to. If this is ``None``
         then the original message was not fetched either due to the Discord API
@@ -614,7 +612,7 @@ class MessageReference:
 
     def to_dict(self) -> MessageReferencePayload:
         result: MessageReferencePayload = (
-            {"message_id": self.message_id} if self.message_id is not None else {}
+            {"message_id": self.message_id} if self.message_id is not None else {}  # type: ignore
         )
         result["channel_id"] = self.channel_id
         if self.guild_id is not None:
@@ -638,13 +636,13 @@ class InteractionReference:
     Attributes
     ----------
     id: :class:`int`
-        ID of the interaction
+        The ID of the interaction.
     type: :class:`InteractionType`
-        The type of interaction
+        The type of interaction.
     name: :class:`str`
-        The name of the application command
+        The name of the application command.
     user: :class:`User`
-        The user who invoked the interaction
+        The interaction author.
     """
 
     __slots__ = ("id", "type", "name", "user", "_state")
@@ -730,7 +728,6 @@ class Message(Hashable):
         This exists only when the message is a response to an interaction without an existing message.
 
         .. versionadded:: 2.1
-
     mention_everyone: :class:`bool`
         Specifies if the message mentions everyone.
 
@@ -749,9 +746,6 @@ class Message(Hashable):
 
             The order of the mentions list is not in any particular order so you should
             not rely on it. This is a Discord limitation, not one with the library.
-    channel_mentions: List[:class:`abc.GuildChannel`]
-        A list of :class:`abc.GuildChannel` that were mentioned. If the message is in a private message
-        then the list is always empty.
     role_mentions: List[:class:`Role`]
         A list of :class:`Role` that were mentioned. If the message is in a private message
         then the list is always empty.
@@ -768,7 +762,6 @@ class Message(Hashable):
         Extra features of the message.
 
         .. versionadded:: 1.3
-
     reactions : List[:class:`Reaction`]
         Reactions to a message. Reactions can be either custom emoji or standard unicode emoji.
     activity: Optional[:class:`dict`]
@@ -1124,6 +1117,8 @@ class Message(Hashable):
 
     @utils.cached_slot_property("_cs_channel_mentions")
     def channel_mentions(self) -> List[GuildChannel]:
+        """List[:class:`abc.GuildChannel`]: A list of :class:`abc.GuildChannel` that were mentioned. If the message is in a private message
+        then the list is always empty."""
         if self.guild is None:
             return []
         it = filter(None, map(self.guild.get_channel, self.raw_channel_mentions))
@@ -1145,7 +1140,6 @@ class Message(Hashable):
             or remove markdown then use :func:`utils.escape_markdown` or :func:`utils.remove_markdown`
             respectively, along with this function.
         """
-
         # fmt: off
         transformations = {
             re.escape(f'<#{channel.id}>'): '#' + channel.name
@@ -1225,7 +1219,6 @@ class Message(Hashable):
         this just returns the regular :attr:`Message.content`. Otherwise this
         returns an English message denoting the contents of the system message.
         """
-
         if self.type is MessageType.default:
             return self.content
 
@@ -1513,7 +1506,6 @@ class Message(Hashable):
         :class:`Message`
             The message that was edited.
         """
-
         # allowed_mentions can only be changed on the bot's own messages
         if self._state.allowed_mentions is not None and self.author.id == self._state.self_id:
             previous_allowed_mentions = self._state.allowed_mentions
@@ -1549,7 +1541,6 @@ class Message(Hashable):
         HTTPException
             Publishing the message failed.
         """
-
         await self._state.http.publish_message(self.channel.id, self.id)
 
     async def pin(self, *, reason: Optional[str] = None) -> None:
@@ -1577,7 +1568,6 @@ class Message(Hashable):
             Pinning the message failed, probably due to the channel
             having more than 50 pinned messages.
         """
-
         await self._state.http.pin_message(self.channel.id, self.id, reason=reason)
         self.pinned = True
 
@@ -1605,14 +1595,13 @@ class Message(Hashable):
         HTTPException
             Unpinning the message failed.
         """
-
         await self._state.http.unpin_message(self.channel.id, self.id, reason=reason)
         self.pinned = False
 
     async def add_reaction(self, emoji: EmojiInputType) -> None:
         """|coro|
 
-        Add a reaction to the message.
+        Adds a reaction to the message.
 
         The emoji may be a unicode emoji or a custom guild :class:`Emoji`.
 
@@ -1636,7 +1625,6 @@ class Message(Hashable):
         InvalidArgument
             The emoji parameter is invalid.
         """
-
         emoji = convert_emoji_reaction(emoji)
         await self._state.http.add_reaction(self.channel.id, self.id, emoji)
 
@@ -1645,7 +1633,7 @@ class Message(Hashable):
     ) -> None:
         """|coro|
 
-        Remove a reaction by the member from the message.
+        Removes a reaction by the member from the message.
 
         The emoji may be a unicode emoji or a custom guild :class:`Emoji`.
 
@@ -1673,7 +1661,6 @@ class Message(Hashable):
         InvalidArgument
             The emoji parameter is invalid.
         """
-
         emoji = convert_emoji_reaction(emoji)
 
         if member.id == self._state.self_id:
@@ -1708,7 +1695,6 @@ class Message(Hashable):
         InvalidArgument
             The emoji parameter is invalid.
         """
-
         emoji = convert_emoji_reaction(emoji)
         await self._state.http.clear_single_reaction(self.channel.id, self.id, emoji)
 
@@ -1732,7 +1718,7 @@ class Message(Hashable):
         self,
         *,
         name: str,
-        auto_archive_duration: AnyThreadArchiveDuration = None,
+        auto_archive_duration: AnyThreadArchiveDuration = None,  # type: ignore
         slowmode_delay: int = None,
     ) -> Thread:
         """|coro|
@@ -1818,7 +1804,6 @@ class Message(Hashable):
         :class:`.Message`
             The message that was sent.
         """
-
         return await self.channel.send(content, reference=self, **kwargs)
 
     def to_reference(self, *, fail_if_not_exists: bool = True) -> MessageReference:
@@ -1839,7 +1824,6 @@ class Message(Hashable):
         :class:`~disnake.MessageReference`
             The reference to this message.
         """
-
         return MessageReference.from_message(self, fail_if_not_exists=fail_if_not_exists)
 
     def to_message_reference_dict(self) -> MessageReferencePayload:
@@ -1966,7 +1950,6 @@ class PartialMessage(Hashable):
         :class:`Message`
             The full message.
         """
-
         data = await self._state.http.get_message(self.channel.id, self.id)
         return self._state.create_message(channel=self.channel, data=data)
 
@@ -2060,7 +2043,6 @@ class PartialMessage(Hashable):
         :class:`Message`
             The message that was edited.
         """
-
         # if no attachment list was provided but we're uploading new files,
         # use current attachments as the base
         if "attachments" not in fields and (fields.get("file") or fields.get("files")):
