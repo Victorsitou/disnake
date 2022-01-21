@@ -17,27 +17,27 @@ disnake
    :target: https://github.com/DisnakeDev/disnake/commits
    :alt: Commit activity
 
-A modern, easy to use, feature-rich, and async ready API wrapper for Discord written in Python.
+Una librería de API moderna, fácil de usar, rica en características y preparada para async para Discord escrita en Python.
 
-About disnake
+Acreca de disnake
 -------------
 
-All the contributors and developers, associated with disnake, are trying their best to add new features to the library as soon as possible. We strive to revive the greatest Python wrapper for Discord API and keep it up to date.
+Todos los colaboradores y desarrolladores, asociados con disnake, están tratando de hacer todo lo posible para añadir nuevas características a la biblioteca tan pronto como sea posible. Nos esforzamos por revivir la mayor librería de Python para la API de Discord y mantenerlo actualizado.
 
-Key Features
+Características principales
 ------------
 
-- Modern Pythonic API using ``async`` and ``await``.
-- Added features for ease of coding
-- Proper rate limit handling.
-- Optimised in both speed and memory.
+- API moderna de Python con ``async`` y ``await``.
+- Funciones añadidas para facilitar la escritura de código.
+- Manejo adecuado del límite de tasa.
+- Optimizado tanto en velocidad como en memoria.
 
-Installing
+Instalación
 ----------
 
-**Python 3.8 or higher is required**
+**Se requiere una versión de Python 3.8 o superior**
 
-To install the library without full voice support, you can just run the following command:
+Para instalar la librería sin soporte de voz completo, sólo tiene que ejecutar el siguiente comando:
 
 .. code:: sh
 
@@ -47,7 +47,7 @@ To install the library without full voice support, you can just run the followin
     # Windows
     py -3 -m pip install -U disnake
 
-Otherwise to get voice support you should run the following command:
+En el caso que quiera soporte de voz debe ejecutar el siguiente comando:
 
 .. code:: sh
 
@@ -58,7 +58,7 @@ Otherwise to get voice support you should run the following command:
     py -3 -m pip install -U disnake[voice]
 
 
-To install the development version, do the following:
+Para instalar la versión de desarrollo, haga lo siguiente:
 
 .. code:: sh
 
@@ -67,12 +67,12 @@ To install the development version, do the following:
     $ python3 -m pip install -U .[voice]
 
 
-Optional Packages
+Paquetes opcionales
 ~~~~~~~~~~~~~~~~~
 
-* `PyNaCl <https://pypi.org/project/PyNaCl/>`__ (for voice support)
+* `PyNaCl <https://pypi.org/project/PyNaCl/>`__ (para el soporte de voz)
 
-Please note that on Linux installing voice you must install the following packages via your favourite package manager (e.g. ``apt``, ``dnf``, etc) before running the above commands:
+Por favor, ten en cuenta que en Linux instalando voice debes instalar los siguientes paquetes a través de tu gestor de paquetes favorito (por ejemplo ``apt``, ``dnf``, etc) antes de ejecutar los comandos anteriores:
 
 * libffi-dev (or ``libffi-devel`` on some systems)
 * python-dev (e.g. ``python3.6-dev`` for Python 3.6)
