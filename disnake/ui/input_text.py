@@ -32,8 +32,6 @@ from .item import WrappedComponent
 if TYPE_CHECKING:
     from ..types.components import InputText as InputTextPayload
 
-InputTextT = TypeVar("InputTextT", bound="InputText")
-
 
 __all__ = ("InputText",)
 
