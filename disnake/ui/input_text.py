@@ -121,7 +121,7 @@ class InputText(WrappedComponent):
     @property
     def label(self) -> str:
         """:class:`str`: The label of the input text."""
-        return self._underlying.label
+        return self._underlying.label  # type: ignore
 
     @label.setter
     def label(self, value: str) -> None:
