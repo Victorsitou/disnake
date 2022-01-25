@@ -80,6 +80,9 @@ class ActionRow:
             children=components,
         )
 
+    def __repr__(self) -> str:
+        return f"<ActionRow children={self.children!r}>"
+
     @property
     def children(self) -> List[Component]:
         """List[:class:`Component`]: The components of this row."""

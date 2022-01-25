@@ -50,7 +50,6 @@ __all__ = (
     "Button",
     "SelectMenu",
     "SelectOption",
-    "Modal",
     "InputText",
 )
 
@@ -458,63 +457,6 @@ class InputText(Component):
             payload["max_length"] = self.max_length
 
         return payload
-
-
-class Modal:
-    # Notice that this is not a component according to API docs.
-
-    """Represents a modal.
-
-    .. versionadded:: 2.4
-
-    .. note::
-
-        The user constructible and usable type to create a modal is
-        :class:`disnake.ui.Modal`, not this one.
-
-    Attributes
-    ----------
-    title: :class:`str`
-        The title of the modal.
-    custom_id: :class:`str`
-        The ID of the modal that gets received during an interaction.
-    components: List[:class:`~.ui.InputText`]
-        The components the modal has.
-    """
-
-    __slots__: Tuple[str, ...] = ("title", "custom_id", "components")
-
-    def __init__(self, data: ModalPayload) -> None:
-        self.title: str = data["title"]
-        self.custom_id: str = data["custom_id"]
-        self.components: List[ActionRow] = [ActionRow(d) for d in data["components"]]
-        # it's safe to assume that top-level components are action rows.
-        # if Discord changes this (which is unlikely), they'll give us enough time to adapt.
-
-    def __repr__(self) -> str:
-        return (
-            f"<Modal custom_id={self.custom_id!r} title={self.title!r} "
-            f"components={self.components!r}>"
-        )
-
-    def to_dict(self) -> ModalPayload:
-        payload: ModalPayload = {
-            "title": self.title,
-            "custom_id": self.custom_id,
-            "components": [component.to_dict() for component in self.components],
-        }
-
-        return payload
-
-    @classmethod
-    def from_attributes(
-        cls, *, title: str, custom_id: str, components: List[ActionRow] = None
-    ) -> Modal:
-        self = cls.__new__(cls)
-        self.title = title
-        self.custom_id = custom_id
-        self.components = components or []
-        return self
 
 
 def _component_factory(data: ComponentPayload) -> Component:

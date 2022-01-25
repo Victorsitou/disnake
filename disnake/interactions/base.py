@@ -1123,7 +1123,6 @@ class InteractionResponse:
 
         if modal is not None:
             modal_data = modal.to_components()  # type: ignore
-            parent._state.store_modal(parent.author.id, modal)
         else:
             modal_data = {
                 "title": title,
@@ -1139,6 +1138,9 @@ class InteractionResponse:
             data=modal_data,
         )
         self._responded = True
+
+        if modal is not None:
+            parent._state.store_modal(parent.author.id, modal)
 
 
 class _InteractionMessageState:
