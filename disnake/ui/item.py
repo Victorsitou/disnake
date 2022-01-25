@@ -66,7 +66,7 @@ class WrappedComponent:
     .. versionadded:: 2.4
     """
 
-    __item_repr_attributes__: Tuple[str, ...]
+    __repr_attributes__: Tuple[str, ...]
 
     def to_component_dict(self) -> Dict[str, Any]:
         raise NotImplementedError
@@ -76,7 +76,7 @@ class WrappedComponent:
         raise NotImplementedError
 
     def __repr__(self) -> str:
-        attrs = " ".join(f"{key}={getattr(self, key)!r}" for key in self.__item_repr_attributes__)
+        attrs = " ".join(f"{key}={getattr(self, key)!r}" for key in self.__repr_attributes__)
         return f"<{self.__class__.__name__} {attrs}>"
 
     @property
@@ -95,7 +95,7 @@ class Item(WrappedComponent, Generic[V]):
     .. versionadded:: 2.0
     """
 
-    __item_repr_attributes__: Tuple[str, ...] = ("row",)
+    __repr_attributes__: Tuple[str, ...] = ("row",)
 
     def __init__(self):
         self._view: Optional[V] = None

@@ -216,7 +216,7 @@ class ActionRow:
         *,
         label: str,
         custom_id: str,
-        style: InputTextStyle = None,
+        style: InputTextStyle = InputTextStyle.short,
         placeholder: Optional[str] = None,
         value: Optional[str] = None,
         required: bool = True,
@@ -297,8 +297,8 @@ def components_to_dict(components: Components) -> List[ActionRowPayload]:
 
             else:
                 raise ValueError(
-                    "components must be a WrappedComponent, a list of ActionRows "
-                    "or a list of WrappedComponents"
+                    "components must be a WrappedComponent, a list of ActionRow "
+                    "or a list of WrappedComponent"
                 )
 
     if auto_row.width > 0:
@@ -334,7 +334,8 @@ def components_to_rows(components: Components) -> List[ActionRow]:
 
             else:
                 raise ValueError(
-                    "components must be an Item, a list of ActionRows or a list of Items"
+                    "components must be an WrappedComponent, a list of ActionRow "
+                    "or a list of WrappedComponent"
                 )
 
     if auto_row.width > 0:

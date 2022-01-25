@@ -130,7 +130,7 @@ class Modal:
         *,
         label: str,
         custom_id: str,
-        style: InputTextStyle = None,
+        style: InputTextStyle = InputTextStyle.short,
         placeholder: Optional[str] = None,
         value: Optional[str] = None,
         required: bool = True,

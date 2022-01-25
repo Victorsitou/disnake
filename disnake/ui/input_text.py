@@ -65,7 +65,7 @@ class InputText(WrappedComponent):
         The maximum length of the input text.
     """
 
-    __item_repr_attributes__: Tuple[str, ...] = (
+    __repr_attributes__: Tuple[str, ...] = (
         "style",
         "label",
         "custom_id",
@@ -81,7 +81,7 @@ class InputText(WrappedComponent):
         *,
         label: str,
         custom_id: str,
-        style: InputTextStyle = None,
+        style: InputTextStyle = InputTextStyle.short,
         placeholder: Optional[str] = None,
         value: Optional[str] = None,
         required: bool = True,
@@ -90,7 +90,7 @@ class InputText(WrappedComponent):
     ) -> None:
         self._underlying = InputTextComponent._raw_construct(
             type=ComponentType.input_text,
-            style=style or InputTextStyle.short,
+            style=style,
             label=label,
             custom_id=custom_id,
             placeholder=placeholder,
