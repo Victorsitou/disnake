@@ -102,7 +102,7 @@ class Component:
 
 
 class ActionRow(Component):
-    """Represents a Discord Bot UI Kit Action Row.
+    """Represents an Action Row.
 
     This is a component that holds up to 5 children components in a row.
 
@@ -380,49 +380,6 @@ class SelectOption:
         return payload
 
 
-class Modal(Component):
-    """Represents a modal from the Discord Bot UI Kit.
-
-    .. versionadded:: 2.4
-
-    .. note::
-
-        The user constructible and usable type to create a modal is
-        :class:`disnake.ui.Modal`, not this one.
-
-    Attributes
-    ----------
-    title: :class:`str`
-        The title of the modal.
-    custom_id: :class:`str`
-        The ID of the modal that gets received during an interaction.
-    components: List[:class:`~.ui.InputText`]
-        The components the modal has.
-    """
-
-    __slots__: Tuple[str, ...] = ("title", "custom_id", "components")
-
-    __repr_info__: ClassVar[Tuple[str, ...]] = __slots__
-
-    def __init__(self, data: ModalPayload) -> None:
-        from .ui.input_text import InputText as InputTextUI
-
-        self.title: str = data["title"]
-        self.custom_id: str = data["custom_id"]
-        self.components: List[InputTextUI] = [
-            InputTextUI.from_dict(component) for component in data["components"]
-        ]
-
-    def to_dict(self) -> ModalPayload:
-        payload: ModalPayload = {
-            "title": self.title,
-            "custom_id": self.custom_id,
-            "components": [component.to_component_dict() for component in self.components],
-        }
-
-        return payload
-
-
 class InputText(Component):
     """Represents an input text from the Discord Bot UI Kit.
 
@@ -439,7 +396,7 @@ class InputText(Component):
     -----------
     style: :class:`InputTextStyle`
         The style of the input text.
-    label: :class:`str`
+    label: Optional[:class:`str`]
         The label of the input text.
     custom_id: :class:`str`
         The ID of the input text that gets received during an interaction.
@@ -469,22 +426,17 @@ class InputText(Component):
     __repr_info__: ClassVar[Tuple[str, ...]] = __slots__
 
     def __init__(self, data: InputTextPayload) -> None:
-        self.type = try_enum(ComponentType, data["type"])
-        self.style = try_enum(InputTextStyle, data["style"])
-        self.label = data["label"]
-        self.custom_id = data["custom_id"]
-        self.placeholder = data.get("placeholder")
-        self.value = data.get("value")
-        self.required = data.get("required", True)
-        self.min_length = data.get("min_length", 0)
-        self.max_length = data.get("max_length")
+        style = data.get("style", InputTextStyle.short.value)
 
-    def __repr__(self) -> str:
-        return (
-            f"<InputText style={self.style!r} label={self.label!r} custom_id={self.custom_id!r} "
-            f"placeholder={self.placeholder!r} value={self.value!r} required={self.required!r} "
-            f"min_length={self.min_length!r} max_length={self.max_length!r}>"
-        )
+        self.type: ComponentType = try_enum(ComponentType, data["type"])
+        self.custom_id: str = data["custom_id"]
+        self.style: InputTextStyle = try_enum(InputTextStyle, style)
+        self.label: Optional[str] = data.get("label")
+        self.placeholder: Optional[str] = data.get("placeholder")
+        self.value: Optional[str] = data.get("value")
+        self.required: bool = data.get("required", True)
+        self.min_length: int = data.get("min_length", 0)
+        self.max_length: Optional[int] = data.get("max_length")
 
     def to_dict(self) -> InputTextPayload:
         payload: InputTextPayload = {
@@ -506,6 +458,63 @@ class InputText(Component):
             payload["max_length"] = self.max_length
 
         return payload
+
+
+class Modal:
+    # Notice that this is not a component according to API docs.
+
+    """Represents a modal.
+
+    .. versionadded:: 2.4
+
+    .. note::
+
+        The user constructible and usable type to create a modal is
+        :class:`disnake.ui.Modal`, not this one.
+
+    Attributes
+    ----------
+    title: :class:`str`
+        The title of the modal.
+    custom_id: :class:`str`
+        The ID of the modal that gets received during an interaction.
+    components: List[:class:`~.ui.InputText`]
+        The components the modal has.
+    """
+
+    __slots__: Tuple[str, ...] = ("title", "custom_id", "components")
+
+    def __init__(self, data: ModalPayload) -> None:
+        self.title: str = data["title"]
+        self.custom_id: str = data["custom_id"]
+        self.components: List[ActionRow] = [ActionRow(d) for d in data["components"]]
+        # it's safe to assume that top-level components are action rows.
+        # if Discord changes this (which is unlikely), they'll give us enough time to adapt.
+
+    def __repr__(self) -> str:
+        return (
+            f"<Modal custom_id={self.custom_id!r} title={self.title!r} "
+            f"components={self.components!r}>"
+        )
+
+    def to_dict(self) -> ModalPayload:
+        payload: ModalPayload = {
+            "title": self.title,
+            "custom_id": self.custom_id,
+            "components": [component.to_dict() for component in self.components],
+        }
+
+        return payload
+
+    @classmethod
+    def from_attributes(
+        cls, *, title: str, custom_id: str, components: List[ActionRow] = None
+    ) -> Modal:
+        self = cls.__new__(cls)
+        self.title = title
+        self.custom_id = custom_id
+        self.components = components or []
+        return self
 
 
 def _component_factory(data: ComponentPayload) -> Component:

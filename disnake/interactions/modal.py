@@ -26,11 +26,11 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Dict, List
 
+from ..components import ActionRow
 from .base import Interaction
 
 if TYPE_CHECKING:
     from ..state import ConnectionState
-    from ..types.components import ActionRow as ActionRowPayload
     from ..types.interactions import (
         Interaction as InteractionPayload,
         ModalInteractionData as ModalInteractionDataPayload,
@@ -95,14 +95,20 @@ class ModalInteraction(Interaction):
         This is a dict of the form ``{custom_id: value}``."""
         values: Dict[str, str] = {}
         for action_row in self.data.components:
-            component = action_row["components"][0]
-            values[component["custom_id"]] = component["value"]  # type: ignore
+            for component in action_row.children:
+                # assuming that action rows from modals only have input_text components
+                values[component.custom_id] = component.value  # type: ignore
         return values
 
     @property
     def custom_id(self) -> str:
         """:class:`str`: The custom ID of the modal."""
         return self.data.custom_id
+
+    @property
+    def components(self) -> List[ActionRow]:
+        """List[:class:`ActionRow`]: The components of the modal."""
+        return self.data.components
 
 
 class ModalInteractionData:
@@ -122,4 +128,4 @@ class ModalInteractionData:
 
     def __init__(self, *, data: ModalInteractionDataPayload):
         self.custom_id: str = data["custom_id"]
-        self.components: List[ActionRowPayload] = data["components"]
+        self.components: List[ActionRow] = [ActionRow(d) for d in data["components"]]

@@ -26,15 +26,22 @@ from __future__ import annotations
 import asyncio
 import sys
 import traceback
-from typing import TYPE_CHECKING, Any, Dict, List, Tuple, Union, overload
+from typing import TYPE_CHECKING, Dict, List, Tuple, Union, overload
 
-from ..components import Modal as ModalComponent
+from ..components import (
+    ActionRow as ActionRowComponent,
+    InputText as InputTextComponent,
+    Modal as ModalComponent,
+)
+from ..enums import ComponentType
+from .action_row import components_to_rows
 from .input_text import InputText
 
 if TYPE_CHECKING:
     from ..interactions.modal import ModalInteraction
     from ..state import ConnectionState
     from ..types.components import Modal as ModalPayload
+    from .action_row import Components
 
 
 __all__ = ("Modal",)
@@ -47,38 +54,37 @@ class Modal:
 
     Parameters
     ----------
-    title: str
+    title: :class:`str`
         The title of the modal.
-    custom_id: str
+    custom_id: :class:`str`
         The custom ID of the modal.
-    components: List[:class:`~.ui.InputText`]
-        The components to display in the modal. Maximum of 5.
+    components: |components_type|
+        The components to display in the modal. Up to 5 action rows.
     """
+
+    __slots__ = ("_underlying",)
 
     def __init__(
         self,
         *,
         title: str,
         custom_id: str,
-        components: List[InputText],  # Discord will support other components as well.
+        components: Components,
     ) -> None:
-        if len(components) > 5:
-            raise ValueError("maximum of components is 5.")
+        ui_action_rows = components_to_rows(components)
+        action_rows = []
 
-        for component in components:
-            if not isinstance(component, InputText):
-                raise TypeError(
-                    f"components must be a list of InputTexts, but {component.__class__.__name__} was given."
-                )
+        for ui_row in ui_action_rows:
+            if not all(isinstance(c, InputTextComponent) for c in ui_row.children):
+                raise TypeError("Components must be of type InputText.")
+            action_rows.append(ui_row._underlying)
 
-        self._underlying = ModalComponent._raw_construct(
-            title=title, custom_id=custom_id, components=components
+        self._underlying = ModalComponent.from_attributes(
+            title=title, custom_id=custom_id, components=action_rows
         )
 
     def __repr__(self) -> str:
-        return (
-            f"<Modal {self.title!r}, custom_id={self.custom_id!r}, components={self.components!r}>"
-        )
+        return repr(self._underlying)
 
     @property
     def title(self) -> str:
@@ -99,7 +105,7 @@ class Modal:
         self._underlying.custom_id = custom_id
 
     @property
-    def components(self) -> List[InputText]:
+    def components(self) -> List[ActionRowComponent]:
         """List[:class:`~.ui.InputText`]: A list of components the modal contains."""
         return self._underlying.components
 
@@ -138,7 +144,11 @@ class Modal:
                 raise TypeError(
                     f"component must be of type InputText or a list of InputText, not {c.__class__.__name__}."
                 )
-            self._underlying.components.append(c)
+            new_row = ActionRowComponent._raw_construct(
+                type=ComponentType.action_row,
+                children=[c._underlying],
+            )
+            self._underlying.components.append(new_row)
 
     async def callback(self, interaction: ModalInteraction) -> None:
         """|coro|
@@ -171,18 +181,7 @@ class Modal:
         traceback.print_exception(error.__class__, error, error.__traceback__, file=sys.stderr)
 
     def to_components(self) -> ModalPayload:
-        components: ModalPayload = {
-            "title": self._underlying.title,
-            "custom_id": self._underlying.custom_id,
-            "components": [],
-        }
-
-        for component in self._underlying.components:
-            components["components"].append(
-                {"type": 1, "components": [component.to_component_dict()]}  # type: ignore
-            )
-
-        return components
+        return self._underlying.to_dict()
 
     async def _scheduled_task(self, interaction: ModalInteraction) -> None:
         try:

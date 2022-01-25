@@ -30,7 +30,7 @@ from ..components import ActionRow as ActionRowComponent, Component, SelectOptio
 from ..enums import ButtonStyle, ComponentType
 from ..utils import MISSING
 from .button import Button
-from .item import Item
+from .item import WrappedComponent
 from .select import Select
 
 __all__ = ("ActionRow",)
@@ -41,7 +41,11 @@ if TYPE_CHECKING:
     from ..types.components import ActionRow as ActionRowPayload
 
     ActionRowT = TypeVar("ActionRowT", bound="ActionRow")
-    Components = Union[ActionRowT, Item, List[Union[ActionRowT, Item, List[Item]]]]
+    Components = Union[
+        ActionRowT,
+        WrappedComponent,
+        List[Union[ActionRowT, WrappedComponent, List[WrappedComponent]]],
+    ]
 
 
 class ActionRow:
@@ -51,24 +55,22 @@ class ActionRow:
 
     Parameters
     ------------
-    *items: :class:`Item`
+    *items: :class:`WrappedComponent`
         The items of this action row.
     """
 
-    def __init__(self, *items: Item):
+    def __init__(self, *items: WrappedComponent):
         self.width: int = 0
         components = []
         # Validate the components
         for item in items:
-            if not isinstance(item, Item):
-                raise ValueError("ActionRow must contain only Item instances")
+            if not isinstance(item, WrappedComponent):
+                raise ValueError("ActionRow must contain only WrappedComponent instances")
 
             self.width += item.width
 
             if self.width > 5:
-                raise ValueError(
-                    "Too many items in 1 row. There should be not more than 5 buttons or 1 menu."
-                )
+                raise ValueError("Too many items in one row.")
 
             components.append(item._underlying)  # type: ignore
 
@@ -90,12 +92,12 @@ class ActionRow:
     def type(self) -> ComponentType:
         return self._underlying.type
 
-    def append_item(self, item: Item) -> None:
+    def append_item(self, item: WrappedComponent) -> None:
         """Appends an item to the action row.
 
         Parameters
         -----------
-        item: :class:`disnake.ui.Item`
+        item: :class:`WrappedComponent`
             The item to append to the action row.
 
         Raises
@@ -104,7 +106,7 @@ class ActionRow:
             The width of the action row exceeds 5.
         """
         if self.width + item.width > 5:
-            raise ValueError("Too many items in this row, can not appen a new one.")
+            raise ValueError("Too many items in this row, can not append a new one.")
 
         self.width += item.width
         self._underlying.children.append(item._underlying)  # type: ignore
@@ -217,7 +219,7 @@ def components_to_dict(components: Components) -> List[ActionRowPayload]:
     auto_row = ActionRow()
 
     for component in components:
-        if isinstance(component, Item):
+        if isinstance(component, WrappedComponent):
             try:
                 auto_row.append_item(component)
             except ValueError:
@@ -236,10 +238,47 @@ def components_to_dict(components: Components) -> List[ActionRowPayload]:
 
             else:
                 raise ValueError(
-                    "components must be an Item, a list of ActionRows or a list of Items"
+                    "components must be a WrappedComponent, a list of ActionRows "
+                    "or a list of WrappedComponents"
                 )
 
     if auto_row.width > 0:
         action_rows.append(auto_row.to_component_dict())
+
+    return action_rows
+
+
+def components_to_rows(components: Components) -> List[ActionRow]:
+    if not isinstance(components, list):
+        components = [components]
+
+    action_rows: List[ActionRow] = []
+    auto_row = ActionRow()
+
+    for component in components:
+        if isinstance(component, WrappedComponent):
+            try:
+                auto_row.append_item(component)
+            except ValueError:
+                action_rows.append(auto_row)
+                auto_row = ActionRow(component)
+        else:
+            if auto_row.width > 0:
+                action_rows.append(auto_row)
+                auto_row = ActionRow()
+
+            if isinstance(component, ActionRow):
+                action_rows.append(component)
+
+            elif isinstance(component, list):
+                action_rows.append(ActionRow(*component))
+
+            else:
+                raise ValueError(
+                    "components must be an Item, a list of ActionRows or a list of Items"
+                )
+
+    if auto_row.width > 0:
+        action_rows.append(auto_row)
 
     return action_rows
