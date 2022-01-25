@@ -27,9 +27,10 @@ from __future__ import annotations
 from typing import TYPE_CHECKING, List, Optional, TypeVar, Union
 
 from ..components import ActionRow as ActionRowComponent, Component, SelectOption
-from ..enums import ButtonStyle, ComponentType
+from ..enums import ButtonStyle, ComponentType, InputTextStyle
 from ..utils import MISSING
 from .button import Button
+from .input_text import InputText
 from .item import WrappedComponent
 from .select import Select
 
@@ -204,6 +205,61 @@ class ActionRow:
                 max_values=max_values,
                 options=options,
                 disabled=disabled,
+            )
+        )
+
+    def add_input_text(
+        self,
+        *,
+        label: str,
+        custom_id: str,
+        style: InputTextStyle = None,
+        placeholder: Optional[str] = None,
+        value: Optional[str] = None,
+        required: bool = True,
+        min_length: int = 0,
+        max_length: Optional[int] = None,
+    ):
+        """Adds an input text to the action row.
+
+        To append a pre-existing :class:`disnake.ui.InputText` use the
+        :meth:`append_item` method instead.
+
+        Parameters
+        -----------
+        style: :class:`.InputTextStyle`
+            The style of the input text.
+        label: :class:`str`
+            The label of the input text.
+        custom_id: :class:`str`
+            The ID of the input text that gets received during an interaction.
+        placeholder: Optional[:class:`str`]
+            The placeholder text that is shown if nothing is entered.
+        value: Optional[:class:`str`]
+            The pre-filled value of the input text.
+        required: :class:`bool`
+            Whether the input text is required. Defaults to ``True``.
+        min_length: :class:`int`
+            The minimum length of the input text. Defaults to ``0``.
+        max_length: Optional[:class:`int`]
+            The maximum length of the input text.
+
+        Raises
+        -------
+        ValueError
+            The width of the action row exceeds 5.
+        """
+
+        self.append_item(
+            InputText(
+                label=label,
+                custom_id=custom_id,
+                style=style,
+                placeholder=placeholder,
+                value=value,
+                required=required,
+                min_length=min_length,
+                max_length=max_length,
             )
         )
 
