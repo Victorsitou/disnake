@@ -107,7 +107,7 @@ class ModalInteraction(Interaction):
 
     @property
     def components(self) -> List[ActionRow]:
-        """List[:class:`ActionRow`]: The components of the modal."""
+        """List[:class:`ActionRow`]: The components the modal has."""
         return self.data.components
 
 
