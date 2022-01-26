@@ -24,9 +24,9 @@ DEALINGS IN THE SOFTWARE.
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, List, Optional, TypeVar, Union
+from typing import TYPE_CHECKING, List, Optional, Sequence, TypeVar, Union
 
-from ..components import ActionRow as ActionRowComponent, Component, NestedComponent, SelectOption
+from ..components import ActionRow as ActionRowComponent, NestedComponent, SelectOption
 from ..enums import ButtonStyle, ComponentType, InputTextStyle
 from ..utils import MISSING
 from .button import Button
@@ -45,7 +45,7 @@ if TYPE_CHECKING:
     Components = Union[
         ActionRowT,
         WrappedComponent,
-        List[Union[ActionRowT, WrappedComponent, List[WrappedComponent]]],
+        Sequence[Union[ActionRowT, WrappedComponent, Sequence[WrappedComponent]]],
     ]
 
 
@@ -85,7 +85,7 @@ class ActionRow:
 
     @property
     def children(self) -> List[NestedComponent]:
-        """List[:class:`Component`]: The components of this row."""
+        """List[Union[:class:`Button`, :class:`SelectMenu`, :class:`InputText`]]: The components of this row."""
         return self._underlying.children
 
     @children.setter
@@ -270,7 +270,7 @@ class ActionRow:
 
 
 def components_to_dict(components: Components) -> List[ActionRowPayload]:
-    if not isinstance(components, list):
+    if not isinstance(components, Sequence):
         components = [components]
 
     action_rows = []
@@ -307,7 +307,7 @@ def components_to_dict(components: Components) -> List[ActionRowPayload]:
 
 
 def components_to_rows(components: Components) -> List[ActionRow]:
-    if not isinstance(components, list):
+    if not isinstance(components, Sequence):
         components = [components]
 
     action_rows: List[ActionRow] = []

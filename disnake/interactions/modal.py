@@ -30,7 +30,6 @@ from ..components import ActionRow
 from .base import Interaction
 
 if TYPE_CHECKING:
-    from ..components import InputText
     from ..state import ConnectionState
     from ..types.interactions import (
         Interaction as InteractionPayload,
@@ -38,12 +37,6 @@ if TYPE_CHECKING:
     )
 
 __all__ = ("ModalInteraction", "ModalInteractionData")
-
-
-class ModalActionRow(ActionRow):
-    """A class for type hinting purposes."""
-
-    children: List[InputText]
 
 
 class ModalInteraction(Interaction):
@@ -113,7 +106,7 @@ class ModalInteraction(Interaction):
         return self.data.custom_id
 
     @property
-    def components(self) -> List[ModalActionRow]:
+    def components(self) -> List[ActionRow]:
         """List[:class:`ActionRow`]: The components the modal has."""
         return self.data.components
 
@@ -135,4 +128,4 @@ class ModalInteractionData:
 
     def __init__(self, *, data: ModalInteractionDataPayload):
         self.custom_id: str = data["custom_id"]
-        self.components: List[ModalActionRow] = [ModalActionRow(d) for d in data["components"]]
+        self.components: List[ActionRow] = [ActionRow(d) for d in data["components"]]
