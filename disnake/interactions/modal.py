@@ -42,6 +42,7 @@ __all__ = ("ModalInteraction", "ModalInteractionData")
 
 class ModalActionRow(ActionRow):
     """A class for type hinting purposes."""
+
     children: List[InputText]
 
 
