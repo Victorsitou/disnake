@@ -23,7 +23,7 @@ DEALINGS IN THE SOFTWARE.
 """
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Optional, Tuple, TypeVar
+from typing import TYPE_CHECKING, Optional, Tuple
 
 from ..components import InputText as InputTextComponent
 from ..enums import ComponentType, InputTextStyle
@@ -45,12 +45,12 @@ class InputText(WrappedComponent):
 
     Parameters
     ----------
-    style: :class:`.InputTextStyle`
-        The style of the input text.
     label: :class:`str`
         The label of the input text.
     custom_id: :class:`str`
         The ID of the input text that gets received during an interaction.
+    style: :class:`.InputTextStyle`
+        The style of the input text.
     placeholder: Optional[:class:`str`]
         The placeholder text that is shown if nothing is entered.
     value: Optional[:class:`str`]

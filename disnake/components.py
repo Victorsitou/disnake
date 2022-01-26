@@ -38,7 +38,6 @@ if TYPE_CHECKING:
         ButtonComponent as ButtonComponentPayload,
         Component as ComponentPayload,
         InputText as InputTextPayload,
-        Modal as ModalPayload,
         SelectMenu as SelectMenuPayload,
         SelectOption as SelectOptionPayload,
     )
@@ -54,6 +53,7 @@ __all__ = (
 )
 
 C = TypeVar("C", bound="Component")
+NestedComponent = Union["Button", "SelectMenu", "InputText"]
 
 
 class Component:
@@ -64,6 +64,7 @@ class Component:
     - :class:`ActionRow`
     - :class:`Button`
     - :class:`SelectMenu`
+    - :class:`InputText`
 
     This class is abstract and cannot be instantiated.
 
@@ -113,7 +114,7 @@ class ActionRow(Component):
     ------------
     type: :class:`ComponentType`
         The type of component.
-    children: List[:class:`Component`]
+    children: List[Union[:class:`Button`, :class:`SelectMenu`, :class:`InputText`]]
         The children components that this holds, if any.
     """
 
@@ -123,7 +124,9 @@ class ActionRow(Component):
 
     def __init__(self, data: ComponentPayload):
         self.type: ComponentType = try_enum(ComponentType, data["type"])
-        self.children: List[Component] = [_component_factory(d) for d in data.get("components", [])]
+        self.children: List[NestedComponent] = [  # type: ignore
+            _component_factory(d) for d in data.get("components", [])
+        ]
 
     def to_dict(self) -> ActionRowPayload:
         return {
@@ -441,7 +444,7 @@ class InputText(Component):
         payload: InputTextPayload = {
             "type": self.type.value,
             "style": self.style.value,  # type: ignore
-            "label": self.label,
+            "label": self.label,  # type: ignore
             "custom_id": self.custom_id,
             "required": self.required,
             "min_length": self.min_length,

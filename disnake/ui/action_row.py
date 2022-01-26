@@ -26,7 +26,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, List, Optional, TypeVar, Union
 
-from ..components import ActionRow as ActionRowComponent, Component, SelectOption
+from ..components import ActionRow as ActionRowComponent, Component, NestedComponent, SelectOption
 from ..enums import ButtonStyle, ComponentType, InputTextStyle
 from ..utils import MISSING
 from .button import Button
@@ -84,12 +84,12 @@ class ActionRow:
         return f"<ActionRow children={self.children!r}>"
 
     @property
-    def children(self) -> List[Component]:
+    def children(self) -> List[NestedComponent]:
         """List[:class:`Component`]: The components of this row."""
         return self._underlying.children
 
     @children.setter
-    def children(self, value: List[Component]):
+    def children(self, value: List[NestedComponent]):
         self._underlying.children = value
 
     @property
@@ -252,7 +252,6 @@ class ActionRow:
         ValueError
             The width of the action row exceeds 5.
         """
-
         self.append_item(
             InputText(
                 label=label,

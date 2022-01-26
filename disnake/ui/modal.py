@@ -56,9 +56,9 @@ class Modal:
     components: |components_type|
         The components to display in the modal. Up to 5 action rows.
     timeout: :class:`float`
-        Timeout from the moment this modal is sent.
-        Defaults to 600 seconds. Modals without timeouts are not supported,
-        since there's no event for closing modals.
+        The time to wait until the modal is removed from cache, if no interaction is made.
+        Modals without timeouts are not supported, since there's no event for when a modal is closed.
+        Defaults to 600 seconds.
     """
 
     __slots__ = ("title", "custom_id", "components", "timeout")
@@ -143,13 +143,13 @@ class Modal:
         :meth:`append_component` method instead.
 
         Parameters
-        -----------
-        style: :class:`.InputTextStyle`
-            The style of the input text.
+        ----------
         label: :class:`str`
             The label of the input text.
         custom_id: :class:`str`
             The ID of the input text that gets received during an interaction.
+        style: :class:`.InputTextStyle`
+            The style of the input text.
         placeholder: Optional[:class:`str`]
             The placeholder text that is shown if nothing is entered.
         value: Optional[:class:`str`]
@@ -161,7 +161,6 @@ class Modal:
         max_length: Optional[:class:`int`]
             The maximum length of the input text.
         """
-
         self.components.append(
             ActionRow(
                 InputText(
@@ -210,7 +209,8 @@ class Modal:
     async def on_timeout(self) -> None:
         """|coro|
 
-        A callback that is called when the modal expires.
+        A callback that is called when the modal is removed from the cache
+        without an interaction being made.
         """
         pass
 
