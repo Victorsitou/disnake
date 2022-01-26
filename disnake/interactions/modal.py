@@ -94,7 +94,7 @@ class ModalInteraction(Interaction):
         """Dict[:class:`str`, :class:`str`]: Returns the values the user has entered in the modal.
         This is a dict of the form ``{custom_id: value}``."""
         values: Dict[str, str] = {}
-        for action_row in self.data.components:
+        for action_row in self.data._components:
             for component in action_row.children:
                 # assuming that action rows from modals only have input_text components
                 values[component.custom_id] = component.value  # type: ignore
@@ -104,11 +104,6 @@ class ModalInteraction(Interaction):
     def custom_id(self) -> str:
         """:class:`str`: The custom ID of the modal."""
         return self.data.custom_id
-
-    @property
-    def components(self) -> List[ActionRow]:
-        """List[:class:`ActionRow`]: The components the modal has."""
-        return self.data.components
 
 
 class ModalInteractionData:
@@ -120,12 +115,11 @@ class ModalInteractionData:
     ----------
     custom_id: :class:`str`
         The custom ID of the modal.
-    components: List[:class:`ActionRow`]
-        The components the modal has.
     """
 
-    __slots__ = ("custom_id", "components")
+    __slots__ = ("custom_id", "_components")
 
     def __init__(self, *, data: ModalInteractionDataPayload):
         self.custom_id: str = data["custom_id"]
-        self.components: List[ActionRow] = [ActionRow(d) for d in data["components"]]
+        # this attribute is not meant to be used since it lacks most of the component data
+        self._components: List[ActionRow] = [ActionRow(d) for d in data["components"]]
