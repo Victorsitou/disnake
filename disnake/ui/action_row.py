@@ -55,7 +55,7 @@ class ActionRow:
     .. versionadded:: 2.4
 
     Parameters
-    ------------
+    ----------
     *items: :class:`WrappedComponent`
         The items of this action row.
     """
@@ -100,7 +100,7 @@ class ActionRow:
         """Appends an item to the action row.
 
         Parameters
-        -----------
+        ----------
         item: :class:`WrappedComponent`
             The item to append to the action row.
 
@@ -131,7 +131,7 @@ class ActionRow:
         :meth:`append_item` method instead.
 
         Parameters
-        -----------
+        ----------
         style: :class:`disnake.ButtonStyle`
             The style of the button.
         custom_id: Optional[:class:`str`]
@@ -178,7 +178,7 @@ class ActionRow:
         :meth:`append_item` method instead.
 
         Parameters
-        -----------
+        ----------
         custom_id: :class:`str`
             The ID of the select menu that gets received during an interaction.
             If not given then one is generated for you.
@@ -229,7 +229,7 @@ class ActionRow:
         :meth:`append_item` method instead.
 
         Parameters
-        -----------
+        ----------
         style: :class:`.InputTextStyle`
             The style of the input text.
         label: :class:`str`
@@ -333,7 +333,7 @@ def components_to_rows(components: Components) -> List[ActionRow]:
 
             else:
                 raise ValueError(
-                    "components must be an WrappedComponent, a list of ActionRow "
+                    "components must be a WrappedComponent, a list of ActionRow "
                     "or a list of WrappedComponent"
                 )
 
