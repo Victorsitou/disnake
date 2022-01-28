@@ -85,7 +85,7 @@ class ActionRow:
 
     @property
     def children(self) -> List[NestedComponent]:
-        """List[Union[:class:`Button`, :class:`SelectMenu`, :class:`InputText`]]: The components of this row."""
+        """List[Union[:class:`~disnake.Button`, :class:`~disnake.SelectMenu`, :class:`~disnake.InputText`]]: The components of this row."""
         return self._underlying.children
 
     @children.setter
@@ -132,7 +132,7 @@ class ActionRow:
 
         Parameters
         ----------
-        style: :class:`disnake.ButtonStyle`
+        style: :class:`.ButtonStyle`
             The style of the button.
         custom_id: Optional[:class:`str`]
             The ID of the button that gets received during an interaction.
@@ -190,7 +190,7 @@ class ActionRow:
         max_values: :class:`int`
             The maximum number of items that must be chosen for this select menu.
             Defaults to 1 and must be between 1 and 25.
-        options: List[:class:`disnake.SelectOption`]
+        options: List[:class:`~disnake.SelectOption`]
             A list of options that can be selected in this menu.
         disabled: :class:`bool`
             Whether the select is disabled or not.
@@ -227,6 +227,8 @@ class ActionRow:
 
         To append a pre-existing :class:`disnake.ui.InputText` use the
         :meth:`append_item` method instead.
+
+        .. versionadded:: 2.4
 
         Parameters
         ----------
