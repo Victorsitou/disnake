@@ -105,7 +105,7 @@ class ActionRow:
             The item to append to the action row.
 
         Raises
-        -------
+        ------
         ValueError
             The width of the action row exceeds 5.
         """
@@ -147,7 +147,7 @@ class ActionRow:
             The emoji of the button, if available.
 
         Raises
-        -------
+        ------
         ValueError
             The width of the action row exceeds 5.
         """
@@ -196,7 +196,7 @@ class ActionRow:
             Whether the select is disabled or not.
 
         Raises
-        -------
+        ------
         ValueError
             The width of the action row exceeds 5.
         """
@@ -248,7 +248,7 @@ class ActionRow:
             The maximum length of the input text.
 
         Raises
-        -------
+        ------
         ValueError
             The width of the action row exceeds 5.
         """
