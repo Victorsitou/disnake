@@ -4805,6 +4805,14 @@ Item
 .. autoclass:: disnake.ui.Item
     :members:
 
+WrappedComponent
+~~~~~~~~~~~~~~~~
+
+.. attributetable:: disnake.ui.WrappedComponent
+
+.. autoclass:: disnake.ui.WrappedComponent
+    :members:
+
 Button
 ~~~~~~~
 
