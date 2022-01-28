@@ -55,7 +55,7 @@ class ActionRow:
     .. versionadded:: 2.4
 
     Parameters
-    ------------
+    ----------
     *items: :class:`WrappedComponent`
         The items of this action row.
     """
@@ -100,12 +100,12 @@ class ActionRow:
         """Appends an item to the action row.
 
         Parameters
-        -----------
+        ----------
         item: :class:`WrappedComponent`
             The item to append to the action row.
 
         Raises
-        -------
+        ------
         ValueError
             The width of the action row exceeds 5.
         """
@@ -131,7 +131,7 @@ class ActionRow:
         :meth:`append_item` method instead.
 
         Parameters
-        -----------
+        ----------
         style: :class:`disnake.ButtonStyle`
             The style of the button.
         custom_id: Optional[:class:`str`]
@@ -147,7 +147,7 @@ class ActionRow:
             The emoji of the button, if available.
 
         Raises
-        -------
+        ------
         ValueError
             The width of the action row exceeds 5.
         """
@@ -178,7 +178,7 @@ class ActionRow:
         :meth:`append_item` method instead.
 
         Parameters
-        -----------
+        ----------
         custom_id: :class:`str`
             The ID of the select menu that gets received during an interaction.
             If not given then one is generated for you.
@@ -196,7 +196,7 @@ class ActionRow:
             Whether the select is disabled or not.
 
         Raises
-        -------
+        ------
         ValueError
             The width of the action row exceeds 5.
         """
@@ -229,7 +229,7 @@ class ActionRow:
         :meth:`append_item` method instead.
 
         Parameters
-        -----------
+        ----------
         style: :class:`.InputTextStyle`
             The style of the input text.
         label: :class:`str`
@@ -248,7 +248,7 @@ class ActionRow:
             The maximum length of the input text.
 
         Raises
-        -------
+        ------
         ValueError
             The width of the action row exceeds 5.
         """
@@ -333,7 +333,7 @@ def components_to_rows(components: Components) -> List[ActionRow]:
 
             else:
                 raise ValueError(
-                    "components must be an WrappedComponent, a list of ActionRow "
+                    "components must be a WrappedComponent, a list of ActionRow "
                     "or a list of WrappedComponent"
                 )
 
