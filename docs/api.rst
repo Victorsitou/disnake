@@ -3997,15 +3997,6 @@ SelectMenu
     :members:
     :inherited-members:
 
-Modal
-~~~~~
-
-.. attributetable:: Modal
-
-.. autoclass:: Modal()
-    :members:
-    :inherited-members:
-
 InputText
 ~~~~~~~~~
 
