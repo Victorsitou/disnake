@@ -75,10 +75,6 @@ class WrappedComponent(ABC):
     def _underlying(self) -> NestedComponent:
         ...
 
-    @_underlying.setter
-    def _underlying(self, value: NestedComponent):
-        ...
-
     @property
     @abstractmethod
     def width(self) -> int:
