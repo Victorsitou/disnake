@@ -62,7 +62,7 @@ class ActionRow:
 
     def __init__(self, *components: WrappedComponent):
         self.width: int = 0
-        raw_components = []
+        raw_components: List[NestedComponent] = []
         # Validate the components
         for component in components:
             if not isinstance(component, WrappedComponent):

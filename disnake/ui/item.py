@@ -47,9 +47,10 @@ I = TypeVar("I", bound="Item")
 V = TypeVar("V", bound="View", covariant=True)
 
 if TYPE_CHECKING:
-    from ..components import Component
+    from ..components import NestedComponent
     from ..enums import ComponentType
     from ..interactions import MessageInteraction
+    from ..types.components import Component as ComponentPayload
     from .view import View
 
     ItemCallbackType = Callable[[Any, I, MessageInteraction], Coroutine[Any, Any, Any]]
@@ -71,11 +72,11 @@ class WrappedComponent(ABC):
 
     @property
     @abstractmethod
-    def _underlying(self) -> Component:
+    def _underlying(self) -> NestedComponent:
         ...
 
     @_underlying.setter
-    def _underlying(self, value: Component):
+    def _underlying(self, value: NestedComponent):
         ...
 
     @property
@@ -91,7 +92,7 @@ class WrappedComponent(ABC):
     def type(self) -> ComponentType:
         return self._underlying.type
 
-    def to_component_dict(self) -> Dict[str, Any]:
+    def to_component_dict(self) -> ComponentPayload:
         return self._underlying.to_dict()
 
 
@@ -122,14 +123,14 @@ class Item(WrappedComponent, Generic[V]):
         # only called upon edit and we're mainly interested during initial creation time.
         self._provided_custom_id: bool = False
 
-    def refresh_component(self, component: Component) -> None:
+    def refresh_component(self, component: NestedComponent) -> None:
         return None
 
     def refresh_state(self, interaction: MessageInteraction) -> None:
         return None
 
     @classmethod
-    def from_component(cls: Type[I], component: Component) -> I:
+    def from_component(cls: Type[I], component: NestedComponent) -> I:
         return cls()
 
     def is_dispatchable(self) -> bool:
