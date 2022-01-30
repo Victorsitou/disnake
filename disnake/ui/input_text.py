@@ -30,7 +30,6 @@ from ..enums import ComponentType, InputTextStyle
 from ..utils import MISSING
 from .item import WrappedComponent
 
-
 __all__ = ("InputText",)
 
 
