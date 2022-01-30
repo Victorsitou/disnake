@@ -85,7 +85,7 @@ class Button(Item[V]):
         "emoji",
         "row",
     )
-
+    # We have to set this to MISSING in order to overwrite the abstract property from WrappedComponent
     _underlying: ButtonComponent = MISSING
 
     def __init__(

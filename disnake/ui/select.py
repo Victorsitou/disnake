@@ -91,7 +91,7 @@ class Select(Item[V]):
         "options",
         "disabled",
     )
-
+    # We have to set this to MISSING in order to overwrite the abstract property from WrappedComponent
     _underlying: SelectMenu = MISSING
 
     def __init__(
