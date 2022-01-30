@@ -56,28 +56,28 @@ class ActionRow:
 
     Parameters
     ----------
-    *items: :class:`WrappedComponent`
-        The items of this action row.
+    *components: :class:`WrappedComponent`
+        The components of this action row.
     """
 
-    def __init__(self, *items: WrappedComponent):
+    def __init__(self, *components: WrappedComponent):
         self.width: int = 0
-        components = []
+        raw_components = []
         # Validate the components
-        for item in items:
-            if not isinstance(item, WrappedComponent):
+        for component in components:
+            if not isinstance(component, WrappedComponent):
                 raise ValueError("ActionRow must contain only WrappedComponent instances")
 
-            self.width += item.width
+            self.width += component.width
 
             if self.width > 5:
-                raise ValueError("Too many items in one row.")
+                raise ValueError("Too many components in one row.")
 
-            components.append(item._underlying)  # type: ignore
+            raw_components.append(component._underlying)
 
         self._underlying = ActionRowComponent._raw_construct(
             type=ComponentType.action_row,
-            children=components,
+            children=raw_components,
         )
 
     def __repr__(self) -> str:
@@ -97,12 +97,12 @@ class ActionRow:
         return self._underlying.type
 
     def append_item(self, item: WrappedComponent) -> None:
-        """Appends an item to the action row.
+        """Appends a component to the action row.
 
         Parameters
         ----------
         item: :class:`WrappedComponent`
-            The item to append to the action row.
+            The component to append to the action row.
 
         Raises
         ------
@@ -110,7 +110,7 @@ class ActionRow:
             The width of the action row exceeds 5.
         """
         if self.width + item.width > 5:
-            raise ValueError("Too many items in this row, can not append a new one.")
+            raise ValueError("Too many components in this row, can not append a new one.")
 
         self.width += item.width
         self._underlying.children.append(item._underlying)  # type: ignore
@@ -127,7 +127,7 @@ class ActionRow:
     ):
         """Adds a button to the action row.
 
-        To append a pre-existing :class:`disnake.ui.Button` use the
+        To append a pre-existing :class:`~disnake.ui.Button` use the
         :meth:`append_item` method instead.
 
         Parameters
@@ -174,7 +174,7 @@ class ActionRow:
     ):
         """Adds a select menu to the action row.
 
-        To append a pre-existing :class:`disnake.ui.Select` use the
+        To append a pre-existing :class:`~disnake.ui.Select` use the
         :meth:`append_item` method instead.
 
         Parameters
@@ -225,7 +225,7 @@ class ActionRow:
     ):
         """Adds an input text to the action row.
 
-        To append a pre-existing :class:`disnake.ui.InputText` use the
+        To append a pre-existing :class:`~disnake.ui.InputText` use the
         :meth:`append_item` method instead.
 
         .. versionadded:: 2.4
