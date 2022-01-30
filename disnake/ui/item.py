@@ -25,7 +25,7 @@ DEALINGS IN THE SOFTWARE.
 
 from __future__ import annotations
 
-from abc import ABC, abstractproperty
+from abc import ABC, abstractmethod
 from typing import (
     TYPE_CHECKING,
     Any,
@@ -69,7 +69,8 @@ class WrappedComponent(ABC):
 
     __repr_attributes__: Tuple[str, ...]
 
-    @abstractproperty
+    @property
+    @abstractmethod
     def _underlying(self) -> Component:
         ...
 
@@ -77,7 +78,8 @@ class WrappedComponent(ABC):
     def _underlying(self, value: Component):
         ...
 
-    @abstractproperty
+    @property
+    @abstractmethod
     def width(self) -> int:
         ...
 

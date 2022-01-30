@@ -23,14 +23,12 @@ DEALINGS IN THE SOFTWARE.
 """
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Optional, Tuple
+from typing import Optional, Tuple
 
 from ..components import InputText as InputTextComponent
 from ..enums import ComponentType, InputTextStyle
+from ..utils import MISSING
 from .item import WrappedComponent
-
-if TYPE_CHECKING:
-    from ..types.components import InputText as InputTextPayload
 
 
 __all__ = ("InputText",)
@@ -74,6 +72,8 @@ class InputText(WrappedComponent):
         "max_length",
     )
 
+    _underlying: InputTextComponent = MISSING
+
     def __init__(
         self,
         *,
@@ -86,7 +86,7 @@ class InputText(WrappedComponent):
         min_length: int = 0,
         max_length: Optional[int] = None,
     ) -> None:
-        self._underlying: InputTextComponent = InputTextComponent._raw_construct(
+        self._underlying = InputTextComponent._raw_construct(
             type=ComponentType.input_text,
             style=style,
             label=label,

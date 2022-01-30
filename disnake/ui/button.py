@@ -32,6 +32,7 @@ from typing import TYPE_CHECKING, Callable, Optional, Tuple, Type, TypeVar, Unio
 from ..components import Button as ButtonComponent
 from ..enums import ButtonStyle, ComponentType
 from ..partial_emoji import PartialEmoji, _EmojiTag
+from ..utils import MISSING
 from .item import DecoratedItem, Item
 
 __all__ = (
@@ -85,6 +86,8 @@ class Button(Item[V]):
         "row",
     )
 
+    _underlying: ButtonComponent = MISSING
+
     def __init__(
         self,
         *,
@@ -117,7 +120,7 @@ class Button(Item[V]):
                     f"expected emoji to be str, Emoji, or PartialEmoji not {emoji.__class__}"
                 )
 
-        self._underlying: ButtonComponent = ButtonComponent._raw_construct(
+        self._underlying = ButtonComponent._raw_construct(
             type=ComponentType.button,
             custom_id=custom_id,
             url=url,
@@ -127,6 +130,10 @@ class Button(Item[V]):
             emoji=emoji,
         )
         self.row = row
+
+    @property
+    def width(self) -> int:
+        return 1
 
     @property
     def style(self) -> ButtonStyle:

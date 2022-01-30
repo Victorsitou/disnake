@@ -43,7 +43,6 @@ __all__ = (
 if TYPE_CHECKING:
     from ..emoji import Emoji
     from ..interactions import MessageInteraction
-    from ..types.components import SelectMenu as SelectMenuPayload
     from .item import ItemCallbackType
     from .view import View
 
@@ -93,6 +92,8 @@ class Select(Item[V]):
         "disabled",
     )
 
+    _underlying: SelectMenu = MISSING
+
     def __init__(
         self,
         *,
@@ -109,7 +110,7 @@ class Select(Item[V]):
         self._provided_custom_id = custom_id is not MISSING
         custom_id = os.urandom(16).hex() if custom_id is MISSING else custom_id
         options = [] if options is MISSING else options
-        self._underlying: SelectMenu = SelectMenu._raw_construct(
+        self._underlying = SelectMenu._raw_construct(
             custom_id=custom_id,
             type=ComponentType.select,
             placeholder=placeholder,
