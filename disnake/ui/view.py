@@ -36,7 +36,6 @@ from typing import (
     TYPE_CHECKING,
     Any,
     Callable,
-    cast,
     ClassVar,
     Dict,
     Iterator,
@@ -44,6 +43,7 @@ from typing import (
     Optional,
     Sequence,
     Tuple,
+    cast,
 )
 
 from ..components import (
