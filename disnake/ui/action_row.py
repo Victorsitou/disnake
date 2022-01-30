@@ -271,43 +271,6 @@ class ActionRow:
         return self._underlying.to_dict()
 
 
-def components_to_dict(components: Components) -> List[ActionRowPayload]:
-    if not isinstance(components, Sequence):
-        components = [components]
-
-    action_rows = []
-    auto_row = ActionRow()
-
-    for component in components:
-        if isinstance(component, WrappedComponent):
-            try:
-                auto_row.append_item(component)
-            except ValueError:
-                action_rows.append(auto_row.to_component_dict())
-                auto_row = ActionRow(component)
-        else:
-            if auto_row.width > 0:
-                action_rows.append(auto_row.to_component_dict())
-                auto_row = ActionRow()
-
-            if isinstance(component, ActionRow):
-                action_rows.append(component.to_component_dict())
-
-            elif isinstance(component, list):
-                action_rows.append(ActionRow(*component).to_component_dict())
-
-            else:
-                raise ValueError(
-                    "components must be a WrappedComponent, a list of ActionRow "
-                    "or a list of WrappedComponent"
-                )
-
-    if auto_row.width > 0:
-        action_rows.append(auto_row.to_component_dict())
-
-    return action_rows
-
-
 def components_to_rows(components: Components) -> List[ActionRow]:
     if not isinstance(components, Sequence):
         components = [components]
@@ -343,3 +306,7 @@ def components_to_rows(components: Components) -> List[ActionRow]:
         action_rows.append(auto_row)
 
     return action_rows
+
+
+def components_to_dict(components: Components) -> List[ActionRowPayload]:
+    return [row.to_component_dict() for row in components_to_rows(components)]

@@ -25,6 +25,7 @@ DEALINGS IN THE SOFTWARE.
 
 from __future__ import annotations
 
+from abc import ABC, abstractproperty
 from typing import (
     TYPE_CHECKING,
     Any,
@@ -54,7 +55,7 @@ if TYPE_CHECKING:
     ItemCallbackType = Callable[[Any, I, MessageInteraction], Coroutine[Any, Any, Any]]
 
 
-class WrappedComponent:
+class WrappedComponent(ABC):
     """Represents the base UI component that all UI components inherit from.
 
     The current UI components supported are:
@@ -68,24 +69,34 @@ class WrappedComponent:
 
     __repr_attributes__: Tuple[str, ...]
 
-    def to_component_dict(self) -> Dict[str, Any]:
-        raise NotImplementedError
+    @abstractproperty
+    def _underlying(self) -> Component:
+        ...
 
-    @property
-    def type(self) -> ComponentType:
-        raise NotImplementedError
+    @_underlying.setter
+    def _underlying(self, value: Component):
+        ...
+
+    @abstractproperty
+    def width(self) -> int:
+        ...
 
     def __repr__(self) -> str:
         attrs = " ".join(f"{key}={getattr(self, key)!r}" for key in self.__repr_attributes__)
         return f"<{self.__class__.__name__} {attrs}>"
 
     @property
-    def width(self) -> int:
-        return 1
+    def type(self) -> ComponentType:
+        return self._underlying.type
+
+    def to_component_dict(self) -> Dict[str, Any]:
+        return self._underlying.to_dict()
 
 
 class Item(WrappedComponent, Generic[V]):
-    """Represents the base UI item that all UI components inherit from.
+    """Represents the base UI item that all UI items inherit from.
+    This class adds more functionality on top of the :class:`WrappedComponent` base class.
+    This functionality mostly relates to :class:`disnake.ui.View`.
 
     The current UI items supported are:
 

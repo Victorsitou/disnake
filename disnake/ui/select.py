@@ -109,7 +109,7 @@ class Select(Item[V]):
         self._provided_custom_id = custom_id is not MISSING
         custom_id = os.urandom(16).hex() if custom_id is MISSING else custom_id
         options = [] if options is MISSING else options
-        self._underlying = SelectMenu._raw_construct(
+        self._underlying: SelectMenu = SelectMenu._raw_construct(
             custom_id=custom_id,
             type=ComponentType.select,
             placeholder=placeholder,
@@ -260,9 +260,6 @@ class Select(Item[V]):
     def width(self) -> int:
         return 5
 
-    def to_component_dict(self) -> SelectMenuPayload:
-        return self._underlying.to_dict()
-
     def refresh_component(self, component: SelectMenu) -> None:
         self._underlying = component
 
@@ -280,10 +277,6 @@ class Select(Item[V]):
             disabled=component.disabled,
             row=None,
         )
-
-    @property
-    def type(self) -> ComponentType:
-        return self._underlying.type
 
     def is_dispatchable(self) -> bool:
         return True

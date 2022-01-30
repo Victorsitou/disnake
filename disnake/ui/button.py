@@ -117,7 +117,7 @@ class Button(Item[V]):
                     f"expected emoji to be str, Emoji, or PartialEmoji not {emoji.__class__}"
                 )
 
-        self._underlying = ButtonComponent._raw_construct(
+        self._underlying: ButtonComponent = ButtonComponent._raw_construct(
             type=ComponentType.button,
             custom_id=custom_id,
             url=url,
@@ -211,13 +211,6 @@ class Button(Item[V]):
             emoji=button.emoji,
             row=None,
         )
-
-    @property
-    def type(self) -> ComponentType:
-        return self._underlying.type
-
-    def to_component_dict(self):
-        return self._underlying.to_dict()
 
     def is_dispatchable(self) -> bool:
         return self.custom_id is not None

@@ -86,7 +86,7 @@ class InputText(WrappedComponent):
         min_length: int = 0,
         max_length: Optional[int] = None,
     ) -> None:
-        self._underlying = InputTextComponent._raw_construct(
+        self._underlying: InputTextComponent = InputTextComponent._raw_construct(
             type=ComponentType.input_text,
             style=style,
             label=label,
@@ -101,11 +101,6 @@ class InputText(WrappedComponent):
     @property
     def width(self) -> int:
         return 5
-
-    @property
-    def type(self) -> ComponentType:
-        """:class:`.ComponentType`: The type of the input text. This is always :attr:`.ComponentType.input_text`."""
-        return self._underlying.type
 
     @property
     def style(self) -> InputTextStyle:
@@ -178,6 +173,3 @@ class InputText(WrappedComponent):
     @max_length.setter
     def max_length(self, value: Optional[int]) -> None:
         self._underlying.max_length = value
-
-    def to_component_dict(self) -> InputTextPayload:
-        return self._underlying.to_dict()
