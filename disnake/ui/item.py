@@ -98,6 +98,7 @@ class WrappedComponent(ABC):
 
 class Item(WrappedComponent, Generic[V]):
     """Represents the base UI item that all UI items inherit from.
+
     This class adds more functionality on top of the :class:`WrappedComponent` base class.
     This functionality mostly relates to :class:`disnake.ui.View`.
 
