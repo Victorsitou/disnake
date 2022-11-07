@@ -259,6 +259,7 @@ class AuditLogChanges:
         'entity_type':                   (None, _enum_transformer(enums.GuildScheduledEventEntityType)),
         'status':                        (None, _enum_transformer(enums.GuildScheduledEventStatus)),
         'type':                          (None, _transform_type),
+        # TODO: Add transformer for `applied_tags`?
     }
     # fmt: on
 

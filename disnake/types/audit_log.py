@@ -37,7 +37,7 @@ from .guild import (
 )
 from .integration import IntegrationExpireBehavior, PartialIntegration
 from .role import Role
-from .snowflake import Snowflake
+from .snowflake import Snowflake, SnowflakeList
 from .threads import Thread
 from .user import User
 from .webhook import Webhook
@@ -102,6 +102,7 @@ class _AuditLogChange_Str(TypedDict):
         "deny",
         "permissions",
         "tags",
+        "template",
     ]
     new_value: str
     old_value: str
@@ -238,6 +239,12 @@ class _AuditLogChange_Datetime(TypedDict):
     old_value: datetime.datetime
 
 
+class _AuditLogChange_SnowflakeList(TypedDict):
+    key: Literal["applied_tags"]
+    new_value: SnowflakeList
+    old_value: SnowflakeList
+
+
 AuditLogChange = Union[
     _AuditLogChange_Str,
     _AuditLogChange_AssetHash,
@@ -254,6 +261,7 @@ AuditLogChange = Union[
     _AuditLogChange_VideoQualityMode,
     _AuditLogChange_Overwrites,
     _AuditLogChange_Datetime,
+    _AuditLogChange_SnowflakeList,
 ]
 
 

@@ -28,6 +28,7 @@ from __future__ import annotations
 import asyncio
 import datetime
 import time
+import unicodedata
 from typing import (
     TYPE_CHECKING,
     Any,
@@ -68,6 +69,8 @@ from .permissions import PermissionOverwrite, Permissions
 from .stage_instance import StageInstance
 from .threads import Thread
 from .utils import MISSING
+from .threads import Tag
+from .emoji import Emoji
 
 __all__ = (
     "TextChannel",
@@ -1906,7 +1909,18 @@ class ForumChannel(disnake.abc.GuildChannel, Hashable):
     slowmode_delay: :class:`int`
         The number of seconds a member must wait between creating threads
         in this channel. A value of `0` denotes that it is disabled.
+    available_tags: List[:class:`Tag`]
+        The tags that are available in this channel, or an empty list if none.
+
+        .. versionadded:: 2.6
+
+    template: Optional[:class:`str`]
+        The template text when creating a new thread, or ``None`` if it's not set.
+
+        .. versionadded:: 2.6
     """
+
+    # TODO: order the stuff with this hierarchy, Properties -> helper methods (is_nsfw, clone, etc) -> other methods (create_thread, edit, etc)
 
     __slots__ = (
         "id",
@@ -1919,6 +1933,8 @@ class ForumChannel(disnake.abc.GuildChannel, Hashable):
         "default_auto_archive_duration",
         "guild",
         "slowmode_delay",
+        "available_tags",
+        "template",
         "_state",
         "_type",
         "_overwrites",
@@ -1954,7 +1970,11 @@ class ForumChannel(disnake.abc.GuildChannel, Hashable):
         self.default_auto_archive_duration: ThreadArchiveDurationLiteral = data.get(
             "default_auto_archive_duration", 1440
         )
-        self.slowmode_delay = data.get("rate_limit_per_user", 0)
+        self.slowmode_delay: int = data.get("rate_limit_per_user", 0)
+        self.available_tags: List[Tag] = [
+            Tag(data=t, channel=self, state=self._state) for t in data.get("available_tags", [])
+        ]
+        self.template = data["template"] or None
         self._fill_overwrites(data)
 
     async def _get_channel(self) -> ForumChannel:
@@ -2150,7 +2170,7 @@ class ForumChannel(disnake.abc.GuildChannel, Hashable):
         name: str,
         auto_archive_duration: AnyThreadArchiveDuration = MISSING,
         slowmode_delay: int = MISSING,
-        content: str,
+        content: str = MISSING,
         embed: Embed = MISSING,
         embeds: List[Embed] = MISSING,
         file: File = MISSING,
@@ -2167,6 +2187,10 @@ class ForumChannel(disnake.abc.GuildChannel, Hashable):
 
         You must have the :attr:`~Permissions.send_messages` permission to do this.
 
+        .. versionchanged:: 2.6
+            The ``content`` parameter is no longer required and it defaults to the
+            channel's :attr:`template` if not provided.
+
         Parameters
         ----------
         name: :class:`str`
@@ -2179,8 +2203,9 @@ class ForumChannel(disnake.abc.GuildChannel, Hashable):
             Specifies the slowmode rate limit for users in this thread, in seconds.
             A value of ``0`` disables slowmode. The maximum value possible is ``21600``.
             If not provided, slowmode is disabled.
-        content: Optional[:class:`str`]
-            The content of the message to send.
+        content: :class:`str`
+            The content of the message to send. Defaults to the channel's :attr:`template`
+            if not provided.
         embed: :class:`.Embed`
             The rich embed for the content to send. This cannot be mixed with the
             ``embeds`` parameter.
@@ -2231,7 +2256,7 @@ class ForumChannel(disnake.abc.GuildChannel, Hashable):
         from .webhook.async_ import handle_message_parameters_dict
 
         params = handle_message_parameters_dict(
-            content,
+            content or self.template,
             embed=embed,
             embeds=embeds,
             file=file,
@@ -2307,6 +2332,65 @@ class ForumChannel(disnake.abc.GuildChannel, Hashable):
         return ArchivedThreadIterator(
             self.id, self.guild, limit=limit, joined=False, private=False, before=before
         )
+
+    async def create_tag(
+        self,
+        *,
+        name: str,
+        emoji: Union[str, Emoji] = MISSING,
+        # reason: Optional[str] = None, # Not working atm
+    ) -> Optional[Tag]:
+        """|coro|
+
+        Creates a :class:`Tag` for this channel.
+
+        You must have :attr:`~Permissions.manage_channels` permission to do this.
+
+        .. versionadded:: 2.5
+
+        Parameters
+        ----------
+        name: :class:`str`
+            The name of the tag.
+        emoji: Union[:class:`str`, :class:`Emoji`]
+            The emoji to use for the tag.
+        reason: Optional[:class:`str`]
+            The reason for creating the tag. Shows up on the audit log.
+
+        Raises
+        ------
+        Forbidden
+            You do not have permissions to create tags.
+        HTTPException
+            Creating the tag failed.
+
+        Returns
+        -------
+        Optional[:class:`Tag`]
+            The newly created tag.
+        """
+
+        payload: Dict[str, Any] = {"name": name}
+
+        if emoji is not MISSING:
+
+            if isinstance(emoji, Emoji):
+                payload["emoji_id"] = emoji.id
+            else:
+                try:
+                    emoji_name = unicodedata.name(emoji)
+                except TypeError:
+                    pass
+                else:
+                    emoji_name = emoji.replace(" ", "_")
+                    payload["emoji_name"] = emoji_name
+
+        data = await self._state.http.create_tag(self.id, **payload)  # reason=reason
+
+        for tag in data.get("available_tags", []):
+            if tag["name"] == name:  # Tag names will always be unique
+                return Tag(data=tag, state=self._state, channel=self)
+        return None
 
 
 DMC = TypeVar("DMC", bound="DMChannel")

@@ -23,5 +23,7 @@ secrets/
 *.env
 venvs/
 .idea
-
 !/task.env
+test*/
+build.bat
+sphinx_errors.txt

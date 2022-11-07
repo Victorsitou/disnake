@@ -136,6 +136,7 @@ class _ForumChannelOptional(TypedDict, total=False):
 
 class ForumChannel(_BaseGuildChannel, _ForumChannelOptional):
     type: Literal[15]
+    template: str
 
 
 GuildChannel = Union[

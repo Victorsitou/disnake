@@ -27,7 +27,8 @@ from __future__ import annotations
 
 import asyncio
 import time
-from typing import TYPE_CHECKING, Callable, Dict, Iterable, List, Optional, Union
+import unicodedata
+from typing import TYPE_CHECKING, Any, Callable, Dict, Iterable, List, Optional, Union
 
 from .abc import Messageable
 from .enums import ChannelType, ThreadArchiveDuration, try_enum, try_enum_to_int
@@ -36,10 +37,7 @@ from .flags import ChannelFlags
 from .mixins import Hashable
 from .utils import MISSING, _get_as_snowflake, parse_time, snowflake_time
 
-__all__ = (
-    "Thread",
-    "ThreadMember",
-)
+__all__ = ("Thread", "ThreadMember", "Tag")
 
 if TYPE_CHECKING:
     import datetime
@@ -58,7 +56,9 @@ if TYPE_CHECKING:
         ThreadArchiveDurationLiteral,
         ThreadMember as ThreadMemberPayload,
         ThreadMetadata,
+        Tag as TagPayload,
     )
+    from .emoji import Emoji
 
     AnyThreadArchiveDuration = Union[ThreadArchiveDuration, ThreadArchiveDurationLiteral]
 
@@ -135,6 +135,11 @@ class Thread(Messageable, Hashable):
         The flags the thread has.
 
         .. versionadded:: 2.5
+
+    applied_tags_ids: List[:class:`int`]
+        The IDs of the tags applied to this thread.
+
+        .. versionadded:: 2.6
     """
 
     __slots__ = (
@@ -155,6 +160,7 @@ class Thread(Messageable, Hashable):
         "archive_timestamp",
         "create_timestamp",
         "flags",
+        "applied_tags_ids",
         "_type",
         "_state",
         "_members",
@@ -190,6 +196,7 @@ class Thread(Messageable, Hashable):
         self.message_count = data.get("message_count")
         self.member_count = data.get("member_count")
         self.flags = ChannelFlags._from_value(data.get("flags", 0))
+        self.applied_tags_ids = [int(t) for t in data.get("applied_tags", [])]
         self._unroll_metadata(data["thread_metadata"])
 
         try:
@@ -215,6 +222,7 @@ class Thread(Messageable, Hashable):
 
         self.slowmode_delay = data.get("rate_limit_per_user", 0)
         self.flags = ChannelFlags._from_value(data.get("flags", 0))
+        self.applied_tags_ids = [int(t) for t in data.get("applied_tags", [])]
 
         try:
             self._unroll_metadata(data["thread_metadata"])
@@ -331,6 +339,28 @@ class Thread(Messageable, Hashable):
         .. versionadded:: 2.4
         """
         return f"https://discord.com/channels/{self.guild.id}/{self.id}"
+
+    @property
+    def applied_tags(self) -> Optional[List[Tag]]:
+        """Returns a generator that yields the tags applied to this thread.
+
+        .. versionadded:: 2.6
+
+        Yields
+        ------
+        Optional[:class:`Tag`]
+            The tags applied to this thread or ``None`` if the parent channel is not a :class:`ForumChannel`.
+        """
+        from .channel import ForumChannel
+
+        if not isinstance(self.parent, ForumChannel):
+            return None
+
+        tags: List[Tag] = []
+        for tag in self.parent.available_tags:
+            if tag.id in self.applied_tags_ids:
+                tags.append(tag)
+        return tags
 
     def is_private(self) -> bool:
         """Whether the thread is a private thread.
@@ -919,3 +949,133 @@ class ThreadMember(Hashable):
     def thread(self) -> Thread:
         """:class:`Thread`: The thread this member belongs to."""
         return self.parent
+
+
+class Tag(Hashable):
+    """Represents a Tag in a Thread.
+
+    .. container:: operations
+
+        .. describe:: x == y
+
+            Checks if two tags are equal.
+
+        .. describe:: x != y
+
+            Checks if two tags are not equal.
+
+        .. describe:: hash(x)
+
+            Returns the tag's hash.
+
+        .. describe:: str(x)
+
+            Returns the tag's name.
+
+    .. versionadded:: 2.5
+
+    Attributes
+    ----------
+    id: :class:`int`
+        The ID of the tag.
+    name: :class:`str`
+        The name of the tag.
+    emoji_id: Optional[:class:`int`]
+        The ID of the emoji associated with the tag. Or ``None`` if there is none.
+    emoji_name: Optional[:class:`str`]
+        The name of the emoji associated with the tag.
+    channel: :class:`ForumChannel`
+        The channel the tag belongs to.
+    """
+
+    __slots__ = ("id", "name", "emoji_id", "emoji_name", "channel", "_state")
+
+    def __init__(self, *, data: TagPayload, channel: ForumChannel, state: ConnectionState) -> None:
+        self.id: int = int(data["id"])
+        self.name: str = data["name"]
+        self.emoji_id: Optional[int] = int(data["emoji_id"]) or None
+        self.emoji_name: Optional[str] = data.get("emoji_name")
+        self.channel: ForumChannel = channel
+        self._state: ConnectionState = state
+
+    def __repr__(self) -> str:
+        return f"<Tag id={self.id!r} name={self.name!r} emoji_id={self.emoji_id!r} emoji_name={self.emoji_name!r}>"
+
+    def __str__(self) -> str:
+        return self.name
+
+    async def edit(
+        self,
+        *,
+        name: str,
+        emoji: Optional[Union[str, Emoji]] = None,
+        # reason: Optional[str] = None   Not working atm
+    ) -> Optional[Tag]:
+        """|coro|
+
+        Edits the tag.
+
+        You must have :attr:`~Permissions.manage_channels` permission to do this.
+
+        Parameters
+        ----------
+        name: :class:`str`
+            The new name of the tag.
+        emoji: Optional[Union[:class:`str`, :class:`Emoji`]]
+            The new emoji associated with the tag. Or ``None`` to remove the emoji.
+        reason: Optional[:class:`str`]
+            The reason for editing this tag. Shows up on the audit log.
+
+        Raises
+        ------
+        Forbidden
+            You do not have permissions to edit the tag.
+        HTTPException
+            Editing the tag failed.
+
+        Returns
+        -------
+        Optional[:class:`Tag`]
+            The newly edited tag.
+        """
+        payload: Dict[str, Any] = {}
+
+        payload["name"] = str(name)
+
+        if emoji is not None:
+            if isinstance(emoji, str):
+                emoji_name = unicodedata.name(emoji)
+                payload["emoji_name"] = emoji_name
+            else:
+                payload["emoji_id"] = emoji.id
+        else:
+            if self.emoji_id is not None:
+                payload["emoji_id"] = self.emoji_id
+            else:
+                payload["emoji_name"] = self.emoji_name
+
+        data = await self._state.http.edit_tag(
+            self.channel.id,
+            self.id,
+            **payload,
+            # reason=reason,
+        )
+
+        for tag in data.get("available_tags", []):
+            if int(tag["id"]) == self.id:
+                return Tag(data=tag, channel=self.channel, state=self._state)
+        return None
+
+    async def delete(self) -> None:  # TODO: check permissions
+        """|coro|
+
+        Deletes the tag.
+
+        You must have :attr:`~Permissions.manage_channels` permission to do this.
+
+        Raises
+        ------
+        HTTPException
+            Deleting the tag failed.
+        """
+        await self._state.http.delete_tag(self.channel.id, self.id)

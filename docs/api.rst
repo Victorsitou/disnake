@@ -2152,6 +2152,7 @@ of :class:`enum.Enum`.
         - :attr:`~AuditLogDiff.rtc_region`
         - :attr:`~AuditLogDiff.video_quality_mode`
         - :attr:`~AuditLogDiff.default_auto_archive_duration`
+        - :attr:`~AuditLogDiff.template`
 
     .. attribute:: channel_delete
 
@@ -3910,6 +3911,17 @@ AuditLogDiff
         The cover image of a guild scheduled event being changed.
 
         :type: :class:`Asset`
+
+    .. attribute:: template
+
+        The template of a forum channel being changed.
+
+        :type: :class:`str`
+    .. attribute:: applied_tags
+
+        The applied tags of a thread being changed.
+
+        :type: List[:class:`str`]
 
 .. this is currently missing the following keys: reason and application_id
    I'm not sure how to about porting these
