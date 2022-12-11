@@ -16,6 +16,7 @@ from typing import (
     Optional,
     Sequence,
     Tuple,
+    TypeVar,
     Union,
     cast,
     overload,
@@ -24,6 +25,7 @@ from typing import (
 import disnake.abc
 
 from . import utils
+from .abc import Snowflake
 from .activity import ActivityTypes, create_activity
 from .asset import Asset
 from .colour import Colour
@@ -41,7 +43,6 @@ __all__ = (
 if TYPE_CHECKING:
     from typing_extensions import Self
 
-    from .abc import Snowflake
     from .channel import DMChannel, StageChannel, VoiceChannel
     from .flags import PublicUserFlags
     from .guild import Guild
@@ -64,6 +65,8 @@ if TYPE_CHECKING:
     )
 
     VocalGuildChannel = Union[VoiceChannel, StageChannel]
+
+T = TypeVar("T")
 
 
 class VoiceState:
@@ -163,7 +166,7 @@ class VoiceState:
         return f"<{self.__class__.__name__} {inner}>"
 
 
-def flatten_user(cls):
+def flatten_user(cls: T) -> T:
     for attr, value in itertools.chain(BaseUser.__dict__.items(), User.__dict__.items()):
         # ignore private/special methods
         if attr.startswith("_"):
@@ -183,30 +186,30 @@ def flatten_user(cls):
             # However I'm not sure how I feel about "functions" returning properties
             # It probably breaks something in Sphinx.
             # probably a member function by now
-            def generate_function(x):
+            def generate_function(x: Any) -> Any:
                 # We want sphinx to properly show coroutine functions as coroutines
                 if asyncio.iscoroutinefunction(value):  # noqa: B023
 
-                    async def general(self, *args, **kwargs):  # type: ignore
+                    async def general(self: Member, *args: Any, **kwargs: Any) -> Any:  # type: ignore
                         return await getattr(self._user, x)(*args, **kwargs)
 
                 else:
 
-                    def general(self, *args, **kwargs):
+                    def general(self: Member, *args: Any, **kwargs: Any) -> Any:
                         return getattr(self._user, x)(*args, **kwargs)
 
                 general.__name__ = x
                 return general
 
             func = generate_function(attr)
-            func = utils.copy_doc(value)(func)
+            func = utils.copy_doc(value)(func)  # type: ignore
             setattr(cls, attr, func)
 
     return cls
 
 
 @flatten_user
-class Member(disnake.abc.Messageable, _UserTag):
+class Member(disnake.abc.Messageable, Snowflake):
     """Represents a Discord member to a :class:`Guild`.
 
     This implements a lot of the functionality of :class:`User`.
@@ -328,7 +331,7 @@ class Member(disnake.abc.Messageable, _UserTag):
         self.premium_since: Optional[datetime.datetime] = utils.parse_time(
             data.get("premium_since")
         )
-        self._roles: utils.SnowflakeList = utils.SnowflakeList(map(int, data["roles"]))
+        self._roles: utils.SnowflakeList[int] = utils.SnowflakeList(map(int, data["roles"]))
         self._client_status: Dict[Optional[str], str] = {None: "offline"}
         self.activities: Tuple[ActivityTypes, ...] = ()
         self.nick: Optional[str] = data.get("nick")
@@ -347,7 +350,7 @@ class Member(disnake.abc.Messageable, _UserTag):
         )
 
     def __eq__(self, other: Any) -> bool:
-        return isinstance(other, _UserTag) and other.id == self.id
+        return isinstance(other, Snowflake) and other.id == self.id
 
     def __ne__(self, other: Any) -> bool:
         return not self.__eq__(other)
@@ -357,7 +360,7 @@ class Member(disnake.abc.Messageable, _UserTag):
 
     @classmethod
     def _from_message(cls, *, message: Message, data: MemberPayload) -> Self:
-        user_data = message.author._to_minimal_user_json()  # type: ignore
+        user_data = message.author._to_minimal_user_json()
         return cls(
             data=data,
             user_data=user_data,
@@ -405,7 +408,7 @@ class Member(disnake.abc.Messageable, _UserTag):
         self._user = member._user
         return self
 
-    async def _get_channel(self):
+    async def _get_channel(self) -> DMChannel:
         ch = await self.create_dm()
         return ch
 
@@ -456,6 +459,10 @@ class Member(disnake.abc.Messageable, _UserTag):
             u.name, u._avatar, u.discriminator, u._public_flags = modified
             # Signal to dispatch on_user_update
             return to_return, u
+        return None
+
+    def _to_minimal_user_json(self) -> UserPayload:
+        return self._user._to_minimal_user_json()
 
     @property
     def status(self) -> Status:
@@ -541,8 +548,9 @@ class Member(disnake.abc.Messageable, _UserTag):
 
         These roles are sorted by their position in the role hierarchy.
         """
-        result = []
+        result: List[Role] = []
         g = self.guild
+        role_id: int
         for role_id in self._roles:
             role = g.get_role(role_id)
             if role:
@@ -606,6 +614,7 @@ class Member(disnake.abc.Messageable, _UserTag):
         """
         if self.activities:
             return self.activities[0]
+        return None
 
     def mentioned_in(self, message: Message) -> bool:
         """Whether the member is mentioned in the specified message.
@@ -669,7 +678,7 @@ class Member(disnake.abc.Messageable, _UserTag):
         if self.guild.owner_id == self.id:
             return Permissions.all()
 
-        base = Permissions.none()
+        base: Permissions = Permissions.none()
         for r in self.roles:
             base.value |= r.permissions.value
 
@@ -892,6 +901,7 @@ class Member(disnake.abc.Messageable, _UserTag):
         if payload:
             data = await http.edit_member(guild_id, self.id, reason=reason, **payload)
             return Member(data=data, guild=self.guild, state=self._state)
+        return None
 
     async def request_to_speak(self) -> None:
         """|coro|

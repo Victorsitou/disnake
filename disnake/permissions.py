@@ -13,6 +13,7 @@ from typing import (
     Optional,
     Set,
     Tuple,
+    TypeVar,
     overload,
 )
 
@@ -22,6 +23,7 @@ from .utils import _generated, _overload_with_permissions
 if TYPE_CHECKING:
     from typing_extensions import Self
 
+T = TypeVar("T")
 
 __all__ = (
     "Permissions",
@@ -44,9 +46,9 @@ def make_permission_alias(alias: str) -> Callable[[Callable[[Any], int]], permis
     return decorator
 
 
-def cached_creation(func):
+def cached_creation(func) -> Callable[[Callable[..., T]], T]:
     @wraps(func)
-    def wrapped(cls):
+    def wrapped(cls: Callable[..., T]) -> T:
         try:
             value = func.__stored_value__
         except AttributeError:

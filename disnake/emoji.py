@@ -98,7 +98,7 @@ class Emoji(_EmojiTag, AssetMixin):
         self.name: str = emoji["name"]  # type: ignore
         self.animated: bool = emoji.get("animated", False)
         self.available: bool = emoji.get("available", True)
-        self._roles: SnowflakeList = SnowflakeList(map(int, emoji.get("roles", [])))
+        self._roles: SnowflakeList[int] = SnowflakeList(map(int, emoji.get("roles", [])))
         user = emoji.get("user")
         self.user: Optional[User] = User(state=self._state, data=user) if user else None
 

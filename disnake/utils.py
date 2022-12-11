@@ -679,7 +679,7 @@ def valid_icon_size(size: int) -> bool:
     return not size & (size - 1) and 4096 >= size >= 16
 
 
-class SnowflakeList(array.array):
+class SnowflakeList(array.array, Generic[T]):
     """Internal data storage class to efficiently store a list of snowflakes.
 
     This should have the following characteristics:
@@ -700,6 +700,9 @@ class SnowflakeList(array.array):
 
     def __new__(cls, data: Iterable[int], *, is_sorted: bool = False):
         return array.array.__new__(cls, "Q", data if is_sorted else sorted(data))  # type: ignore
+
+    def __iter__(self) -> Iterator[T]:
+        yield from self
 
     def add(self, element: int) -> None:
         i = bisect_left(self, element)
