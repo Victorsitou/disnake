@@ -48,6 +48,10 @@ GuildFeature = Literal[
     "ENABLED_DISCOVERABLE_BEFORE",
     "FEATURABLE",
     "GUILD_HOME_TEST",  # not yet documented/finalised
+    "GUILD_ONBOARDING",
+    "GUILD_ONBOARDING_EVER_ENABLED",
+    "GUILD_ONBOARDING_HAS_PROMPTS",
+    "GUILD_SERVER_GUIDE",  # not yet documented/finalised
     "HAS_DIRECTORY_ENTRY",
     "HUB",
     "INVITE_SPLASH",
