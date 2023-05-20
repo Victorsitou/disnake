@@ -70,6 +70,7 @@ from .onboarding import Onboarding
 from .partial_emoji import PartialEmoji
 from .permissions import PermissionOverwrite
 from .role import Role
+from .server_guide import ServerGuide
 from .stage_instance import StageInstance
 from .sticker import GuildSticker
 from .threads import Thread, ThreadMember
@@ -352,6 +353,7 @@ class Guild(Hashable):
         "_scheduled_events",
         "_threads",
         "_region",
+        "_server_guide_banner",
     )
 
     _PREMIUM_GUILD_LIMITS: ClassVar[Dict[Optional[int], _GuildLimit]] = {
@@ -572,6 +574,8 @@ class Guild(Hashable):
         self.widget_enabled: Optional[bool] = guild.get("widget_enabled")
         self.widget_channel_id: Optional[int] = utils._get_as_snowflake(guild, "widget_channel_id")
         self.vanity_url_code: Optional[str] = guild.get("vanity_url_code")
+        # NOTE: called home_header in the API
+        self._server_guide_banner: Optional[str] = guild.get("home_header")
 
         stage_instances = guild.get("stage_instances")
         if stage_instances is not None:
@@ -1053,6 +1057,15 @@ class Guild(Hashable):
             return None
         return Asset._from_guild_image(
             self._state, self.id, self._discovery_splash, path="discovery-splashes"
+        )
+
+    @property
+    def server_guide_banner(self) -> Optional[Asset]:
+        """Optional[:class:`Asset`]: Returns the guild's server guide banner asset, if available."""
+        if self._server_guide_banner is None:
+            return None
+        return Asset._from_guild_image(
+            self._state, self.id, self._server_guide_banner, path="home-headers"
         )
 
     @property
@@ -4652,6 +4665,26 @@ class Guild(Hashable):
         """
         data = await self._state.http.get_guild_onboarding(self.id)
         return Onboarding(data=data, guild=self)
+
+    async def server_guide(self) -> ServerGuide:
+        """|coro|
+
+        Retrieves the guild server guide
+
+        .. versionadded:: 2.?
+
+        Raises
+        ------
+        HTTPException
+            Retrieving the guild server guide failed.
+
+        Returns
+        -------
+        :class:`ServerGuide`
+            The guild server guide.
+        """
+        data = await self._state.http.get_guild_server_guide(self.id)
+        return ServerGuide(data=data, guild=self)
 
 
 PlaceholderID = NewType("PlaceholderID", int)

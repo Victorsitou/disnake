@@ -1302,6 +1302,11 @@ class OnboardingPromptType(Enum):
     dropdown = 1
 
 
+class MemberActionActionType(Enum):
+    view = 0
+    chat = 1
+
+
 T = TypeVar("T")
 
 

@@ -70,6 +70,7 @@ if TYPE_CHECKING:
         message,
         onboarding,
         role,
+        server_guide,
         sticker,
         template,
         threads,
@@ -2263,6 +2264,13 @@ class HTTPClient:
 
     def get_guild_onboarding(self, guild_id: Snowflake) -> Response[onboarding.Onboarding]:
         return self.request(Route("GET", "/guilds/{guild_id}/onboarding", guild_id=guild_id))
+
+    # Guild Server Guide
+
+    def get_guild_server_guide(self, guild_id: Snowflake) -> Response[server_guide.ServerGuide]:
+        return self.request(
+            Route("GET", "/guilds/{guild_id}/new-member-welcome", guild_id=guild_id)
+        )
 
     # Application commands (global)
 

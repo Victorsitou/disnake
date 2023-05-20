@@ -1,0 +1,4 @@
+Implement Server Guide features.
+- Add :class:`ServerGuide`, :class:`MemberAction`, :class:`ResourceChannel` and :class:`WelcomeMessage`.
+- Add :meth:`Guild.server_guide` and :property:`Guild.server_guide_banner`.
+- Add :class:`MemberActionActionType` enum.
