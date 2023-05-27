@@ -66,6 +66,7 @@ GuildFeature = Literal[
     "PARTNERED",
     "PREVIEW_ENABLED",
     "PRIVATE_THREADS",  # deprecated
+    "RAID_ALERTS_DISABLED",
     "RELAY_ENABLED",
     "ROLE_ICONS",
     "ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE",
@@ -132,6 +133,7 @@ class Guild(_BaseGuildPreview):
     nsfw_level: NSFWLevel
     stickers: NotRequired[List[GuildSticker]]
     premium_progress_bar_enabled: bool
+    safety_alerts_channel_id: Optional[Snowflake]
 
     # specific to GUILD_CREATE event
     joined_at: NotRequired[Optional[str]]
