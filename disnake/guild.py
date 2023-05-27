@@ -212,7 +212,7 @@ class Guild(Hashable):
         - ``ANIMATED_BANNER``: Guild can upload an animated banner.
         - ``ANIMATED_ICON``: Guild can upload an animated icon.
         - ``AUTO_MODERATION``: Guild has set up auto moderation rules.
-        - ``BANNER``: Guild can upload and use a banner. (i.e. :attr:`.banner`)
+        - ``BANNER``: Guild can upload and use a banner. (i.e. :attr:`.banner` or :attr:`.server_guide_banner`)
         - ``COMMUNITY``: Guild is a community server.
         - ``CREATOR_MONETIZABLE_PROVISIONAL``: Guild has enabled monetization.
         - ``CREATOR_STORE_PAGE``: Guild has enabled the role subscription promo page.
@@ -1871,6 +1871,7 @@ class Guild(Hashable):
         banner: Optional[AssetBytes] = MISSING,
         splash: Optional[AssetBytes] = MISSING,
         discovery_splash: Optional[AssetBytes] = MISSING,
+        server_guide_banner: Optional[AssetBytes] = MISSING,
         community: bool = MISSING,
         invites_disabled: bool = MISSING,
         raid_alerts_disabled: bool = MISSING,
@@ -1953,6 +1954,13 @@ class Guild(Hashable):
 
             .. versionchanged:: 2.5
                 Now accepts various resource types in addition to :class:`bytes`.
+
+        server_guide_banner: Optional[|resource_type|]
+            The new guild server guide banner.
+            Could be ``None`` to denote removing the banner. This is only available to guilds that contain
+            ``BANNER`` in :attr:`Guild.features`.
+
+            .. versionadded:: 2.?
 
         community: :class:`bool`
             Whether the guild should be a Community guild. If set to ``True``\\, both ``rules_channel``
@@ -2077,6 +2085,9 @@ class Guild(Hashable):
 
         if discovery_splash is not MISSING:
             fields["discovery_splash"] = await utils._assetbytes_to_base64_data(discovery_splash)
+
+        if server_guide_banner is not MISSING:
+            fields["home_header"] = await utils._assetbytes_to_base64_data(server_guide_banner)
 
         if default_notifications is not MISSING:
             if not isinstance(default_notifications, NotificationLevel):
