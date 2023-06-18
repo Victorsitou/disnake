@@ -38,6 +38,7 @@ from .file import File
 from .flags import ChannelFlags, MessageFlags
 from .invite import Invite
 from .mentions import AllowedMentions
+from .object import Object
 from .partial_emoji import PartialEmoji
 from .permissions import PermissionOverwrite, Permissions
 from .role import Role
@@ -142,8 +143,6 @@ class User(Snowflake, Protocol):
     global_name: Optional[:class:`str`]
         The user's global display name, if set.
         This takes precedence over :attr:`.name` when shown.
-
-        For bots, this is the application name.
 
         .. versionadded:: 2.9
 
@@ -1016,15 +1015,46 @@ class GuildChannel(ABC):
         base_attrs: Dict[str, Any],
         *,
         name: Optional[str] = None,
+        category: Optional[Snowflake] = MISSING,
+        overwrites: Mapping[Union[Role, Member], PermissionOverwrite] = MISSING,
         reason: Optional[str] = None,
     ) -> Self:
-        base_attrs["permission_overwrites"] = [x._asdict() for x in self._overwrites]
-        base_attrs["parent_id"] = self.category_id
+        # if the overwrites are MISSING, defaults to the
+        # original permissions of the channel
+        overwrites_payload: List[PermissionOverwritePayload]
+        if overwrites is not MISSING:
+            if not isinstance(overwrites, dict):
+                raise TypeError("overwrites parameter expects a dict.")
+
+            overwrites_payload = []
+            for target, perm in overwrites.items():
+                if not isinstance(perm, PermissionOverwrite):
+                    raise TypeError(
+                        f"Expected PermissionOverwrite, received {perm.__class__.__name__}"
+                    )
+
+                allow, deny = perm.pair()
+                payload: PermissionOverwritePayload = {
+                    "allow": str(allow.value),
+                    "deny": str(deny.value),
+                    "id": target.id,
+                    "type": (_Overwrites.ROLE if isinstance(target, Role) else _Overwrites.MEMBER),
+                }
+                overwrites_payload.append(payload)
+        else:
+            overwrites_payload = [x._asdict() for x in self._overwrites]
+        base_attrs["permission_overwrites"] = overwrites_payload
+        if category is not MISSING:
+            base_attrs["parent_id"] = category.id if category else None
+        else:
+            # if no category was given don't change the category
+            base_attrs["parent_id"] = self.category_id
         base_attrs["name"] = name or self.name
+        channel_type = base_attrs.get("type") or self.type.value
         guild_id = self.guild.id
         cls = self.__class__
         data = await self._state.http.create_channel(
-            guild_id, self.type.value, reason=reason, **base_attrs
+            guild_id, channel_type, reason=reason, **base_attrs
         )
         obj = cls(state=self._state, guild=self.guild, data=data)
 
@@ -1245,7 +1275,7 @@ class GuildChannel(ABC):
         unique: bool = True,
         target_type: Optional[InviteTarget] = None,
         target_user: Optional[User] = None,
-        target_application: Optional[PartyType] = None,
+        target_application: Optional[Union[Snowflake, PartyType]] = None,
         guild_scheduled_event: Optional[GuildScheduledEvent] = None,
     ) -> Invite:
         """|coro|
@@ -1281,10 +1311,13 @@ class GuildChannel(ABC):
 
             .. versionadded:: 2.0
 
-        target_application: Optional[:class:`.PartyType`]
+        target_application: Optional[:class:`.Snowflake`]
             The ID of the embedded application for the invite, required if `target_type` is `TargetType.embedded_application`.
 
             .. versionadded:: 2.0
+
+            .. versionchanged:: 2.9
+                ``PartyType`` is deprecated, and :class:`.Snowflake` should be used instead.
 
         guild_scheduled_event: Optional[:class:`.GuildScheduledEvent`]
             The guild scheduled event to include with the invite.
@@ -1306,6 +1339,12 @@ class GuildChannel(ABC):
         :class:`.Invite`
             The newly created invite.
         """
+        if isinstance(target_application, PartyType):
+            utils.warn_deprecated(
+                "PartyType is deprecated and will be removed in future version",
+                stacklevel=2,
+            )
+            target_application = Object(target_application.value)
         data = await self._state.http.create_invite(
             self.id,
             reason=reason,
@@ -1315,7 +1354,7 @@ class GuildChannel(ABC):
             unique=unique,
             target_type=try_enum_to_int(target_type),
             target_user_id=target_user.id if target_user else None,
-            target_application_id=try_enum_to_int(target_application),
+            target_application_id=target_application.id if target_application else None,
         )
         invite = Invite.from_incomplete(data=data, state=self._state)
         invite.guild_scheduled_event = guild_scheduled_event

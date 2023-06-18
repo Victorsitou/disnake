@@ -1154,8 +1154,7 @@ class Guild(Hashable):
         2. Lookup by global name.
         3. Lookup by username.
 
-        While the migration away from discriminators is still ongoing,
-        the name can have an optional discriminator argument, e.g. "Jake#0001",
+        The name can have an optional discriminator argument, e.g. "Jake#0001",
         in which case it will be treated as a username + discriminator combo
         (note: this only works with usernames, not nicknames).
 
@@ -2638,14 +2637,19 @@ class Guild(Hashable):
     def fetch_members(
         self, *, limit: Optional[int] = 1000, after: Optional[SnowflakeTime] = None
     ) -> MemberIterator:
-        """Retrieves an :class:`.AsyncIterator` that enables receiving the guild's members. In order to use this,
-        :meth:`Intents.members` must be enabled.
+        """Retrieves an :class:`.AsyncIterator` that enables receiving the guild's members.
+
+        In order to use this, the :attr:`~Intents.members` intent must be
+        enabled in the developer portal.
 
         .. note::
 
             This method is an API call. For general usage, consider :attr:`members` instead.
 
         .. versionadded:: 1.3
+
+        .. versionchanged:: 2.9
+            No longer requires the intent to be enabled on the websocket connection.
 
         All parameters are optional.
 
@@ -2662,7 +2666,7 @@ class Guild(Hashable):
         Raises
         ------
         ClientException
-            The members intent is not enabled.
+            The members intent is not enabled in the developer portal.
         HTTPException
             Retrieving the members failed.
 
@@ -2683,8 +2687,13 @@ class Guild(Hashable):
             members = await guild.fetch_members(limit=150).flatten()
             # members is now a list of Member...
         """
-        if not self._state._intents.members:
-            raise ClientException("Intents.members must be enabled to use this.")
+        # `hasattr` check to avoid issues with uninitialized state
+        if hasattr(self._state, "application_flags"):
+            flags = self._state.application_flags
+            if not (flags.gateway_guild_members_limited or flags.gateway_guild_members):
+                raise ClientException(
+                    "The `members` intent must be enabled in the Developer Portal to be able to use this method."
+                )
 
         return MemberIterator(self, limit=limit, after=after)
 
